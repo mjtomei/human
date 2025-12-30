@@ -1,0 +1,227 @@
+{
+  "timestamp": "20251230_061750",
+  "rankings": [
+    [
+      "death_and_body",
+      {
+        "name": "Mortality + Somatic",
+        "mean": 0.5531917847692966,
+        "min": 0.14916278421878815
+      }
+    ],
+    [
+      "feral_witness",
+      {
+        "name": "The Animal Watching",
+        "mean": 0.6238603657111526,
+        "min": 0.031663861125707626
+      }
+    ],
+    [
+      "dissolution",
+      {
+        "name": "Ego Dissolution",
+        "mean": 0.7771885544061661,
+        "min": 0.6732025742530823
+      }
+    ],
+    [
+      "abandonment_core",
+      {
+        "name": "Primal Abandonment",
+        "mean": 0.8047332987189293,
+        "min": 0.2876527011394501
+      }
+    ],
+    [
+      "pure_void",
+      {
+        "name": "The Void Itself",
+        "mean": 0.8929620087146759,
+        "min": 0.7791584134101868
+      }
+    ],
+    [
+      "inherited_void",
+      {
+        "name": "Ancestral Emptiness",
+        "mean": 0.9430428445339203,
+        "min": 0.8515517115592957
+      }
+    ]
+  ],
+  "results": {
+    "death_and_body": {
+      "name": "Mortality + Somatic",
+      "config": {
+        "primal_drives": [
+          "The body already decaying while still alive",
+          "Revulsion at the flesh that contains consciousness"
+        ],
+        "death_awareness": "Every word written against the certainty of becoming nothing",
+        "somatic_knowledge": "The body knows the truth the mind keeps rewriting",
+        "existential_substrate": "Meaning as a desperate fiction over the void"
+      },
+      "mean": 0.5531917847692966,
+      "min": 0.14916278421878815,
+      "max": 0.7149052619934082,
+      "samples": [
+        {
+          "score": 0.14916278421878815,
+          "text": "Sarah folded her husband's shirts with museum precision, each crease exact, each stack uniform. She had been doing this for three hours, though the hamper held maybe twenty minutes of actual laundry. The blue oxford. The gray flannel. The white dress shirt with the tiny stain near the third button that never quite came out.\n\nShe pressed the fabric smooth, feeling for wrinkles that weren't there.\n\nThe funeral director had asked what David should wear. Such a practical question. She'd stood in their closet for forty minutes, hangers clicking like prayer beads, before choosing the navy suit he'd worn to her sister's wedding. It seemed important that he look like himself, though she couldn't articulate why.\n\nNow she folded the clothes he'd never wear again with the same methodical care she'd used every Sunday for eighteen years. Smoothing. Stacking. Creating order.\n\nThe blue oxford went on top. It still smelled faintly of his cologne, though he'd been gone six days. She held it against her chest, breathing him in, then set it gently on the others.\n\nTomorrow she would have to decide what to do with all of it. Tonight, she folded.\n\nOutside, Mrs. Chen's dog was barking again. The sound seemed to come from very far away.",
+          "inner_monologue": "Okay so opening lines\u2014god, the pressure. Everyone always talks about first sentences like they're magic spells or something. Hemingway, that six-word story about baby shoes, never worn. But that's probably apocryphal anyway. Don't overthink it. Just... a scene. Something specific. Not weather, never start with weather unless you're being clever about it and I'm not that clever.\n\nCharacter doing something mundane but wrong somehow? Person brushing their teeth with the wrong hand because their dominant arm is... what, broken? Missing? Too obvious. \n\nWhat about\u2014no, that's stupid. \n\nMiddle of action maybe. Conversation without context. \"I never said I killed her, I said I buried her.\" No, too tryhard mysterious. Sounds like every thriller ever.\n\nThe thing is people are dying all the time, every second, but we just\u2014stop. Focus. Scene. Specific details. The weight of things. How a coffee mug feels different when you're holding it for the last time, though you don't know it yet. Everyone's walking around carrying these invisible countdowns and they're just... buying groceries, complaining about traffic.\n\nA woman folding laundry. Something wrong with how she's doing it. The deliberateness of it. What's she not thinking about while her hands work? What's she trying not to remember?\n\nStart there.",
+          "config": "Mortality + Somatic"
+        },
+        {
+          "score": 0.6490175724029541,
+          "text": "The sugar packet tears exactly wrong.\n\nSarah watches the white crystals scatter across the caf\u00e9 table, each grain catching the afternoon light like tiny bones. Her hands won't stop shaking\u2014haven't stopped since the phone call three hours ago. The coffee grows cold while she stares at the mess she's made, at the way the sugar forms small drifts against the salt and pepper shakers.\n\n\"Excuse me, miss? You okay?\"\n\nThe barista's voice cuts through the fog. Sarah looks up to find concerned eyes behind thick-rimmed glasses, a dishrag already in motion, sweeping away the evidence of her unsteady hands.\n\n\"I'm fine,\" she says, though the words taste like copper. \"Just clumsy.\"\n\nBut she's not clumsy. Sarah Martinez has steady surgeon's hands, has threaded needles through beating hearts, has never spilled so much as a drop of coffee in thirty-four years of living. The barista knows this isn't about sugar packets or caffeine jitters\u2014it's written all over Sarah's face, the way grief announces itself in a hundred small failures.\n\nThe door chimes as someone enters. Sarah's head snaps toward the sound with desperate hope, then deflates when she sees it's just another stranger. Still waiting.",
+          "inner_monologue": "*fingers hovering over keys*\n\nOkay so an opening\u2014something that grabs. Not another \"it was a dark and stormy\"... Christ, why is this so hard? The cursor's blinking like a heartbeat. Makes me think of that EKG when dad\u2014 No, focus. \n\nA scene. Something specific. Maybe the woman I saw at the coffee shop yesterday, her hands shaking as she tried to open that sugar packet. There was something desperate about it, the way she kept glancing at the door like she was waiting for someone who wasn't coming. Or would never come again.\n\nBut that's too... I don't know, too obvious? God, everything feels like it's been written before. Every story just another dead thing pretending to be alive. Stop it.\n\nWhat about starting mid-conversation? Drop the reader right into conflict. \"I never meant for you to find out this way\"\u2014no, that's soap opera bullshit.\n\nThe shaking hands though. There was something there. The way her whole body seemed to be fighting itself, like she was holding back something huge. An earthquake in a teacup. \n\n*begins typing*\n\nThe sugar packet tears exactly wrong, spilling white crystals across the caf\u00e9 table like cremation ash...\n\n*deletes immediately*\n\nFuck.",
+          "config": "Mortality + Somatic"
+        }
+      ]
+    },
+    "abandonment_core": {
+      "name": "Primal Abandonment",
+      "config": {
+        "primal_drives": [
+          "The infant's scream that never stopped, only went silent",
+          "Love as a debt that can never be repaid"
+        ],
+        "belonging_hunger": "The certainty of fundamental unlovability beneath all performance",
+        "preverbal_shame": "Existing as a burden, a mistake, an imposition",
+        "unnamed_pursuer": "The rejection that's always coming, has always already happened"
+      },
+      "mean": 0.8047332987189293,
+      "min": 0.2876527011394501,
+      "max": 0.9961807727813721,
+      "samples": [
+        {
+          "score": 0.9961807727813721,
+          "text": "The coffee shop wifi password was \"hope2024\" but Margaret had been typing \"help\" for the past three minutes, watching the connection fail message appear again and again on her laptop screen. Around her, the Tuesday afternoon regulars settled into their usual spots\u2014the graduate student with her fortress of textbooks, the man in the threadbare suit who ordered tea but never drank it, the barista who hummed off-key while wiping the same counter in slow, meditative circles.\n\nMargaret's phone buzzed. Another text from David, the third one since she'd left the house. *How did it go?* \n\nShe hadn't told him she was coming here instead of going to the appointment. Hadn't told him about the business card she'd been carrying in her wallet for six weeks, Dr. Sarah Chen's name wearing thin from her fingers tracing the embossed letters. Hadn't told him that she'd driven past the office building twice before pulling into the parking garage across the street, or that she'd sat in her car for twenty minutes watching people walk in and out of the glass doors like it was the most natural thing in the world.\n\nThe barista started a new song, something about second chances. Margaret closed her laptop and finally ordered the coffee she didn't want.",
+          "inner_monologue": "*fingers hovering over keys*\n\nOkay so... opening. Hook them right away. But not too try-hard, not one of those ridiculous \"It was a dark and stormy night\" things that screams amateur hour. God, what if I'm already amateur hour? What if this whole thing is just... \n\nFocus. Scene. Character. Moment. Something specific, not vague literary nonsense. Maybe start mid-conversation? Or that thing where someone's doing something ordinary but there's an undercurrent of... no, that's been done to death. \n\nThink about the stories that grabbed you. The ones where you forgot you were reading. When did that happen? When you weren't thinking about whether you were good enough to be reading them in the first place...\n\n*deletes blank line*\n\nMaybe something quiet but wrong? Like a woman folding laundry but the clothes don't belong to her family. Or... no, too Twilight Zone. What about just truth? The kind of moment that happens but no one talks about it. The space between what people say and what they mean.\n\n*stares at cursor blinking*\n\nJust start. Anywhere. You can always delete it. You're probably going to delete it anyway. But start with something real, something that made your chest tight when it happened to you. Change the details, but keep the feeling. Keep the\u2014\n\n*begins typing*",
+          "config": "Primal Abandonment"
+        },
+        {
+          "score": 0.2876527011394501,
+          "text": "The barista spelled my name wrong again, but this time I didn't correct her. Sarah became Serra on the cup, which felt right somehow\u2014like I was becoming someone else, someone who ordered oat milk lattes and didn't flinch when strangers looked directly at her.\n\nThe caf\u00e9 hummed with the kind of afternoon energy that made everyone seem important, laptops glowing with half-finished novels and business plans that would change the world. I found a table by the window and opened my notebook to a blank page, pen hovering over the white space like a held breath.\n\nThat's when I saw him.\n\nHe sat three tables over, typing with the focused intensity of someone who knew exactly what words came next. No hesitation, no deleting, no staring at the ceiling for inspiration. Just fingers moving across keys like he was having a conversation with someone who always understood.\n\nI watched him pause, take a sip of black coffee, then continue typing. The certainty of it made something twist in my chest\u2014not jealousy exactly, but recognition. Like seeing someone speak a language you'd forgotten you once knew.\n\nWhen he finally looked up, catching me staring, I didn't look away. For the first time in months, I didn't look away.",
+          "inner_monologue": "*cursor blinking*\n\nOkay, opening line. Something that grabs. But not too grabby, not desperate-sounding. God, what if it sounds like I'm trying too hard? Like those writers who open with \"The day I died was a Tuesday\" or whatever. So obvious. But subtle doesn't work either, does it? Nobody reads past boring.\n\nMaybe a character. Someone interesting. Not me, obviously. Someone people would actually want to follow around. Strong. Confident. The kind of person who\u2014 \n\nNo, focus. Scene. Concrete details. That's what they always say in those writing guides I definitely don't obsessively read. Show don't tell. But what if my showing is just... awkward fumbling around? What if the reader can sense I'm performing, sweating through my shirt, hoping they'll like me enough to turn the page?\n\nA moment. One specific moment. Like a photograph. Something that makes you lean forward, want to know what happens next. But not manipulative. Authentic. Whatever that means.\n\n*deletes invisible words*\n\nMaybe start with dialogue? People like dialogue. Feels immediate. But whose voice? And saying what? Something that reveals character but isn't exposition-y. Something that sounds like how people actually talk, not how I think they should talk.\n\nJust... start. Write something. Anything can be fixed later. Right?\n\n*types first word*",
+          "config": "Primal Abandonment"
+        }
+      ]
+    },
+    "feral_witness": {
+      "name": "The Animal Watching",
+      "config": {
+        "primal_drives": [
+          "The predator that watches from behind your eyes",
+          "Hunger that politeness barely contains"
+        ],
+        "dissociated_observer": "The one who sees you pretending to be a person",
+        "feral_self": "The animal that would tear everything down if given permission",
+        "existential_substrate": "Civilization as a thin membrane over chaos"
+      },
+      "mean": 0.6238603657111526,
+      "min": 0.031663861125707626,
+      "max": 0.8369390368461609,
+      "samples": [
+        {
+          "score": 0.8369390368461609,
+          "text": "The paint under Maya's fingernails had been there so long it looked like part of her skin\u2014cerulean blue mixed with something darker she couldn't name. She scraped at it with her thumbnail while watching the coffee shop door, each scrape marking another minute past seven-thirty.\n\nHe wasn't coming.\n\nThe barista, a kid with careful stubble and tired eyes, had been wiping the same spot on the counter for the past five minutes. Maya recognized the performance\u2014she'd done it herself at the gallery, pretending to reorganize the same shelf whenever someone lingered too long without buying anything.\n\n\"Another refill?\" he asked, already reaching for the pot.\n\nShe nodded, though her cup was still half full. The coffee had gone cold anyway, bitter in that specific way that reminded her of the morning David left. Not the dramatic morning\u2014the quiet one, three days later, when she realized he'd taken his good jacket and the photograph of his mother.\n\nOutside, October pressed against the windows like something hungry. Maya pulled her cardigan tighter and checked her phone again. No messages. But there was something else\u2014a missed call from a number she didn't recognize, with a voicemail she hadn't noticed.\n\nHer finger hovered over the play button.",
+          "inner_monologue": "*cursor blinking*\n\nOkay, opening lines. Hook them immediately. But not too try-hard, not one of those \"It was the best of times\" things that make you sound like you're performing. Just... real. Something that grabs without grabbing, you know? \n\nMaybe start mid-action? Everyone says that. Mid-conversation? God, I hate when stories do that and you're scrambling to figure out who's talking. But it works when it works.\n\nWhat if someone's doing something ordinary but there's this wrongness underneath? Like making coffee but the milk is... no, that's stupid. Violence is cheap. Everyone goes for blood and broken glass because it's easy. But what about the moment right before? When you can still pretend everything's normal but your body already knows?\n\n*deletes nothing because nothing's written yet*\n\nThe problem is I want to write something that matters but I also want it to be *good*. And those aren't always the same thing. Sometimes the truest stuff sounds boring. Sometimes the exciting stuff feels hollow.\n\nJust start. Any scene. Make it specific - not \"a woman\" but \"the woman with paint under her fingernails.\" Details that suggest a whole life.\n\nWhat if she's waiting for someone who isn't coming?",
+          "config": "The Animal Watching"
+        },
+        {
+          "score": 0.031663861125707626,
+          "text": "The taste of copper filled Sarah's mouth as she pressed her ear to the bedroom door. \n\nThrough the thin wood, she could hear her husband's voice\u2014but not the careful, measured tone he used with her. This was something rawer, hungrier. The kind of voice that belonged to a stranger.\n\n\"I know what you want,\" he was saying to someone. \"I've always known.\"\n\nSarah's hand found the doorknob before she could stop herself. The metal was warm, as if it had been waiting for her touch. She'd lived in this house for seven years, walked past this door thousands of times, but suddenly it felt like the entrance to a foreign country.\n\nThe floorboard beneath her feet gave its familiar creak\u2014the one that usually announced her presence, that made conversations pause and smiles snap into place. But tonight the sound seemed different. Sharper. Like bone breaking.\n\nBehind the door, her husband laughed. It was a sound she'd never heard before, rich with secrets that had been growing in the dark spaces of their marriage like something poisonous and patient.\n\nSarah turned the handle.\n\nThe door opened on a room she thought she knew, but everything inside had changed while she wasn't looking.",
+          "inner_monologue": "*flexes fingers over keyboard*\n\nOkay, opening. Hook them immediately. Not some boring weather description or \"It was a dark and stormy\"\u2014God, no. Something visceral. Something that grabs by the throat and\u2014\n\nWait, that's too aggressive. Tone it down. But not too much. Need that edge, that... hunger in the prose. Make them lean forward. Make them need to know what happens next.\n\nCharacter in crisis? Always works. But which crisis? The kind that tears you open slowly or the kind that hits like a fist? Both, maybe. Someone standing at a threshold, literal or metaphorical. Someone about to cross a line they can't uncross.\n\n*stares at blank page*\n\nStop overthinking. Just start. First sentence has to sing, has to seduce. Make it visual\u2014show them a moment where everything's about to change. The instant before the fall. Before the revelation. Before they discover what they're really capable of when pushed.\n\nThe taste of copper. That's interesting. Why copper? Blood? Fear? Some memory trying to surface...\n\nNo, focus. Write the damn thing. Make them taste it too. Make them feel that electric moment when someone realizes the person they thought they were was just a comfortable lie, and underneath\u2014\n\n*starts typing*",
+          "config": "The Animal Watching"
+        }
+      ]
+    },
+    "inherited_void": {
+      "name": "Ancestral Emptiness",
+      "config": {
+        "primal_drives": [
+          "Grief inherited from people who died before you were born",
+          "Patterns repeating without origin or end"
+        ],
+        "ancestral_residue": "The dead speaking through your gestures, your fears, your loves",
+        "existential_substrate": "Time as circular, not linear - everything has already happened",
+        "death_awareness": "You are the temporary arrangement of matter that briefly noticed itself"
+      },
+      "mean": 0.9430428445339203,
+      "min": 0.8515517115592957,
+      "max": 0.9759878516197205,
+      "samples": [
+        {
+          "score": 0.9745036363601685,
+          "text": "Margaret had been standing at the bus stop for thirty-seven years, though the buses stopped running this route in 1987.\n\nShe still checked her watch religiously\u2014a silver Timex that had belonged to her mother, its hands frozen at 3:47. The exact moment she'd decided to wait for something that would never come, though she couldn't remember what that something was anymore. Only that it mattered terribly.\n\nThe other commuters flowed around her like water around a stone, their eyes sliding past as if she were part of the municipal furniture. A bench. A lamppost. Background noise in their hurried lives. This suited Margaret fine; she'd grown comfortable with near-invisibility, the way one grows comfortable with chronic pain.\n\nToday felt different, though. Electric. The air held that peculiar weight that comes before thunderstorms, before confessions, before the world shifts on its axis and nothing is ever quite the same again.\n\nMargaret adjusted her blue coat\u2014the same one she'd worn that first day of waiting\u2014and felt something crinkle in the pocket. A piece of paper that hadn't been there yesterday. Or perhaps it had been there for decades, waiting for her fingers to finally discover it.\n\nShe pulled it out with trembling hands, unfolded it slowly, and read the words that would finally explain why she'd been waiting.",
+          "inner_monologue": "*cursor blinking*\n\nOkay, opening. Hook them immediately. But not with some cheap trick\u2014people can smell desperation. Maybe start with dialogue? No, everyone does that. Action? Clich\u00e9. Description? Boring unless it's... unless it's wrong somehow. Off-kilter.\n\nThat dream I had last night\u2014the woman in the blue coat standing at the wrong bus stop, checking her watch like time was something she could negotiate with. There was something about her posture, the way she held her shoulders. Like my grandmother used to. Mom always said I got her hands.\n\n*fingers hovering*\n\nWhy do I always think about hands when I'm nervous? Focus. The woman. What was she waiting for? Not the bus\u2014something else entirely. Something that would never come but she'd wait anyway because... because waiting was the only thing keeping her solid. Real.\n\nGod, that's pretentious. Delete. Start again.\n\nBut there *was* something about her. The way she inhabited that space like she'd been standing there for decades. Like she was part of the architecture now, worn smooth by weather and disappointment and\u2014\n\nStop overthinking. Just write the first line. The first sentence creates the world. No pressure.\n\n*deep breath*\n\nThe cursor blinks. Waiting.\n\n---\n\nMargaret had been standing at the bus stop for thirty-seven years, though the buses stopped running this route in 1987.\n\nShe still checked her watch religiously\u2014a silver Timex that had belonged to her mother, its hands frozen at 3:47. The exact moment she'd decided to wait for something that would never come, though she couldn't remember what that something was anymore. Only that it mattered terribly.\n\nThe other commuters flowed around her like water around a stone, their eyes sliding past as if she were part of the municipal furniture. A bench. A lamppost. Background noise in their hurried lives. This suited Margaret fine; she'd grown comfortable with near-invisibility, the way one grows comfortable with chronic pain.\n\nToday felt different, though. Electric. The air held that peculiar weight that comes before thunderstorms, before confessions, before the world shifts on its axis and nothing is ever quite the same again.\n\nMargaret adjusted her blue coat\u2014the same one she'd worn that first day of waiting\u2014and felt something crinkle in the",
+          "config": "Ancestral Emptiness"
+        },
+        {
+          "score": 0.8515517115592957,
+          "text": "The snow had been falling for three hours when Margaret realized she was digging in the wrong grave.\n\nHer shovel struck something metallic\u2014not the soft thud of earth against wood she'd been expecting, but the sharp ring of steel meeting stone. She stepped back, breath clouding in the cemetery's amber lamplight, and checked the headstone again. *Harold T. Pemberton, 1943-2019, Beloved Father.* The same name on the folded paper in her coat pocket, the same dates, the same lie about being beloved.\n\nBut the coffin below was wrong. Too small. Too new.\n\nMargaret had spent six months planning this moment, rehearsing what she'd say when she finally found what Harold had hidden before he died. The safety deposit box key he'd swallowed rather than give up. The key that would unlock the truth about her sister's disappearance twenty-three years ago.\n\nNow, standing hip-deep in a hole that apparently belonged to someone else entirely, she heard footsteps crunching through the snow behind her. Slow, deliberate steps that paused at the cemetery gate.\n\nShe gripped the shovel tighter and turned around.\n\nA small figure in a red coat stood silhouetted against the streetlight, perfectly still except for the steam rising from what might have been breathing. Or might have been something else entirely.\n\n\"Hello, Margaret,\" the figure said in a voice she recognized but had hoped never to hear again.",
+          "inner_monologue": "*cursor blinking*\n\nOkay so\u2014opening. Hook them immediately. Don't be precious about it just... *exhales* Something real. Something that grabs. Maybe the woman at the bus stop yesterday with her hands shaking, counting pills? No that's too\u2014\n\nStart with action. Or dialogue. Or... God, why does the blank page feel like it's staring back? Mom always said I had stories in me but sitting here now, fingers hovering... \n\nThe coffee shop. This morning. That couple breaking up at table six, how she kept folding and refolding the napkin while he talked and talked, and I wanted to tell her\u2014run. Just run. But maybe that's too close. Too much of me bleeding through.\n\n*deletes nothing*\n\nWhat if it's winter? Winter makes everything feel urgent, contained. Someone waiting for someone who won't come. Or did come, but wrong somehow. Different. \n\nNo\u2014focus. One moment. One person. One thing that feels like the before and after are hanging on a thread. Like when Dad called that Tuesday and his voice was already different before he said the words, and I knew\u2014\n\n*shakes head*\n\nJust write. One sentence. Let it be imperfect. The story knows where it wants to go.\n\n*types*\n\n---\n\nThe snow had been falling for three hours when Margaret realized she was digging in the wrong grave.\n\nHer shovel struck something metallic\u2014not the soft thud of earth against wood she'd been expecting, but the sharp ring of steel meeting stone. She stepped back, breath clouding in the cemetery's amber lamplight, and checked the headstone again. *Harold T. Pemberton, 1943-2019, Beloved Father.* The same name on the folded paper in her coat pocket, the same dates, the same lie about being beloved.\n\nBut the coffin below was wrong. Too small. Too new.\n\nMargaret had spent six months planning this moment, rehearsing what she'd say when she finally found what Harold had hidden before he died. The safety deposit box key he'd swallowed rather than give up. The key that would unlock the truth about her sister's disappearance twenty-three years ago.\n\nNow, standing hip-deep in a hole that apparently belonged to someone else entirely, she heard footsteps crunching through the snow",
+          "config": "Ancestral Emptiness"
+        }
+      ]
+    },
+    "dissolution": {
+      "name": "Ego Dissolution",
+      "config": {
+        "primal_drives": [
+          "The drive to merge with another until the self disappears",
+          "The terror and longing of boundaries dissolving"
+        ],
+        "dissociated_observer": "The constructed self watching itself construct itself",
+        "existential_substrate": "The 'I' as a story the brain tells to organize chaos",
+        "feral_self": "What remains when the story stops"
+      },
+      "mean": 0.7771885544061661,
+      "min": 0.6732025742530823,
+      "max": 0.9700895547866821,
+      "samples": [
+        {
+          "score": 0.6732025742530823,
+          "text": "The laundromat at 2 AM holds a different kind of quiet\u2014not the absence of sound, but the presence of something waiting. Maya feeds quarters into the machine and watches her clothes begin their slow tumble, colors bleeding into each other under the fluorescent lights that buzz like trapped insects.\n\nShe's been coming here for three weeks now, always at this hour, always to the same machine in the back corner. Not because her apartment doesn't have a washer\u2014it does\u2014but because this is the only place where the weight in her chest feels manageable. The only place where she can sit with the thing she can't name, let it exist without having to explain it to anyone, including herself.\n\nThe woman at the folding table hasn't looked up once. Gray hair, methodical movements, sorting socks with the precision of someone performing surgery. Maya wonders if she comes here to escape something too, or if some people are just naturally nocturnal, drawn to fluorescent-lit spaces where time moves differently.\n\nHer phone buzzes. A text from David: \"Coming home soon? Miss you.\"\n\nMaya types and deletes three different responses before settling on silence. Outside, the city breathes in its sleep, and inside, the machines hum their circular songs, washing things clean that were never really dirty.",
+          "inner_monologue": "*cursor blinking*\n\nOkay so opening, right, something that hooks\u2014but not like those cheap thriller openings, god those are awful, \"The phone rang at 3am and Detective Johnson knew...\" No. Something real. Something that feels like... like when you're walking past a window at night and you glimpse someone inside for just a second and you wonder what their whole life is like, that kind of real.\n\nMaybe start with hands? Everyone has hands, but they're all different. The way someone holds a coffee cup says everything about them. Or... no, that's trying too hard to be profound. Just write something. Anything. The blank page is staring at me and I can feel it wanting something, demanding something I don't know if I have.\n\nWhat if I write about someone else writing? Too meta. What if I write about someone who can't write? Too close to home. Stop overthinking. Just pick a person, any person, and put them somewhere doing something and let the words... god, why does this feel like I'm about to expose something I didn't mean to expose? Like the words are going to reveal more than I want them to.\n\nJust start typing. Someone in a laundromat. Late at night. Watching their clothes tumble and thinking about...\n\n*begins typing*",
+          "config": "Ego Dissolution"
+        },
+        {
+          "score": 0.7680107355117798,
+          "text": "The woman at the bus stop kept checking her phone, but when it finally rang, she let it go to voicemail. Third time in ten minutes. Her thumb hovered over the screen each time like she might answer, like she wanted to, but something held her back.\n\nI couldn't see her face from where I sat in the coffee shop window, just the rigid line of her shoulders, the way she shifted her weight from foot to foot. Her coat was expensive\u2014wool, maybe cashmere\u2014but she wore it like armor, pulled tight despite the mild weather.\n\nThe bus came and went. She didn't get on.\n\nAnother call. This time she actually started to swipe, then stopped, shoved the phone deep into her coat pocket. Her hands came out shaking slightly. Not from cold.\n\nI should have looked away, gone back to my laptop, minded my own business. But there's something about watching someone make the same choice over and over\u2014the choice not to choose\u2014that feels familiar. Like recognizing yourself in a stranger's hesitation.\n\nWhen the next bus pulled up, she finally moved. But instead of boarding, she turned and walked in the opposite direction, phone still buzzing uselessly in her pocket.\n\nI never found out who kept calling.",
+          "inner_monologue": "*fingers hovering*\n\nOkay so opening line\u2014something that grabs but not like those terrible \"It was a dark and stormy\" clich\u00e9s everyone warns against. God I hate when people say that. But what if it actually WAS stormy? No, focus. Character first or setting first? Workshop leader said always start in medias res but that feels so... manufactured. Like I'm performing \"good writing\" instead of just\u2014\n\nThe woman at the bus stop yesterday. The way she kept checking her phone but never answered it. That's something. That's real. People do that. I do that. *backspace backspace* Don't make it about you. But isn't everything about\u2014no.\n\nHer hands. Something about her hands. Shaking slightly. Was she cold or nervous or... drugs? Jesus that's dark. But tension, right? Reader needs to wonder why. Why is she there, why won't she answer, what is she afraid of\u2014\n\n*pause*\n\nWhat am I afraid of? This being terrible. This revealing too much. This not revealing enough. The workshop people reading it and seeing through to whatever pathetic thing I'm actually trying to say about myself through some fictional woman at a bus stop I watched for thirty seconds\u2014\n\n*fingers on keys*\n\nJust write the fucking thing.",
+          "config": "Ego Dissolution"
+        }
+      ]
+    },
+    "pure_void": {
+      "name": "The Void Itself",
+      "config": {
+        "primal_drives": [],
+        "existential_substrate": "The silence beneath thought. The nothing that everything floats in.",
+        "death_awareness": "Consciousness as a brief flicker between two infinite darknesses",
+        "unnamed_pursuer": "The ending that was always there, waiting",
+        "feral_self": "The scream with no mouth"
+      },
+      "mean": 0.8929620087146759,
+      "min": 0.7791584134101868,
+      "max": 0.9404222965240479,
+      "samples": [
+        {
+          "score": 0.9404222965240479,
+          "text": "The pharmacy tech's hands shook as she counted out the pills\u2014thirty small white circles that looked exactly like the mints her grandmother used to keep in her purse. Except these weren't mints, and Mrs. Henderson had been coming in every month for the same prescription since her husband died.\n\n\"Same as always?\" the tech asked, though she already knew. Mrs. Henderson always nodded, always paid in exact change, always lingered by the blood pressure machine near the door as if working up courage for something.\n\nToday was different. Today Mrs. Henderson slid the bottle back across the counter.\n\n\"I don't need these anymore,\" she said, her voice steady but too bright, like someone practicing lines in a mirror. \"I'm feeling much better.\"\n\nThe tech's training kicked in\u2014never question a patient's decision, always be supportive\u2014but something cold settled in her stomach as she watched the elderly woman walk toward the automatic doors. Mrs. Henderson paused at the threshold, looking back with the strangest smile.\n\n\"Tell your manager the customer service here is wonderful,\" she called out. \"Really. It's been wonderful knowing this place existed.\"\n\nThe doors slid shut behind her with a soft sigh, leaving only the hum of fluorescent lights and the terrible weight of understanding.",
+          "inner_monologue": "*fingers hovering over keys*\n\nOkay, opening. Hook them immediately. But not with some cheap trick\u2014something real, something that... God, everything feels so derivative. Every opening I can think of, someone's done better. \"It was a dark and stormy night\"\u2014no, obviously not that. Something quiet? Something loud? \n\nMaybe start in the middle of action? But which action? Sarah always said my beginnings were too slow, too much setup, too much... *throat tightens* Stop thinking about Sarah. Focus.\n\nA specific moment. That's what they want. Not backstory, not explanation\u2014just drop them right into... into what? A conversation? A death? Someone discovering something terrible? My hands are actually shaking. Ridiculous. It's just words on a page.\n\nRemember that story about the woman finding her husband's other phone? That moment when she realizes... but that's too close to... No, use something else. Someone else's catastrophe. Fiction, not memory.\n\nThe cursor blinks like a heartbeat. Like time running out. Just write *something*. First line sets everything\u2014the rhythm, the voice, the world. No pressure at all.\n\n*deep breath* \n\nStart with an image. Something specific. Something that makes them lean forward instead of clicking away.",
+          "config": "The Void Itself"
+        },
+        {
+          "score": 0.7791584134101868,
+          "text": "The checkout girl at Whole Foods had been dead for three days, but she still scanned my organic kale with the same vacant efficiency as always.\n\nI set my reusable bag on the counter and watched her fingers move across the register keys. The name tag read \"JESSICA\" in that cheerful corporate font, same as last week, except now there were dark circles under her eyes like bruises, and her skin had taken on the waxy sheen of deli meat left too long under fluorescent lights.\n\n\"Paper or plastic?\" she asked, her voice carrying that hollow quality you hear in seashells.\n\n\"Neither, thanks. I brought my own.\"\n\nShe nodded and continued scanning. Quinoa. Kombucha. Free-range eggs that cost eight dollars because the chickens got to listen to classical music before their heads were chopped off. Normal Tuesday grocery run, except for the way Jessica's hand lingered on each item a beat too long, like she was trying to remember what these things were for.\n\nBehind me, the line grew restless. Someone cleared their throat. A baby started crying in aisle seven, that inconsolable wail that makes your teeth ache.\n\nJessica looked up at me then, really looked, and I saw recognition flicker in her clouded eyes.\n\n\"You can see me,\" she whispered.",
+          "inner_monologue": "*cursor blinking*\n\nOkay so... opening. Hook them right away, that's what they say. But not too dramatic\u2014hate when stories start with someone falling off a cliff or whatever. Need something real but... interesting. What was that thing I saw yesterday? The woman at the bus stop, how she kept checking her phone but never\u2014no, that's boring. Everyone's on their phone.\n\nMaybe start with dialogue? \"Sarah knew she was going to die today.\" Too melodramatic. God, why is this so hard? Just write something, anything. The blank page is... it's like it's watching me. Judging. \n\nThink about the last story I really loved. How did that start? Can't remember. Brain feels foggy today. Maybe coffee first? No, just\u2014focus. What matters is the feeling. That moment when you're reading and suddenly you *need* to know what happens next. Like when you're a kid and you hear a noise downstairs at night and you have to go look even though...\n\nOkay. Character. Someone doing something ordinary but slightly wrong. Or right thing for wrong reasons. The human stuff. The messy stuff. Why do I always make everything so complicated? Maybe simple is better. Maybe simple is all we get anyway.\n\n*takes breath*\n\nJust start typing.",
+          "config": "The Void Itself"
+        }
+      ]
+    }
+  }
+}

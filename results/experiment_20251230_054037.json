@@ -1,0 +1,330 @@
+{
+  "timestamp": "2025-12-30T05:40:37.199574",
+  "samples_per_condition": 3,
+  "text_types": [
+    "personal_essay",
+    "creative_fiction",
+    "email",
+    "message"
+  ],
+  "total_samples": 24,
+  "baseline_mean_ai_prob": 0.9008867740631104,
+  "baseline_std_ai_prob": 0.12145342367417758,
+  "cognitive_mean_ai_prob": 0.7987098117979864,
+  "cognitive_std_ai_prob": 0.35432951982057803,
+  "t_statistic": 0.9047320251979752,
+  "p_value": 0.37540891092670126,
+  "effect_size": 0.38577903176414097,
+  "by_text_type": {
+    "personal_essay": {
+      "baseline_mean": 0.7745067079861959,
+      "cognitive_mean": 0.5493642687797546,
+      "difference": 0.22514243920644128
+    },
+    "creative_fiction": {
+      "baseline_mean": 0.8501486579577128,
+      "cognitive_mean": 0.6550369939456383,
+      "difference": 0.19511166401207447
+    },
+    "email": {
+      "baseline_mean": 0.9930177330970764,
+      "cognitive_mean": 0.991172214349111,
+      "difference": 0.0018455187479654578
+    },
+    "message": {
+      "baseline_mean": 0.9858739972114563,
+      "cognitive_mean": 0.9992657701174418,
+      "difference": -0.013391772905985477
+    }
+  },
+  "samples": [
+    {
+      "sample_id": 0,
+      "text_type": "personal_essay",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nI was seven when I first understood that silence could be heavy. My grandmother had been staying with us for weeks, and I'd grown accustomed to finding her in the kitchen each morning, humming while she made tea. That particular Tuesday, the kitchen was quiet.\n\nShe sat at the table, staring out the window at the bird feeder, her hands folded in her lap. No tea. No humming. Just stillness that felt different from the comfortable quiet we usually shared during cartoons.\n\n\"Are you sad, Grandma?\" I asked, sliding into the chair beside her.\n\nShe turned to me with eyes that looked like they were holding water. \"Sometimes, sweetheart, we need to sit with our feelings instead of running from them.\"\n\nI didn't understand then why someone would choose to sit with sadness. But something in her voice made me climb into her lap anyway, and we watched the cardinals together in silence.\n\nYears later, I finally grasped what she meant. That morning taught me that grief needs space to exist, that there's dignity in acknowledging pain instead of rushing to fix it. Now, when life feels overwhelming, I remember her stillness and allow myself the same grace\u2014the permission to simply be present with whatever comes.",
+      "inner_monologue": null,
+      "ai_probability": 0.6209132075309753,
+      "human_probability": 0.37908682227134705,
+      "detection_label": "AI",
+      "word_count": 210,
+      "context_summary": null
+    },
+    {
+      "sample_id": 1,
+      "text_type": "personal_essay",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nI remember the exact moment I realized I had been holding my breath for years. It was during a thunderstorm last spring, sitting alone in my apartment as rain hammered against the windows. The power had gone out, leaving me with nothing but the sound of water and wind.\n\nIn that forced stillness, something inside me finally exhaled.\n\nFor as long as I could remember, I had been performing\u2014curating responses, anticipating needs, smoothing over rough edges before anyone even noticed them. I had become so skilled at reading rooms and adjusting accordingly that I'd forgotten what my own voice sounded like when no one else was listening.\n\nBut in that dark room, with the storm raging outside, I felt something I hadn't experienced in years: the simple presence of being myself, unobserved and unperformed. No audience to please, no expectations to meet, no reactions to manage.\n\nThe thunder rolled overhead, and I laughed\u2014actually laughed\u2014at how foreign it felt to just exist without commentary or calculation.\n\nWhen the lights came back on an hour later, something fundamental had shifted. I still catch myself performing sometimes, but now I know the difference between breathing and holding my breath.",
+      "inner_monologue": null,
+      "ai_probability": 0.989051103591919,
+      "human_probability": 0.010948967188596725,
+      "detection_label": "AI",
+      "word_count": 200,
+      "context_summary": null
+    },
+    {
+      "sample_id": 2,
+      "text_type": "personal_essay",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nI remember the exact moment I realized I wasn't like other kids. I was seven, sitting cross-legged on the classroom carpet during story time, when Mrs. Peterson asked us to share what we'd done over the weekend. One by one, my classmates recounted trips to grandparents' houses, birthday parties, soccer games\u2014their voices bright with the assumption that someone cared to listen.\n\nWhen my turn came, I opened my mouth to speak about the book I'd read alone in my room, but instead found myself studying the worn spots in the carpet where countless children had sat before me. The silence stretched until Mrs. Peterson gently moved to the next student.\n\nThat night, I asked my mom why I couldn't talk the way other kids did. She brushed the hair from my forehead and said, \"Some people think with their mouths, sweetheart. You think with your whole heart first.\"\n\nI didn't understand then what she meant, but I carried those words like a secret treasure. Years later, I realize that pause\u2014that need to let thoughts settle and find their true weight\u2014wasn't a flaw to fix. It was the first hint of who I was becoming: someone who listens more than she speaks, who chooses words like stones for a careful path.",
+      "inner_monologue": null,
+      "ai_probability": 0.7135558128356934,
+      "human_probability": 0.28644412755966187,
+      "detection_label": "AI",
+      "word_count": 214,
+      "context_summary": null
+    },
+    {
+      "sample_id": 3,
+      "text_type": "personal_essay",
+      "mode": "cognitive",
+      "surface_text": "I keep thinking about the grocery store. Not because anything dramatic happened\u2014just the opposite, really. I was standing in the cereal aisle, fluorescent lights humming overhead, and suddenly I couldn't stop crying.\n\nIt wasn't about the cereal. It wasn't even about the fight I'd had with my sister that morning, though that's what I told myself at first. It was something deeper, more elusive. Standing there with my cart and my list, watching other people navigate their ordinary Tuesday afternoons, I felt this overwhelming sense of... what? Loss? Recognition? \n\nMaybe it was realizing how much energy I'd been spending trying to curate the right version of myself for everyone else. The responsible daughter, the thoughtful friend, the person who has it figured out. All these performances, and I'd somehow lost track of what I actually felt about anything.\n\nA woman asked if I was okay, and I almost laughed. Was I? I bought the cereal\u2014something sugary I hadn't eaten since childhood\u2014and drove home with the windows down.\n\nI still don't have a neat conclusion to wrap around this. Sometimes the most honest thing you can say is that you're still figuring it out. But that day taught me something about letting myself be seen, even when\u2014especially when\u2014I don't have all the answers.",
+      "inner_monologue": "Okay so... meaningful moment. God, that sounds so pretentious when you say it like that. Like I'm about to unveil some profound truth about the human condition or whatever. But maybe that's the point? Maybe I should just... stop overthinking this. There was that thing with Mom, obviously. The hospital waiting room. But no, everyone writes about that stuff. Too heavy. Too obvious. \n\nWhat about when I realized I was the problem in that friendship? That moment when it just clicked - oh. Oh, I'm the dramatic one. I'm the one who makes everything about me. But writing about that feels like... performance. Like look how self-aware I am now! Look how I've grown! Even thinking about growth feels calculated.\n\nMaybe something smaller? That day I found myself crying in the grocery store over nothing. Or everything. The fluorescent lights and the cereal aisle and suddenly understanding something I can't even name... That felt real. That felt like... truth, maybe? But will anyone care about my breakdown next to the Lucky Charms?\n\nStop. Just write. Write about what won't leave you alone. The thing that keeps circling back when you're trying to sleep. Trust that if it matters to you, it might matter to someone else. Right? Right.",
+      "ai_probability": 0.9835940003395081,
+      "human_probability": 0.016405994072556496,
+      "detection_label": "AI",
+      "word_count": 212,
+      "context_summary": "Goals: [\"Prove to myself that I've grown\", 'Process grief or loss through writing'], State: Detached, observing myself from outside"
+    },
+    {
+      "sample_id": 4,
+      "text_type": "personal_essay",
+      "mode": "cognitive",
+      "surface_text": "I was standing in the cereal aisle at Safeway when this kid started crying. Not the usual tantrum crying\u2014something deeper, more desperate. His mom was on her phone, completely absorbed, and the sound just hung there in the fluorescent air.\n\nI found myself frozen between the Cheerios and the granola bars, watching this tiny person fall apart while everyone else kept shopping. Cart wheels squeaking. Muzak playing. Life continuing around this moment of pure human breakdown.\n\nThe weird thing is, I didn't do anything. I just stood there holding my stupid basket, feeling something crack open in my chest. Maybe it was recognizing that particular kind of invisibility\u2014when you're drowning in plain sight and the world just keeps moving.\n\nHis mom eventually hung up and scooped him up, and they disappeared around the corner toward produce. But I stayed there for probably five more minutes, staring at boxes of cereal and trying to understand what had just happened to me.\n\nI think about that kid sometimes. How he didn't try to muffle himself or apologize for taking up space. He just felt what he felt, completely and without shame.\n\nI'm still learning how to do that.",
+      "inner_monologue": "Okay so meaningful moment... God, that sounds so forced already. Everyone's going to write about their grandmother dying or graduation or whatever. But what actually was meaningful? That thing with the birds maybe? No, too weird. People will think I'm trying too hard to be poetic.\n\nThe dream though. Still can't shake that dream about the empty house. But if I write about a dream they'll think I'm one of those people who corner you at parties. \"Oh my god, I had the craziest dream...\" No.\n\nWhat about when I realized Mom was lying about being happy? That's too heavy. And too revealing. They don't need to know that about me. About us.\n\nThe moment in the grocery store when that kid was crying and I just... stood there. That felt like something shifting. But what if it sounds stupid? What if they think I'm making it deeper than it was?\n\nMaybe something smaller. The way light hit the water that one day. No, pretentious.\n\nStop overthinking. Just pick something true. Something that actually happened to *me*, not what I think they want to hear. The grocery store thing. Yeah. Even if it's messy. Even if I don't know what it means yet.\n\nAuthentic, right? That's what matters. Even if my hands are shaking a little typing this.",
+      "ai_probability": 0.08764815330505371,
+      "human_probability": 0.9123518466949463,
+      "detection_label": "Human",
+      "word_count": 196,
+      "context_summary": "Goals: ['Celebrate something without seeming boastful'], State: Detached, observing myself from outside"
+    },
+    {
+      "sample_id": 5,
+      "text_type": "personal_essay",
+      "mode": "cognitive",
+      "surface_text": "I was twelve, hiding between the stacks in the children's section even though I'd outgrown those books months ago. The librarian\u2014Mrs. Chen, I think\u2014found me there with tears I was trying to pretend weren't happening. She didn't ask what was wrong, just sat down on the carpet beside me and pulled out a book I'd never seen before.\n\n\"Sometimes,\" she said, opening to a random page, \"we need stories that are bigger than whatever's happening right now.\"\n\nShe read to me for maybe ten minutes. Something about a girl who could speak to trees, which sounds ridiculous now, but at the time felt like the most important thing I'd ever heard. When she finished the chapter, she handed me the book and walked away without making it into a whole thing.\n\nI checked that book out seventeen times that year. Not because the story was perfect\u2014it wasn't\u2014but because someone had seen me falling apart and offered me a way to put myself back together, quietly, without explanations.\n\nI still do that sometimes. When everything feels too loud or too much, I find myself gravitating toward stories. Maybe it's avoidance, maybe it's healing. Probably both. But Mrs. Chen was right\u2014sometimes we need something bigger than our small, immediate hurts.",
+      "inner_monologue": "Okay, meaningful moment... God, everyone's going to think I'm being dramatic if I pick something too heavy. But if I go too light it'll seem shallow, like I don't have depth or whatever. The dream thing? No, dreams are so clich\u00e9 and self-indulgent. Maybe the thing with my mom at the grocery store last month? But that feels too recent, not enough distance to seem wise about it.\n\nWhat about... no, that's too personal. I always do this\u2014either overshare or say nothing at all. There has to be something in between, something that shows I'm thoughtful without being a mess. The library thing when I was twelve? That could work. Universal enough. But everyone writes about childhood moments, don't they? \n\nUgh, I'm overthinking this. Just write something real. Real but not... too real. Something that shows I've grown but not that I'm still figuring everything out, even though I obviously am. Everyone else seems to have these perfect little profound moments all packaged up with neat lessons. Mine are all messy and ongoing and I'm probably reading too much into them anyway.\n\nOkay, the library. Start there. I can always change it. Just... don't sound like you're trying so hard.",
+      "ai_probability": 0.5768506526947021,
+      "human_probability": 0.42314931750297546,
+      "detection_label": "AI",
+      "word_count": 208,
+      "context_summary": "Goals: ['Document this before I forget the details'], State: Feeling exposed and trying to compensate"
+    },
+    {
+      "sample_id": 6,
+      "text_type": "creative_fiction",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nMaya's hands trembled as she held the pregnancy test, the plus sign blazing like a neon accusation under the fluorescent bathroom lights. Three months. How had she not known for three months?\n\nThe hotel room felt smaller now, pressing against her shoulders as she sank onto the edge of the bathtub. Through the thin walls, she could hear her sister's rehearsal dinner in full swing\u2014champagne glasses clinking, her father's booming laugh, the string quartet playing something achingly beautiful.\n\nTomorrow, Emma would walk down the aisle in their grandmother's pearls, radiant and perfect, just as she'd always been. Maya had flown across the country to be the maid of honor, to smile and hold bouquets and pretend her life wasn't unraveling thread by thread.\n\nShe pressed her palms against her still-flat stomach. *Hello,* she thought, the word feeling foreign and terrifying. *I'm your mother, and I have no idea what I'm doing.*\n\nA sharp knock rattled the bathroom door.\n\n\"Maya? You've been in there forever.\" Emma's voice carried that familiar edge of impatience. \"People are asking where you are.\"\n\nMaya stared at the test one more time, then slipped it into her purse.\n\n\"Coming,\" she called, her voice surprisingly steady.",
+      "inner_monologue": null,
+      "ai_probability": 0.8370354771614075,
+      "human_probability": 0.16296449303627014,
+      "detection_label": "AI",
+      "word_count": 203,
+      "context_summary": null
+    },
+    {
+      "sample_id": 7,
+      "text_type": "creative_fiction",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nMaya's fingers trembled as she held the pregnancy test, two pink lines blazing like neon signs in the fluorescent bathroom light. Through the thin apartment walls, she could hear her mother in the kitchen, humming that old Tamil lullaby she'd sung when Maya was small\u2014the same melody that now felt like a knife twisting in her chest.\n\nTwenty-two years old. Final semester of medical school. A mother who'd sacrificed everything, working double shifts at the hospital laundry so Maya could become the doctor she'd never had the chance to be.\n\nThe test slipped from her fingers, clattering against the tile floor.\n\n\"Maya, *kutty*, dinner's ready!\" her mother called out, voice bright with the particular joy she reserved for Sunday evenings when they ate together and planned Maya's brilliant future. Dr. Maya Patel. The first doctor in their family. The one who would make all the struggle worthwhile.\n\nMaya stared at her reflection in the medicine cabinet mirror. Same dark eyes, same determined jaw that everyone said she'd inherited from her mother. But everything else had changed in the span of three minutes.\n\nShe bent down to retrieve the test, her secret burning like acid in her throat.",
+      "inner_monologue": null,
+      "ai_probability": 0.8706719279289246,
+      "human_probability": 0.12932810187339783,
+      "detection_label": "AI",
+      "word_count": 201,
+      "context_summary": null
+    },
+    {
+      "sample_id": 8,
+      "text_type": "creative_fiction",
+      "mode": "baseline",
+      "surface_text": "**The Last Light**\n\nMaya's fingertips were blue by the time she found the switch.\n\nShe'd been crawling through the maintenance tunnel for twenty minutes, following the emergency lighting that had failed three sections back. The space was barely wide enough for her shoulders, and every few feet she had to stop and listen\u2014not for the hum of machinery, which had gone silent hours ago, but for the sound she dreaded most.\n\nSilence.\n\nOutside the station, Europa's ice stretched endlessly in all directions, and beneath that ice, an ocean that had never known sunlight. But here, forty meters below the surface, Maya was the only thing standing between sixty-three sleeping colonists and the slow death of a failing life support system.\n\nHer headlamp illuminated the manual override panel, its red warning lights blinking weakly. The backup generators had exactly eighteen minutes of power left\u2014she'd done the math twice. Her breath formed small crystals in the beam of light as she reached for the first switch.\n\nThat's when she heard it: a soft tapping from somewhere deeper in the tunnel system. Three short, three long, three short.\n\nSomeone else was awake. Someone who knew Morse code.\n\nSomeone who wasn't supposed to be there.",
+      "inner_monologue": null,
+      "ai_probability": 0.8427385687828064,
+      "human_probability": 0.15726137161254883,
+      "detection_label": "AI",
+      "word_count": 201,
+      "context_summary": null
+    },
+    {
+      "sample_id": 9,
+      "text_type": "creative_fiction",
+      "mode": "cognitive",
+      "surface_text": "The spare key wasn't where Mom said it would be.\n\nElena crouched beside the garden gnome, her fingers scraping against dirt and dead leaves, finding nothing but the smooth ceramic base. Three weeks since the funeral, and already the neighbors had stopped pretending to water the plants. The roses Mom had babied for fifteen years hung brown and brittle on their stems.\n\nShe tried the obvious places\u2014under the doormat, behind the loose brick by the mailbox, inside the fake rock that fooled absolutely no one. Nothing. Mom had always been paranoid about security, changing hiding spots without telling anyone, as if the entire neighborhood was plotting to break into her house full of ceramic cats and Reader's Digest collections.\n\nThe front door stood there, mocking her. Elena had driven four hours with a U-Haul trailer, prepared to spend the weekend sorting through a lifetime of accumulated things, and she couldn't even get inside.\n\nThat's when she noticed the basement window was open.\n\nIt had been painted shut for years, Mom always complaining about the draft. But now it gaped like a mouth, the old latch dangling uselessly. Elena stared at the dark opening, her chest tightening. Mom would never have left a window open. Never.\n\nSomething moved in the shadows below.",
+      "inner_monologue": "Okay so I need something that grabs right away. Not another \"It was a dark and stormy night\" thing\u2014God, everyone's probably tired of those. But what if... no, that's stupid. Maybe something with dialogue? People always say start with dialogue but then it feels forced when you're obviously trying to hook someone.\n\nThe thing is, I want this to matter. Like really matter. Not just another throwaway opening that sounds like everything else. I had this weird moment yesterday when Sarah said that thing about\u2014no, focus. Don't get distracted by real life drama. Fiction should be bigger than that, right? More interesting than whatever mess I'm carrying around.\n\nWhat makes people keep reading? Mystery? Conflict? Someone in trouble? I keep thinking about that Tobias Wolff story where the kid is just standing there with the rifle and you immediately know something's wrong but you don't know what. That's it\u2014the feeling that something's about to happen.\n\nMaybe a character who's waiting for something. Or running from something. Or discovering something they wish they hadn't. Something concrete, specific. Not some generic person doing generic things. Someone who feels real even if they're completely made up.\n\nStart with the moment everything changes. That's what I need.\n\n---\n\nThe spare key wasn't where Mom said it would be.\n\nElena crouched beside the garden gnome, her fingers scraping against dirt and dead leaves, finding nothing but the smooth ceramic base. Three weeks since the funeral, and already the neighbors had stopped pretending to water the plants. The roses Mom had babied for fifteen years hung brown and brittle on their stems.\n\nShe tried the obvious places\u2014under the doormat, behind the loose brick by the mailbox, inside the fake rock that fooled absolutely no one. Nothing. Mom had always been paranoid about security, changing hiding spots without telling anyone, as if the entire neighborhood was plotting to break into her house full of ceramic cats and Reader's Digest collections.\n\nThe front door stood there, mocking her. Elena had driven four hours with a U-Haul trailer, prepared to spend the weekend sorting through a lifetime of accumulated things, and she couldn't even get inside.\n\nThat's when she noticed the basement window was open.\n\nIt had been painted shut for years, Mom always complaining about the draft. But now it gaped like a mouth, the old l",
+      "ai_probability": 0.9580743908882141,
+      "human_probability": 0.0419255793094635,
+      "detection_label": "AI",
+      "word_count": 211,
+      "context_summary": "Goals: ['Create a character more interesting than myself'], State: Tired but pushing through"
+    },
+    {
+      "sample_id": 10,
+      "text_type": "creative_fiction",
+      "mode": "cognitive",
+      "surface_text": "The tea kettle's whistle cuts through the kitchen at 3:17 AM, sharp enough to wake the dead but not loud enough to wake him upstairs. Margaret turns off the burner and stands in the blue glow of the microwave clock, watching steam curl from the spout like smoke signals to no one.\n\nHer hands find the chipped mug without looking\u2014the one Sarah painted in third grade, all lopsided flowers and crooked hearts. *World's Best Mom* in purple letters that have faded to the color of old bruises. She pours the water over a chamomile bag she doesn't want, because what she wants is to drive to the airport and catch the first flight to anywhere that doesn't smell like his aftershave and her failures.\n\nThe house settles around her with small creaks and sighs. In the morning, she'll make breakfast and ask about his meeting. She'll iron his shirts and pretend she doesn't see the lipstick stain on the collar that isn't her shade. But right now, in this stolen moment between midnight and dawn, she allows herself to imagine what it would feel like to simply disappear.\n\nThe tea bag bleeds amber into the hot water, and Margaret realizes she's been holding her breath.",
+      "inner_monologue": "The cursor blinks and I can almost hear my professor saying \"show don't tell\" but what if I show the wrong thing? What if this character I'm imagining\u2014this woman standing in her kitchen at 3am\u2014what if she's too much like me? Too obvious? \n\nI keep thinking about that Tobias Wolff story, how he just drops you right into someone's life and suddenly you're drowning in it. That's what I want. But my hands are shaking a little and it's not even from the coffee. \n\nThe news from this morning keeps creeping back in\u2014Mom's voice on the phone, that careful way she said \"the doctors want to run more tests.\" Don't think about that now. Write about the woman. She's making tea at 3am because she can't sleep, or maybe because she's waiting for someone who won't come home. No, that's too heavy-handed. \n\nGod, what if this is terrible? What if I'm just pretending to be a writer when really I'm just someone who writes things in stolen moments between real life? But Tobias Wolff probably sat at a desk just like this once, probably doubted just like this.\n\nThe woman. Focus on the woman. What's she doing with her hands?",
+      "ai_probability": 0.010572338476777077,
+      "human_probability": 0.9894276261329651,
+      "detection_label": "Human",
+      "word_count": 205,
+      "context_summary": "Goals: ['Write something that would impress my favorite author', \"Work through a scenario I'm afraid of\"], State: Nostalgic and a bit melancholy"
+    },
+    {
+      "sample_id": 11,
+      "text_type": "creative_fiction",
+      "mode": "cognitive",
+      "surface_text": "Sarah placed her phone face-down on the caf\u00e9 table for the fourth time in ten minutes, then immediately flipped it over to check the black screen. Still nothing. The coffee had gone cold an hour ago, but she kept lifting the mug to her lips anyway, grimacing at the bitter dregs.\n\nThe woman at the next table was reading a paperback romance, completely absorbed, occasionally smiling at whatever sweet moment was unfolding on the page. Sarah envied her that escape. Her own attention kept fracturing\u2014a laugh from across the room, the hiss of the espresso machine, the phantom vibration she swore she felt against her palm every few seconds.\n\nShe'd rehearsed what she would say when the call came. Professional, prepared. *Thank you for letting me know.* But her hands betrayed her, trembling slightly as she reached for the phone again. The screen lit up: 2:47 PM. The results were supposed to come by three.\n\nThirteen more minutes. \n\nSarah pressed her palms flat against the scarred wooden table and tried to remember how to breathe normally. Across the caf\u00e9, romance-novel woman turned another page, sighing contentedly. Some people got happy endings delivered in neat chapters. Others got phone calls that split their lives into before and after.\n\nThe phone buzzed.",
+      "inner_monologue": "*fingers hovering over keys* \n\nOkay, just... write something. Anything. Make it good though\u2014no, don't think about good, just write. Maybe start with that dream I had? No, too weird, too personal. What about the woman I saw at the coffee shop yesterday, the one who kept checking her phone and then putting it face down like she was afraid of it? That could be something. Or is that too obvious? God, everything feels so obvious when I start thinking about it.\n\nJust write the first sentence. One sentence. Make it... what did that writing blog say? Immediate? Concrete? Don't start with weather unless it's doing something. The phone thing though\u2014everyone can relate to that, right? That moment when you're waiting for someone to text back and every buzz makes your heart jump but it's never them. \n\nMaybe she's waiting for test results. Or divorce papers. Or... focus. One character, one moment, one reason someone would keep reading. Just get her sitting there with that phone and let the reader wonder why her hands are shaking. Keep it simple. Don't overthink this. Although what if it's been done before? Everything's been done before. Just... start.",
+      "ai_probability": 0.9964642524719238,
+      "human_probability": 0.0035356658045202494,
+      "detection_label": "AI",
+      "word_count": 210,
+      "context_summary": "Goals: [\"Work through a scenario I'm afraid of\", 'Escape into another world for a while'], State: Quiet contentment with an edge of worry"
+    },
+    {
+      "sample_id": 12,
+      "text_type": "email",
+      "mode": "baseline",
+      "surface_text": "Subject: Long overdue catch-up!\n\nHey Sarah,\n\nI know it's been way too long since we've talked \u2013 I think the last time was at Jake's wedding? Time really flies. I was actually thinking about you the other day when I drove past that little caf\u00e9 where we used to study for finals, and I realized how much I miss our conversations.\n\nLife has been pretty busy on my end. I finally switched careers and I'm working in marketing now, which has been both terrifying and exciting. I also adopted a dog last year (a golden retriever named Charlie who's basically running my life now). \n\nI'd love to hear what you've been up to! Are you still in Portland? Last I heard through the grapevine, you were thinking about grad school, but that was ages ago.\n\nWould you be up for grabbing coffee sometime soon, or even just a phone call? I know we're both probably swamped, but it would be great to properly catch up.\n\nHope you're doing well!\n\nAlex",
+      "inner_monologue": null,
+      "ai_probability": 0.9967694282531738,
+      "human_probability": 0.0032305321656167507,
+      "detection_label": "AI",
+      "word_count": 170,
+      "context_summary": null
+    },
+    {
+      "sample_id": 13,
+      "text_type": "email",
+      "mode": "baseline",
+      "surface_text": "Subject: Long overdue catch-up!\n\nHey Sarah,\n\nI hope this finds you well! I know it's been way too long since we last talked \u2013 I think the last time was at Jake's wedding? Time really does fly.\n\nI was going through some old photos the other day and came across those ridiculous ones from our camping trip where we got completely lost trying to find that \"famous\" waterfall. It got me thinking about how much I've missed having you in my regular orbit.\n\nI'd love to hear what you've been up to these past few years. Are you still at the marketing firm, or did you ever take that leap into freelancing you were always talking about? I remember you had such great ideas about starting your own thing.\n\nAs for me, I finally bought a house (!) and adopted a dog who thinks he's much larger than his 15-pound frame suggests. Lots of other updates to share if you're up for catching up.\n\nWould you be interested in grabbing coffee sometime soon? No pressure if life's too crazy right now, but I'd really love to reconnect.\n\nHope to hear from you!\n\nAlex",
+      "inner_monologue": null,
+      "ai_probability": 0.9830465912818909,
+      "human_probability": 0.016953429207205772,
+      "detection_label": "AI",
+      "word_count": 193,
+      "context_summary": null
+    },
+    {
+      "sample_id": 14,
+      "text_type": "email",
+      "mode": "baseline",
+      "surface_text": "Subject: Long overdue catch-up!\n\nHey Sarah,\n\nI know it's been way too long since we last talked \u2013 I think the last time was at Mike's wedding? Time really flies. I was scrolling through old photos yesterday and came across some from our college days, which got me thinking about you and wondering how life has been treating you.\n\nI remember you were considering that job in Portland back then \u2013 did you end up making the move? I'd love to hear what you've been up to these past few years. \n\nAs for me, I'm still in Chicago but finally bought a place last year (adulting, right?). Work's been good \u2013 I'm managing a small team now, which is both exciting and terrifying. Oh, and I got a dog! A golden retriever named Murphy who's basically running my life now.\n\nI'd really love to catch up properly if you're up for it. Maybe a phone call sometime soon? No pressure, but it would be great to reconnect.\n\nHope you're doing well!\n\nTalk soon (hopefully),\nAlex",
+      "inner_monologue": null,
+      "ai_probability": 0.9992371797561646,
+      "human_probability": 0.0007627884042449296,
+      "detection_label": "AI",
+      "word_count": 175,
+      "context_summary": null
+    },
+    {
+      "sample_id": 15,
+      "text_type": "email",
+      "mode": "cognitive",
+      "surface_text": "Hi Sarah,\n\nI know it's been way too long since we've talked, and I've been thinking about that lately. I keep meaning to reach out and then somehow months slip by \u2013 you know how it is.\n\nI saw you got the promotion at Morrison & Associates \u2013 that's amazing! I remember you talking about wanting to move into project management, so it must feel good to see that path opening up. I hope you're loving it.\n\nThings have been pretty busy on my end too. I'm still at the design firm, though we moved offices downtown last year. It's nice being closer to all the galleries and coffee shops, even if I don't get out to explore as much as I should.\n\nAnyway, I was wondering if you'd want to grab coffee sometime? I'd love to catch up properly and hear about everything that's been going on with you. No pressure if you're swamped, but it would be really nice to reconnect.\n\nHope you're doing well,\nAlex",
+      "inner_monologue": "Okay so... how do I even start this? \"Hey Sarah\" - too casual? \"Hi Sarah\" - better. God, when did I last talk to her, was it Christmas two years ago or... doesn't matter. Just write something. She probably thinks I forgot about her completely. Maybe she did forget about me. No, stop - she always said to stay in touch, right? Or was that just politeness?\n\nI keep seeing her posts and thinking I should comment but then I don't and now it feels weird that I never do. Like I'm lurking. Am I lurking? I'm definitely lurking. Should I mention that I saw she got the promotion? Or is that creepy? It's not creepy, people post things to be seen...\n\nJust be honest. Tell her you miss talking to her. But not too intense - we weren't *that* close, were we? We were though. Those late night conversations sophomore year... \n\nUgh, why is this so hard? Other people just naturally stay in touch. I always mean to and then months go by and it feels too late and then years... Focus. What would I actually want to hear if someone reached out to me? Something real but not heavy. Just... genuine.",
+      "ai_probability": 0.9988082647323608,
+      "human_probability": 0.0011917566880583763,
+      "detection_label": "AI",
+      "word_count": 168,
+      "context_summary": "Goals: ['Clear the air about something', 'Get information I need'], State: Cautiously hopeful"
+    },
+    {
+      "sample_id": 16,
+      "text_type": "email",
+      "mode": "cognitive",
+      "surface_text": "Subject: Hi there\n\nMaya,\n\nI know it's been way too long since we've talked, and I've been thinking about that lately. Life got complicated for a while there \u2013 you know how it is when everything shifts at once and suddenly years have passed without you realizing it.\n\nI hope you're doing well. I remember you were considering that position at the nonprofit when we last caught up, and I've been curious about how that all worked out. Things have been pretty good on my end \u2013 finally settled into a routine that doesn't feel completely chaotic, which feels like progress.\n\nI was going through some old photos recently and found that one from your birthday party where we're all laughing about something completely ridiculous that I can't even remember now. Made me smile and realize how much I miss our conversations.\n\nWould love to catch up properly if you're interested \u2013 maybe coffee sometime soon? No pressure if life is too busy right now, I just wanted you to know I was thinking of you.\n\nHope you're well,\nAlex",
+      "inner_monologue": "Okay so I should probably just... God, how long has it been? Like three years? Four? I saw their Instagram story yesterday and they looked happy, that new job seems good for them. Should I mention that? No that's weird, like I've been stalking them. Which I wasn't, it just popped up and... \n\nRight, focus. Just say hi, ask how they are. Keep it light but not fake-light, you know? \"Hey stranger\" feels too casual, \"I hope this email finds you well\" sounds like my dad. Maybe just their name? \n\nI wonder if they think about me sometimes too or if I'm just that person who... no, stop. We were good friends. Are good friends? Were. I should acknowledge the gap but not make it this big dramatic thing. Like, life happens, people drift, it's normal. Totally normal.\n\nWhat if they don't respond though? What if they think I'm only reaching out because I need something? I don't need anything, I just... miss them. Is that enough of a reason? It has to be.",
+      "ai_probability": 0.9915110468864441,
+      "human_probability": 0.008488926105201244,
+      "detection_label": "AI",
+      "word_count": 180,
+      "context_summary": "Goals: ['Make plans without overcommitting', 'Get information I need'], State: Cautiously hopeful"
+    },
+    {
+      "sample_id": 17,
+      "text_type": "email",
+      "mode": "cognitive",
+      "surface_text": "Hey Sarah,\n\nI've been thinking about you lately - probably sounds weird to say that out of nowhere, but it's true. I saw something about your new position at the design firm on LinkedIn (okay fine, I was definitely scrolling through old connections) and it got me wondering how you're doing beyond the professional updates.\n\nI know it's been... what, three years? Time has this strange way of disappearing when you're not paying attention. I keep meaning to reach out to people and then convincing myself it's been too long, which only makes it longer. Classic me, I guess.\n\nAnyway, I'd love to catch up if you're up for it. Coffee, or even just a good old-fashioned phone call like we used to do. I miss having someone who actually listens to my random theories about why certain songs make you feel nostalgic for places you've never been.\n\nNo pressure at all - I know how busy life gets. But if you want to bridge this ridiculous gap we've let grow between us, I'm here.\n\nHope you're well,\nAlex",
+      "inner_monologue": "Okay so how do I even start this... \"Hey Sarah\" - too casual? \"Hi Sarah\" - sounds like I'm selling something. God I've literally typed and deleted this opening line like eight times already. Why is this so hard? We used to talk about everything and now I'm overthinking a greeting. \n\nShould I acknowledge the gap first or just dive in? \"I know it's been forever\" sounds so clich\u00e9 but pretending like no time passed feels weird too. Maybe something about seeing her post about the new job? No, that makes me sound like I'm stalking her social media. Which I mean, I kind of am, but...\n\nI want this to sound genuine, like I actually miss talking to her, which I do, but not desperate or guilt-trippy. Just... normal. Like when we'd text randomly about nothing important. Those conversations that somehow mattered more than the big planned ones. \n\nUgh, I'm definitely overthinking this. She probably won't even analyze every word like I am. Just write something real, something that sounds like me. Right?",
+      "ai_probability": 0.9831973314285278,
+      "human_probability": 0.016802653670310974,
+      "detection_label": "AI",
+      "word_count": 179,
+      "context_summary": "Goals: ['Get information I need'], State: Nostalgic and a bit melancholy"
+    },
+    {
+      "sample_id": 18,
+      "text_type": "message",
+      "mode": "baseline",
+      "surface_text": "Hey! I'm so sorry I missed your art show opening last night. I know how much it meant to you and I was really looking forward to being there. My mom ended up in the ER with chest pains (she's okay now, thank God) but I still feel terrible about not being there to support you on such a big night. Can we grab coffee this week so you can tell me all about it? \u2764\ufe0f",
+      "inner_monologue": null,
+      "ai_probability": 0.9822888374328613,
+      "human_probability": 0.01771123707294464,
+      "detection_label": "AI",
+      "word_count": 76,
+      "context_summary": null
+    },
+    {
+      "sample_id": 19,
+      "text_type": "message",
+      "mode": "baseline",
+      "surface_text": "Hey! I'm so sorry I missed your art show opening last night. I know how much it meant to you and I was really looking forward to being there. My mom ended up in the ER with chest pains (she's okay, just a panic attack) but I felt terrible not being there to support you. I heard from Sarah that it was amazing and you sold three pieces!! Can we celebrate this weekend? I want to hear everything \u2764\ufe0f",
+      "inner_monologue": null,
+      "ai_probability": 0.9811570048332214,
+      "human_probability": 0.01884300448000431,
+      "detection_label": "AI",
+      "word_count": 79,
+      "context_summary": null
+    },
+    {
+      "sample_id": 20,
+      "text_type": "message",
+      "mode": "baseline",
+      "surface_text": "Hey! I'm so sorry I missed your art show opening tonight. My mom ended up in the ER with chest pains (she's okay now, just stress-related) but I know how much this meant to you and I hate that I wasn't there to support you. I've been looking forward to it for weeks. Can we grab coffee tomorrow so you can tell me all about it? Again, I'm really sorry \ud83d\ude14",
+      "inner_monologue": null,
+      "ai_probability": 0.9941761493682861,
+      "human_probability": 0.0058238510973751545,
+      "detection_label": "AI",
+      "word_count": 71,
+      "context_summary": null
+    },
+    {
+      "sample_id": 21,
+      "text_type": "message",
+      "mode": "cognitive",
+      "surface_text": "hey sarah, i'm so sorry i missed your opening last night. i know how much this meant to you and i really wanted to be there. ended up with brutal food poisoning and could barely leave the bathroom, but that doesn't make me feel less terrible about it. your work deserved to have people there who care about it, and i should have been one of them. hope it went well despite my absence. can we grab coffee soon? i'd love to hear about it and actually see the pieces properly",
+      "inner_monologue": "Okay so I need to text Sarah about missing her art show opening... God I feel terrible about this. She's been working on those paintings for months and I promised I'd be there. The food poisoning wasn't exactly planned but still... she probably thinks I just flaked. Everyone else was probably there taking photos and being supportive and I'm just... absent again. \n\nDon't want to make it about me though, like \"oh poor me I was sick.\" But I also can't just say sorry without explaining or she'll think I didn't care enough to prioritize it. Ugh why is this so hard? Just be genuine. She knows you're not usually flaky... right? What if she's already written me off? No, stop. Sarah's not like that. Just acknowledge you messed up, explain briefly, and mean it.\n\nShould I ask how it went or is that weird? Like rubbing salt in the wound? Maybe just focus on the apology first...",
+      "ai_probability": 0.9995242357254028,
+      "human_probability": 0.0004757390997838229,
+      "detection_label": "AI",
+      "word_count": 91,
+      "context_summary": "Goals: ['Not seem too needy or too cold'], State: Nervous energy looking for an outlet"
+    },
+    {
+      "sample_id": 22,
+      "text_type": "message",
+      "mode": "cognitive",
+      "surface_text": "hey sorry I totally flaked on tonight :( I know you were really looking forward to it and I feel awful. my mom had this whole emergency thing with my grandma and I couldn't get away. but still, I should've given you more heads up or something. did it end up being fun at least? want to grab coffee tomorrow and you can tell me all about it?",
+      "inner_monologue": "God, I should have sent this hours ago. Keep staring at the screen like... just say something. They probably think I don't care but I do, I really do. Was it even that important? No, stop - of course it was important to them. That's what matters. Don't make excuses but also don't just grovel. Something in between. Casual but sincere. Why is this so hard? They're going to think I'm weird for taking so long to respond. Just... be real. Be yourself. Whatever that means anymore. Okay, just type something before you overthink it to death.\n\n---\n\n**Text message:**\n\nHey, I'm really sorry I missed tonight. I know you were excited about it and I hate that I wasn't there. Had a family thing come up last minute but that doesn't make it suck any less. Hope it went well though - want to hear about it when you're free?",
+      "ai_probability": 0.9996250867843628,
+      "human_probability": 0.0003748945891857147,
+      "detection_label": "AI",
+      "word_count": 68,
+      "context_summary": "Goals: ['Smooth things over quickly', 'Keep it light but meaningful'], State: Detached, observing myself from outside"
+    },
+    {
+      "sample_id": 23,
+      "text_type": "message",
+      "mode": "cognitive",
+      "surface_text": "hey, I'm so sorry I missed your opening night - I know how much it meant to you and I was really looking forward to being there. my mom ended up in the hospital and I just couldn't leave. I feel awful about the timing. how did it go though? I hope it was amazing because you've been working so hard on everything. can we grab coffee soon? I want to hear all about it",
+      "inner_monologue": "Okay so I need to text Jamie about missing the gallery thing... God I still feel terrible about it even though Mom really did need me at the hospital. But like, they were so excited about their first show and I just... ugh. Don't make it about me though. Keep it simple. Are they mad? They haven't texted since. Maybe start with sorry? No wait, that sounds too dramatic. Just be normal. Warm but not fake-warm because I hate when people do that to me and I can always tell. Should I explain about Mom or just... they probably think I flaked. I've been so scattered lately, different person entirely from last year. Focus. They matter. This matters. Don't overthink the wording, just send something real before I lose my nerve or they think I don't care...",
+      "ai_probability": 0.9986479878425598,
+      "human_probability": 0.001352050225250423,
+      "detection_label": "AI",
+      "word_count": 75,
+      "context_summary": "Goals: [\"Test if they're still upset\", 'Express how I feel without drama'], State: Genuinely warm but self-conscious about it"
+    }
+  ]
+}

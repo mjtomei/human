@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-12-30T05:34:23.320164",
+  "samples_per_condition": 2,
+  "text_types": [
+    "personal_essay"
+  ],
+  "total_samples": 4,
+  "baseline_mean_ai_prob": 0.00029065259877825156,
+  "baseline_std_ai_prob": 0.0001195818986161612,
+  "cognitive_mean_ai_prob": 0.0008749410335440189,
+  "cognitive_std_ai_prob": 0.0006295097700785846,
+  "t_statistic": -0.9118578382139134,
+  "p_value": 0.4580989098866899,
+  "effect_size": -1.2895617217583277,
+  "by_text_type": {
+    "personal_essay": {
+      "baseline_mean": 0.00029065259877825156,
+      "cognitive_mean": 0.0008749410335440189,
+      "difference": -0.0005842884347657673
+    }
+  },
+  "samples": [
+    {
+      "sample_id": 0,
+      "text_type": "personal_essay",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Small Things**\n\nI was twelve when my grandmother taught me to fold fitted sheets in her narrow laundry room. The August heat pressed against the windows while she demonstrated the mysterious choreography\u2014corner to corner, tuck and smooth, until the unruly fabric transformed into a neat rectangle.\n\n\"Most people just stuff them in the closet,\" she said, her weathered hands moving with practiced grace. \"But doing something right, even when no one sees\u2014that matters.\"\n\nI fumbled through my attempts, frustrated by the sheet's rebellion against order. She guided my hands patiently, over and over, until I finally managed one passable fold.\n\nYears later, after she died, I found myself standing in my own laundry room, holding a fitted sheet. My hands remembered the motions before my mind did. As I folded, I understood what she'd really been teaching me\u2014that care itself is the point, not the audience. That dignity lives in the details no one notices.\n\nNow, whenever I fold sheets, I think of her hands covering mine, the summer heat, and the radical act of doing small things well. It's become my meditation, my way of touching something larger than myself through the simple geometry of cotton and intention.",
+      "inner_monologue": null,
+      "ai_probability": 0.00041023449739441276,
+      "human_probability": 0.999589741230011,
+      "detection_label": "Human",
+      "word_count": 202,
+      "context_summary": null
+    },
+    {
+      "sample_id": 1,
+      "text_type": "personal_essay",
+      "mode": "baseline",
+      "surface_text": "**The Weight of Silence**\n\nI remember the exact moment I realized I wasn't listening\u2014I was just waiting for my turn to speak. \n\nMy grandmother was telling me about her childhood during the war, something she rarely discussed. I was nineteen, home from college, fidgeting with my phone while she described rationing bread and sleeping in subway tunnels during air raids. I kept nodding, formulating my own stories to share, barely absorbing her words.\n\nThen she paused mid-sentence. The silence stretched uncomfortably until she said, quietly, \"You know, some stories can only be told once.\"\n\nSomething in her voice made me look up. Her hands were folded carefully in her lap, and she was staring past me toward the window. I realized she wasn't just sharing memories\u2014she was offering me pieces of herself that she'd carried alone for decades.\n\nI put my phone down and asked her to continue. She shook her head gently. \"Another time, maybe.\"\n\nShe passed away the following spring, and I never heard the rest of that story.\n\nNow, years later, I find myself pausing before I speak, creating space for others' words to land fully. That moment taught me that listening isn't passive\u2014it's an act of love, and sometimes, it's irreplaceable.",
+      "inner_monologue": null,
+      "ai_probability": 0.00017107070016209036,
+      "human_probability": 0.9998289346694946,
+      "detection_label": "Human",
+      "word_count": 205,
+      "context_summary": null
+    },
+    {
+      "sample_id": 2,
+      "text_type": "personal_essay",
+      "mode": "cognitive",
+      "surface_text": "The mug broke on a Tuesday, which feels important somehow. Not the breaking itself\u2014that was just gravity and my clumsy morning hands\u2014but the way I stood there staring at the pieces scattered across the kitchen floor.\n\nIt was Mom's favorite mug. The one with the faded blue flowers that she'd drink her coffee from every morning, reading the news on her phone and making those little disapproving sounds at whatever headlines caught her attention. I'd been using it for months now, telling myself it was practical. Just a mug.\n\nBut standing there with ceramic shards around my bare feet, I realized I'd been holding onto her morning routine like it could somehow hold onto her. The coffee at exactly 7:15, the same spot at the counter, even the way I'd started making those same little sounds at the news.\n\nI swept up the pieces carefully, saved a few in a small box that now sits in my desk drawer. Not because I think I'll glue it back together someday\u2014some things are meant to stay broken. But because letting go doesn't have to mean throwing away.\n\nThe coffee tastes the same from other mugs. Different, but the same.",
+      "inner_monologue": "Okay, what am I even doing here... I should write about that day at the coffee shop, right? When everything just clicked into place? But that feels so... neat. Too neat. Like I'm trying to package up this messy life into some kind of lesson. God, I hate when people do that. But isn't that what essays are supposed to do?\n\nMaybe the thing with Mom instead. No, too heavy. They'll think I'm fishing for sympathy. I'm not, am I? I just... it mattered. It changed things. But how do you explain how someone can die twice - once when they actually leave, and once when you finally stop expecting them to text you back?\n\nFocus. Just pick something real. Something that actually happened, not the polished version I tell at parties. The version where I learned something profound and now I'm wise. Jesus, I'm not wise. I'm just tired and pretending I have my shit together.\n\nThat morning with the broken mug. That's smaller. Manageable. I can probably make it sound meaningful without being too... much. Right? People relate to broken things. We all have broken things.\n\nStop overthinking. Just write it. It'll probably sit in drafts anyway.",
+      "ai_probability": 0.0002454312634654343,
+      "human_probability": 0.9997546076774597,
+      "detection_label": "Human",
+      "word_count": 197,
+      "context_summary": "Goals: ['Process grief or loss through writing'], State: Tired but pushing through"
+    },
+    {
+      "sample_id": 3,
+      "text_type": "personal_essay",
+      "mode": "cognitive",
+      "surface_text": "I was twenty-six, standing in the cereal aisle at Kroger, when I realized I'd been holding my breath for most of my adult life.\n\nIt sounds ridiculous now, but something about the fluorescent lights buzzing overhead and the overwhelming wall of colorful boxes made me stop. I'd been reaching for the same brand I'd bought for years\u2014not because I liked it, but because it felt safe. Predictable. And suddenly I was exhausted by how many small choices I'd made the same way.\n\nThe woman next to me was reading ingredient labels out loud to herself, completely unbothered by looking foolish. She caught me staring and smiled. \"Trying to find something without corn syrup,\" she said, like we were old friends.\n\nI grabbed a different cereal. Something with too much sugar that I'd wanted as a kid but never asked for. It tasted terrible, but I finished the whole box anyway.\n\nThat was three months ago. I still think about that woman sometimes, how easily she existed in her own skin. I'm trying to learn that\u2014to read my own labels out loud, to reach for what I actually want instead of what seems right. Some mornings I succeed. Some mornings I still hold my breath. But at least now I notice when I'm doing it.",
+      "inner_monologue": "Okay, meaningful moment... God, why does that phrase make me cringe? Like I'm supposed to have some profound epiphany ready to package up nicely. The writing workshop thing again - \"share your truth\" - ugh. But maybe that's just me being defensive because I actually do want to write this, want someone to read it and think \"yeah, I get that.\" \n\nThat thing that happened with Mom last spring keeps coming back to me. Or maybe the grocery store realization? No, that sounds stupid when I say it out loud. The grocery store realization. Christ. But it wasn't stupid when it happened, was it? I stood there looking at all those cereal boxes and something shifted and... no, that's exactly the kind of thing that sounds made up.\n\nMaybe I should write about something safer. Something that doesn't make me feel so exposed. But then what's the point? I'm tired of writing things that don't matter, that I could delete tomorrow and not miss. And I keep thinking about what Sarah said about vulnerability being magnetic, but what if mine is just messy? What if I overshare or sound like I'm trying too hard to be deep?\n\nJust pick something. Write it. Stop thinking about who's reading.",
+      "ai_probability": 0.0015044508036226034,
+      "human_probability": 0.9984955787658691,
+      "detection_label": "Human",
+      "word_count": 214,
+      "context_summary": "Goals: ['Connect with whoever reads this'], State: Irritated but suppressing it"
+    }
+  ]
+}

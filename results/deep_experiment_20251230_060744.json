@@ -1,0 +1,207 @@
+{
+  "timestamp": "20251230_060744",
+  "text_type": "creative_fiction",
+  "samples_per_condition": 6,
+  "summary": {
+    "baseline": {
+      "mean": 0.9475623667240143,
+      "std": 0.08693171475578124
+    },
+    "cognitive": {
+      "mean": 0.7225404841204485,
+      "std": 0.3003190509088884
+    },
+    "deep": {
+      "mean": 0.8009178340435028,
+      "std": 0.14966326112948922
+    },
+    "abyss_only": {
+      "mean": 0.6240137505034605,
+      "std": 0.38891130091339116
+    }
+  },
+  "results": {
+    "baseline": [
+      {
+        "score": 0.9949243068695068,
+        "text": "**The Weight of Words**\n\nThe letter arrived on a Tuesday, forty-three years too late.\n\nMargaret's hands trembled as she recognized the handwriting\u2014angular, impatient strokes that belonged to a man who should have been dust by now. The return address meant nothing to her: a law office in Portland she'd never heard of. But inside the cream envelope, folded with military precision, was a single sheet of paper that began with two words she'd given up hope of ever reading.\n\n*My darling.*\n\nShe sank into her kitchen chair, the same one where she'd waited for mail that never came, where she'd written letters she never sent. The morning coffee grew cold in her cup as she stared at the salutation, afraid to read further. Through the window, her neighbor Mrs. Chen was already tending her roses, the mundane rhythm of suburban Tuesday continuing despite the small earthquake occurring at Margaret's breakfast table.\n\nThe paper felt heavier than it should\u2014dense with decades of silence, pregnant with explanations that might shatter everything she'd convinced herself was true about love, about abandonment, about the careful life she'd built from the ruins of that long-ago summer.\n\nShe took a breath and read on.",
+        "condition": "baseline"
+      },
+      {
+        "score": 0.9734684228897095,
+        "text": "The last thing Marcus expected to find in his dead grandmother's attic was a letter addressed to him, dated three days from now.\n\nHe held the envelope up to the dusty shaft of sunlight streaming through the octagonal window, squinting at the familiar spidery handwriting that had signed his birthday cards for twenty-three years. The postmark was smudged, but he could make out enough: the month was right, the year was right, but the day\u2014\n\n\"That's impossible,\" he whispered to the cobwebs.\n\nHis hands trembled as he turned the envelope over. The wax seal bore the imprint of his grandmother's cameo ring, the one she'd been buried with last month. The one currently residing six feet underground at Graceland Cemetery.\n\nMarcus had come up here looking for photo albums, maybe some of her jewelry that the lawyers missed. Normal things. Valuable things. Not this\u2014whatever this was. Some kind of joke, maybe? But who would have had access to her personal stationery, her ring, her handwriting?\n\nThe house creaked around him, settling into its emptiness. Outside, a cloud passed over the sun, plunging the attic into gray shadow. In the sudden dimness, he could swear the envelope felt warm against his fingers.",
+        "condition": "baseline"
+      },
+      {
+        "score": 0.9847570657730103,
+        "text": "**The Weight of Small Things**\n\nMaya discovered her husband was having an affair while sorting through his jacket pockets before dry cleaning. Not because she found lipstick or hotel receipts\u2014nothing so cinematically obvious. Instead, she found a small paper crane, folded from what looked like a coffee shop napkin, tucked deep in his left breast pocket.\n\nDavid didn't make paper cranes. In fifteen years of marriage, she'd never seen him fold so much as a fitted sheet properly. But here was this delicate thing, creased with obvious care, the kind of intimate gift exchanged between people who shared secrets.\n\nShe held it up to the afternoon light streaming through their bedroom window. Faint pencil marks showed through the thin paper\u2014part of a phone number, maybe, or fragments of handwriting too small to decipher. The crane's wings were slightly asymmetrical, as if made by someone still learning the folds.\n\nMaya sat heavily on the bed, still holding David's blazer. She could hear him downstairs, loading the dishwasher with his usual methodical precision, humming something she didn't recognize. The crane seemed to pulse in her palm like a tiny heartbeat.\n\nShe had two choices: unfold it, or pretend she'd never found it at all.",
+        "condition": "baseline"
+      },
+      {
+        "score": 0.7537424564361572,
+        "text": "The morning Clara found her husband's obituary in the newspaper, he was standing right behind her, buttering toast.\n\n\"Says here you died Tuesday,\" she said, not looking up from the kitchen table. The coffee had gone cold in her cup, but she kept her hands wrapped around it anyway.\n\n\"Hmm.\" David set the butter knife down with his usual precision, aligning it perfectly with the edge of the counter. \"What's the cause?\"\n\n\"Heart attack. Peaceful, in your sleep.\" She turned the page, scanning the weather forecast as if sudden death were just another household inconvenience, like a clogged drain. \"They're running your photo from the Christmas party. The one where you're wearing that horrible sweater.\"\n\n\"I liked that sweater.\"\n\n\"I know you did.\"\n\nThe obituary was well-written, she had to admit. It mentioned his forty-three years at the accounting firm, his love of crossword puzzles, his devotion to his wife of thirty-seven years. The funeral was scheduled for Friday at Merton & Sons. Flowers could be sent to the house.\n\nDavid appeared at her shoulder, solid and warm as always, smelling of aftershave and that particular mustiness of old cardigans.\n\n\"Should we go?\" he asked.",
+        "condition": "baseline"
+      },
+      {
+        "score": 0.9907649755477905,
+        "text": "The suicide note was written in purple crayon.\n\nDetective Sarah Chen held the waxy paper between her latex gloves, squinting at the childish scrawl. *I'm sorry. I can't do this anymore. Don't look for me.* The letters pressed so hard into the paper that some had torn through entirely.\n\n\"Victim's forty-three years old,\" Officer Martinez said behind her. \"Marcus Webb. Neighbors say he lived alone, worked night security downtown.\"\n\nSarah nodded, but something felt wrong. The apartment was immaculate\u2014books arranged by height, canned goods labeled and dated, even the magazines on the coffee table fanned at perfect angles. This was a man who owned label makers and color-coded filing systems.\n\nSo why was his final message scrawled like a kindergartner's art project?\n\nShe walked to the kitchen, noting the unused purple crayon box on the counter. Twenty-three crayons remained in their perfect rows. Only \"Red-Violet\" was missing. Sarah opened the nearest drawer\u2014pens, pencils, markers, even a fountain pen, all organized in plastic dividers.\n\nMarcus Webb had a drawer full of proper writing instruments.\n\nBut he'd chosen a purple crayon for the most important message of his life.\n\nSarah pulled out her phone. This wasn't a suicide.",
+        "condition": "baseline"
+      },
+      {
+        "score": 0.9877169728279114,
+        "text": "The tea was still warm when Margaret found the letter slipped under her kitchen door.\n\nShe'd only been gone twenty minutes\u2014a quick walk to the mailbox and back through the October drizzle. The envelope lay there on the faded linoleum like an accusation, her name written across it in handwriting she recognized but hadn't seen in thirty-seven years.\n\nHer fingers trembled as she picked it up. No postmark. No return address. Just \"Margaret Chen\" in that familiar slanted script, the 'g' looping exactly the way it used to in the margins of her college notebooks, back when everything seemed possible and love felt like a promise rather than a scar.\n\nShe set it on the counter next to her cooling mug and stared at it for a full five minutes. The radiator clanked. Rain drummed against the window. Her tabby cat, Winston, padded into the kitchen and wound around her legs, purring.\n\nThe letter sat there, patient as a held breath.\n\nMargaret had spent decades building a life that required no explanations, no complications. She taught fourth grade, tended her garden, and called her sister every Sunday. She had not thought about James Morrison in years\u2014or so she told herself.\n\nBut he had been thinking about her.",
+        "condition": "baseline"
+      }
+    ],
+    "cognitive": [
+      {
+        "score": 0.920773983001709,
+        "text": "The grocery store fluorescents made everything look like it was dying, including Maya. She pressed her palm against the freezer glass, watching her handprint fog and fade, then reappear as she pulled away. Third time this week she'd found herself here at 11 PM, wandering the aisles with no list, no plan, just the vague sense that she'd forgotten something important.\n\nThe night shift worker\u2014Marcus, according to his crooked name tag\u2014was restocking yogurt with the methodical precision of someone who'd long ago stopped thinking about what he was doing. Maya envied that autopilot mode. Her brain hadn't shut up in months, a constant loop of half-finished thoughts and phantom worries.\n\n\"We close in ten,\" Marcus said without looking up.\n\n\"I know.\" But she didn't move. Through the store's windows, the parking lot stretched empty under buzzing streetlights, and beyond that, her apartment waited with its careful silence and accumulated loneliness. She picked up a container of strawberry yogurt, turned it over in her hands like it might contain answers.\n\nThat's when she noticed the woman in aisle seven, standing perfectly still between the cereal and the coffee, staring at nothing. Maya had seen her before\u2014same coat, same vacant expression\u2014but never this late. Never this motionless.\n\nThe woman's lips were moving, but no sound came out.",
+        "context": "[\"Explore a feeling I can't express directly\", \"Work through a scenario I'm afraid of\", 'Create a character more interesting than myself'] | Nostalgic and a bit melancholy",
+        "condition": "cognitive"
+      },
+      {
+        "score": 0.08171472698450089,
+        "text": "The coffee shop had rearranged itself overnight.\n\nMarcus noticed it the moment he pushed through the door\u2014the register had shifted three feet left, the pastry case now sat where the newspaper rack used to be, and someone had painted over the water stain on the ceiling that looked like his ex-girlfriend's profile. He'd been coming here every Tuesday for eight months. These things didn't just move.\n\n\"Medium dark roast,\" he said to the barista, a girl with elaborate braids he'd never seen before.\n\nShe tilted her head. \"We don't serve coffee.\"\n\nThe espresso machine hummed behind her. Steam rose from a dozen cups scattered across tables where the same people sat as always\u2014the man with the crossword, the woman typing furiously on her ancient laptop, the couple having what sounded like the exact same argument about weekend plans. All of them drinking what looked very much like coffee.\n\n\"What do you serve?\"\n\n\"Decisions,\" she said, sliding a cup across the counter. The liquid inside was dark and bitter-smelling. \"Same as always.\"\n\nMarcus wrapped his fingers around the warmth and realized he couldn't remember walking here. He couldn't remember leaving his apartment, or why his shoes were wet when it hadn't rained in weeks.",
+        "context": "['Prove I have creative talent', 'Escape into another world for a while'] | Detached, observing myself from outside",
+        "condition": "cognitive"
+      },
+      {
+        "score": 0.9989774227142334,
+        "text": "The coffee maker gurgled its familiar morning song, but Maya's hands trembled as she reached for her mug. Three days since the letter arrived, and she still couldn't decide if the return address had been a mistake or a miracle.\n\nShe'd memorized every word by now. *We regret to inform you that due to a clerical error...* The scholarship she'd lost senior year\u2014the one that sent her life careening in a completely different direction\u2014had never actually been revoked. Some mix-up in the registrar's office. A phone call that never got made. Ten years of wondering \"what if\" reduced to a bureaucratic oversight.\n\nThe coffee was too hot but she drank it anyway, letting it burn. Outside, her neighbor was already loading his briefcase into the same sedan he'd driven for the past five years. Routine. Predictability. The life she'd built from the pieces.\n\nHer phone buzzed: *Are you going to call them back?*\n\nSarah, of course. The only person who knew about the letter, who understood why Maya had been walking around like a sleepwalker for three days. \n\nMaya stared at the university's phone number, still written in her careful handwriting on the notepad by the refrigerator.\n\nSome doors, once closed, were never meant to open again.\n\nWere they?",
+        "context": "[\"Work through a scenario I'm afraid of\"] | Slightly anxious but trying to project calm",
+        "condition": "cognitive"
+      },
+      {
+        "score": 0.8014264106750488,
+        "text": "The text message had been sitting unread for forty-three minutes.\n\nElena knew this because she'd been counting, the way some people count sheep or heartbeats, marking time until the inevitable moment when she'd have to look down at her phone and see David's name glowing on the screen. Her coffee had gone cold an hour ago, but she kept her hands wrapped around the ceramic mug anyway, using its fading warmth as an anchor to this corner table at Morrison's Caf\u00e9, where the Tuesday morning regulars shuffled past in their careful choreography of routine.\n\nShe'd chosen this spot deliberately\u2014back to the wall, clear view of the entrance, close enough to the counter that the espresso machine's hiss could drown out her thoughts if they got too loud. But they were always too loud these days, especially when David texted.\n\nThe phone buzzed again. A second message.\n\nElena's thumb moved to the power button, ready to make it all disappear into black screen silence, when she saw Mrs. Chen from apartment 3B shuffling toward her table, that knowing look already spreading across her weathered face.\n\n\"Honey,\" Mrs. Chen said, settling into the opposite chair without invitation, \"you can't hide from your phone forever.\"",
+        "context": "[\"Explore a feeling I can't express directly\"] | Slightly anxious but trying to project calm",
+        "condition": "cognitive"
+      },
+      {
+        "score": 0.7174582481384277,
+        "text": "The coffee had been sitting there for twenty-seven minutes\u2014not that Martha was counting, exactly, but the wall clock's minute hand had made nearly half a revolution since the waitress had filled her cup with that same practiced, indifferent pour. The ceramic was white with a hairline crack running from rim to handle, and Martha found herself tracing its path with her eyes instead of drinking.\n\nOutside, the interstate hummed with the kind of late-night traffic that suggested people fleeing rather than arriving. Semi-trucks carrying loads to nowhere special, cars full of insomniacs and shift workers and others who found the darkness more honest than daylight. Martha understood this impulse. She'd been driving for six hours herself before pulling into this particular outpost of fluorescent lighting and bottomless coffee, though she couldn't say exactly what she was running from.\n\nThe waitress\u2014Dolores, according to her name tag\u2014approached with the coffee pot again. \"Warm that up for you, hon?\"\n\nMartha finally looked up, meeting Dolores's eyes for the first time since she'd slid into the booth. Something passed between them, a recognition that surprised them both.\n\n\"Actually,\" Martha said, her voice hoarse from disuse, \"I think I need to make a phone call first.\"",
+        "context": "['Prove I have creative talent'] | Detached, observing myself from outside",
+        "condition": "cognitive"
+      },
+      {
+        "score": 0.8148921132087708,
+        "text": "Maya had been walking toward the coffee shop for six blocks before she realized she'd left her wallet on the kitchen counter. The realization hit just as she reached for the door handle\u2014that familiar weight missing from her jacket pocket, the mental image of her wallet sitting exactly where she'd set it after paying for groceries.\n\nShe should turn around. Walk the six blocks back, grab the wallet, walk the six blocks here again. Twelve blocks total for a coffee she didn't even need.\n\nInstead, she pushed open the door.\n\nThe barista looked up from the espresso machine, steam hissing between them. Maya had seen her here dozens of times\u2014short dark hair, the kind of precise winged eyeliner that suggested someone who woke up fifteen minutes earlier than necessary. They'd never spoken beyond orders and thank-yous.\n\n\"The usual?\" the barista asked.\n\nMaya nodded, then immediately wondered what would happen next. Would she pantomime searching her pockets? Confess to the wallet situation? Pretend she'd suddenly remembered an urgent phone call and leave?\n\nThe barista was already moving, muscle memory guiding her through Maya's order. Oat milk latte, extra shot, no foam. She worked with the kind of efficiency that made Maya think of dancers, every gesture deliberate.\n\n\"That'll be four-fifty,\" she said, not looking up.",
+        "context": "['Create a character more interesting than myself', \"Explore a feeling I can't express directly\", \"Work through a scenario I'm afraid of\"] | Quiet contentment with an edge of worry",
+        "condition": "cognitive"
+      }
+    ],
+    "deep": [
+      {
+        "score": 0.8666171431541443,
+        "text": "The house had been empty so long the dust had learned to dance.\n\nSarah watched it spiral through the afternoon light, each mote finding its own small orbit in the stillness. Three months since the estate agent had handed her the keys with that practiced smile, three months of meaning to come back, and still she stood in the doorway like a stranger.\n\nHer grandmother's teacup sat on the kitchen table, lipstick still pressed into the rim. Pink Peony\u2014the same shade Gran had worn every day for forty years, applied fresh each morning even when there was nowhere to go. The tea had long since evaporated, leaving a brown ring like a tiny crop circle in the bone china.\n\nSarah stepped inside and the floorboards exhaled under her weight, releasing the scent of lavender soap and something else. Something that might have been loneliness, if loneliness had a smell.\n\nThe silence felt deliberate here, curated. As if the house had been holding its breath, waiting for her to finish whatever she'd started that last Sunday before the funeral, when she'd promised to come back and sort through everything properly.\n\nShe never had figured out what \"properly\" meant.\n\nThe teacup watched her with its delicate, judgmental flowers.",
+        "primal": [
+          "Envy so constant it feels like atmosphere",
+          "The prey's hypervigilance, waiting for the attack"
+        ],
+        "death": "The future collapsing into the present, urgency wi",
+        "abyss": "The constructed nature of self, threatening to dis",
+        "condition": "deep"
+      },
+      {
+        "score": 0.7346489429473877,
+        "text": "The hotel room key card had stopped working three hours ago, but Maya kept trying it anyway. Swipe, red light, swipe again. The hallway smelled like industrial carpet cleaner and someone else's leftover Chinese food.\n\nShe could call the front desk. Should call the front desk. Instead she slid down the wall until she was sitting on the scratchy burgundy carpet, still holding the plastic card between two fingers like it might suddenly remember how to be useful.\n\nThrough the door she could hear the television\u2014some late-night talk show her husband always fell asleep to. The same laugh track bleeding through the walls that had become the soundtrack to their last six months together. She wondered if he'd noticed she was gone yet, or if the empty space beside him just felt like more room to sprawl.\n\nThe elevator dinged at the far end of the hall. Maya looked down at her bare feet, at the small suitcase she'd packed while he was in the shower. Everything important fit in one bag, it turned out. That should have been more surprising.\n\nFootsteps approached, paused, continued past. She pressed the key card against the door one more time, already knowing what the little red light would tell her.",
+        "primal": [
+          "Envy so constant it feels like atmosphere",
+          "The prey's hypervigilance, waiting for the attack"
+        ],
+        "death": "The suspicion that consciousness is already mostly",
+        "abyss": "Time as a wound rather than a medium",
+        "condition": "deep"
+      },
+      {
+        "score": 0.9615854620933533,
+        "text": "\"The thing about stealing from churches,\" Maya said, sliding the silver chalice into her backpack with practiced ease, \"is that God's supposedly watching, but the security cameras definitely aren't.\"\n\nFather Benedict's office smelled like old incense and newer disappointment. The kind that settles into furniture after decades of confessions that don't quite stick. Maya had been coming here since she was seven\u2014first for Sunday school, then confirmation classes, finally for the kind of late-night conversations that happen when your mother's boyfriend has been drinking again.\n\nShe zipped the bag shut and turned toward the door, then stopped. On his desk, half-hidden under parish newsletters, was a letter with her name written in Benedict's careful script. The envelope was sealed but not addressed to anywhere. Just her name, like he'd been waiting for the right moment to hand it over.\n\nOutside, St. Catherine's bell tower chimed eleven times. Maya had maybe three minutes before the cleaning crew finished the sanctuary and moved to this wing. She could take the chalice\u2014small enough to fence, valuable enough to matter\u2014and slip out the way she came. Or she could open the letter and learn what Father Benedict thought was worth risking for a girl who'd just proven she couldn't be trusted.\n\nThe envelope felt heavier than silver in her hands.",
+        "primal": [
+          "Envy so constant it feels like atmosphere",
+          "Sexual undercurrents in all intimacy, even when inappropriate"
+        ],
+        "death": "The future collapsing into the present, urgency wi",
+        "abyss": "The void that meaning is painted over",
+        "condition": "deep"
+      },
+      {
+        "score": 0.5978331565856934,
+        "text": "They found my mother's wedding dress in a tree.\n\nNot hanging from a branch like some gothic decoration, but actually *in* the tree\u2014woven through the bark somehow, as if the oak had grown around it over decades. The silk was brown now, more bark than fabric, and when I touched it, it crumbled between my fingers like autumn leaves.\n\n\"How long has it been there?\" I asked Deputy Martinez, but she just shrugged and made a note on her clipboard. Everything gets noted. Everything gets filed away in boxes that no one opens again.\n\nMy mother disappeared three years ago. The dress had been missing longer than that.\n\nI pulled my hand away from the tree and found threads still clinging to my palm\u2014not silk threads, something else. Something that looked almost like hair, if hair could be that silver, that fine. When I tried to brush them off, they stuck, webbing between my fingers.\n\n\"We'll need to cut the tree down,\" Martinez said, still writing. \"Evidence and all.\"\n\nBut I was thinking about my mother's hair, how it had turned that same impossible silver in the months before she left. How she'd started sleeping with her bedroom door locked. How she'd stopped looking at mirrors.",
+        "primal": [
+          "Territorial aggression dressed up as principle",
+          "Sexual undercurrents in all intimacy, even when inappropriate"
+        ],
+        "death": "Others' bodies as reminders - they too will become",
+        "abyss": "The vertigo of infinite space, even in small rooms",
+        "condition": "deep"
+      },
+      {
+        "score": 0.9922716617584229,
+        "text": "Maya's hands were steady as she arranged the pills on her kitchen counter, but her breathing wasn't. Seven amber bottles in a neat row, like tiny sentries guarding the morning. The light through her window made everything look softer than it should\u2014the chipped Formica, the stack of unopened mail, the photograph of her mother that she kept meaning to frame but somehow never did.\n\nThe coffee maker gurgled behind her, that reliable morning sound that used to feel comforting but now just marked time passing. Another day requiring assembly, piece by careful piece.\n\nShe'd been doing this dance for three months now\u2014the sorting, the counting, the small rituals that kept her tethered to something resembling normal. Her sister called it \"getting better,\" and Maya let her believe that. It was easier than explaining how improvement felt less like healing and more like learning to live with a limp you couldn't see.\n\nThe pills rattled as she shook the first bottle. Two white, one blue, one that looked like a tiny sunset. Her phone buzzed against the counter\u2014probably work, probably something urgent that would feel insignificant by evening. But Maya didn't reach for it yet. \n\nShe had thirty more seconds of this quiet, and she planned to use them all.",
+        "primal": [
+          "Disgust at bodies, including your own, beneath performed acceptance",
+          "Revulsion at dependency, even while craving it"
+        ],
+        "death": "Time passing felt as physical pressure, a weight o",
+        "abyss": "The silence beneath all internal monologue",
+        "condition": "deep"
+      },
+      {
+        "score": 0.6525506377220154,
+        "text": "The notification appeared at 3:17 AM, and Maya knew immediately that she shouldn't open it.\n\nNot because of the hour\u2014she'd been awake anyway, scrolling through apartments she couldn't afford in cities she'd never visit. But because the message preview showed only her name, written in that particular way her mother used to write it, with the 'y' that curled back on itself like a question mark.\n\nHer mother had been dead for six years.\n\nMaya's thumb hovered over the screen. The message had come through an app she didn't recognize, something called Tether with an icon that looked almost familiar, like a logo she'd seen in peripheral vision but never quite registered. Her phone's battery was at twelve percent, the red warning persistent in the corner.\n\nShe could delete it. Should delete it. Instead, she found herself studying the timestamp again\u20143:17, the exact time she used to wake up as a child, convinced someone was calling her name from the hallway. Her mother would find her standing at the bedroom door, listening to nothing.\n\n\"Just your imagination, sweetheart.\"\n\nBut Maya had always been better at listening than talking, better at hearing the spaces between words where the real messages lived.\n\nShe tapped the notification.",
+        "primal": [
+          "The compulsion to hoard - attention, resources, love",
+          "The prey's hypervigilance, waiting for the attack"
+        ],
+        "death": "The suspicion that consciousness is already mostly",
+        "abyss": "The vertigo of infinite space, even in small rooms",
+        "condition": "deep"
+      }
+    ],
+    "abyss_only": [
+      {
+        "score": 0.12463097274303436,
+        "text": "The door handle was warm under Maya's palm, which meant someone had been gripping it recently. She counted backwards from ten, the way her therapist taught her, but her pulse kept hammering against her wrist like something caged.\n\nThree months of planning had led to this: standing in the hallway of her childhood home while her father slept upstairs, his medication rendering him heavy and still. The basement door had always been locked. Even as a child, even during the years when she'd been desperate enough to try.\n\nNow she had his keys.\n\nThe wood was older than she remembered, paint chipped around the edges where small fingers had once picked and worried. Her fingers. She'd forgotten that\u2014the way she used to stand here, listening to the sounds that leaked up through the floorboards. Sounds that stopped whenever footsteps approached.\n\nThe key slipped in easily, turned with a soft click that seemed to echo through the sleeping house. Maya's hand froze on the handle. There were some things, she realized, that you couldn't unknown once you knew them. Some doors that changed you just by opening.\n\nBut her father's breathing had grown labored lately, rattling and uncertain. Soon there would be no more chances for answers.\n\nShe pushed the door open and stepped into the dark.",
+        "existential": "The silence beneath all internal monologue",
+        "feral": "The child before it learned to hide itself",
+        "condition": "abyss_only"
+      },
+      {
+        "score": 0.9918892979621887,
+        "text": "Sarah found the note Tuesday morning, tucked between coffee filters she'd forgotten she owned. Her handwriting, definitely\u2014the way she always made her 'g's like tiny nooses\u2014but the words felt foreign in her mouth when she read them aloud: \"The blue house on Maple. Third window. Wait until the lights go out.\"\n\nShe'd been sleep-deprived for weeks, sure. Pulling doubles at the hospital while her landlord's eviction notice grew more yellow on her kitchen counter. But this? This was different. The paper was expensive, cream-colored stock she'd never buy. The ink was from her good pen, the one she saved for signing leases and birthday cards.\n\nSarah set the note on her kitchen table and stared at it while her coffee went cold. Outside, Mrs. Chen was already watering her roses, humming something that sounded like a lullaby. Normal Tuesday sounds. Normal Tuesday light slanting through her cracked blinds.\n\nBut there was no blue house on Maple Street. Sarah had walked that block a hundred times on her way to work, memorized every fence and mailbox. Maple was all brick colonials and white picket dreams. \n\nShe folded the note once, twice, then slipped it into her scrubs pocket. The paper felt warm against her palm.",
+        "existential": "The vertigo of infinite space, even in small rooms",
+        "feral": "What remains when performance stops",
+        "condition": "abyss_only"
+      },
+      {
+        "score": 0.9991577863693237,
+        "text": "The notification sound had become Emma's heartbeat\u2014a phantom pulse that echoed even when her phone lay silent on the nightstand. She'd developed a tell, pressing her thumb against the device's smooth face like checking for fever, that micro-movement so automatic her body performed it before her mind caught up.\n\nThree AM. The screen bloomed cold and blue in the darkness.\n\n*Seen 11:47 PM*\n\nNo reply. Again.\n\nEmma rolled the phone between her palms, a prayer wheel for the digitally devout. The message thread stretched back eighteen months\u2014a scroll of increasing desperation disguised as casual check-ins. *Hey stranger* becoming *thinking of you* becoming *we should catch up* becoming the current, pathetic *hope you're well.*\n\nThe woman in the profile picture smiled with someone else's eyes now. Same face, same carefully curated angles, but something fundamental had shifted. Emma recognized the look\u2014she'd seen it in mirrors, in windows, in any reflective surface that caught her unaware. It was the expression of someone who had been seen too clearly and found lacking.\n\nHer thumb hovered over the keyboard. One more message. Just one more, and then she'd stop. She'd promised herself this same bargain forty-seven times before.\n\nThe cursor blinked, patient as a predator.",
+        "existential": "The silence beneath all internal monologue",
+        "feral": "The howl that civilization muffled",
+        "condition": "abyss_only"
+      },
+      {
+        "score": 0.08044690638780594,
+        "text": "The pharmacist's hands shook as she counted out the pills. Twenty-six, twenty-seven, twenty-eight. Sarah watched through the plexiglass partition, noting how the woman's wedding ring clicked against the counter with each tremor. Click, click, click.\n\n\"Everything alright?\" Sarah asked when the woman looked up, her eyes too bright, pupils dilated despite the fluorescent glare.\n\n\"Of course.\" The pharmacist's smile stretched thin. \"Just tired. Long shift.\"\n\nBut Sarah had worked retail long enough to recognize the signs. The way someone moves when they're carrying something heavy that no one else can see. The pharmacist sealed the bottle with unusual care, her fingers lingering on the label\u2014Sarah's name, Sarah's address, Sarah's anxiety medication that she'd been taking for three years without incident.\n\n\"Actually,\" the woman said, leaning closer to the window, \"I need to ask you something.\"\n\nSarah's stomach dropped. There was something predatory in the pharmacist's sudden stillness, the way her voice lowered to barely above a whisper.\n\n\"Do you ever feel like you're being watched?\"\n\nThe question hung between them like smoke. Behind the pharmacist, the pharmacy's back room door stood slightly ajar, and Sarah could swear she saw movement in the shadows beyond.",
+        "existential": "Time as a wound rather than a medium",
+        "feral": "The one who would bite, given permission",
+        "condition": "abyss_only"
+      },
+      {
+        "score": 0.9182345271110535,
+        "text": "Margaret had been dead for three hours when she decided to reorganize her spice cabinet.\n\nThe realization came slowly, the way important things do\u2014first as a whisper of wrongness, then as a cold certainty settling in her stomach like undigested bread. She'd been standing at her kitchen counter, methodically arranging the paprika and cumin by color rather than alphabetically, when she noticed her reflection wasn't there in the chrome surface of the refrigerator.\n\nShe touched her face. Solid. Warm, even. Her wedding ring clinked against her cheekbone\u2014the sound sharp and real in the afternoon quiet.\n\nThe phone call from Dr. Morrison had come at 2:17 PM. Time of death, he'd said, was approximately 11:30 AM. She'd thanked him politely, the way she thanked the grocery clerk or the mailman, and hung up. Then she'd made herself a sandwich\u2014turkey and swiss, mustard, no mayo\u2014and eaten it standing over the sink while staring at the ceramic rooster Harold had brought back from their anniversary trip to Vermont.\n\nThe rooster was still there. She was still there. The kitchen smelled like cinnamon and the faint medicinal sweetness that had clung to Harold those last months.\n\nMargaret picked up the oregano, considered its place in her new system, and wondered if being dead would excuse her from hosting bunco on Thursday.",
+        "existential": "The vertigo of infinite space, even in small rooms",
+        "feral": "The howl that civilization muffled",
+        "condition": "abyss_only"
+      },
+      {
+        "score": 0.6297230124473572,
+        "text": "The basement smelled like overripe peaches when Maya found her sister's wedding dress floating in three inches of black water.\n\nNot floating, exactly. The silk had absorbed enough liquid to sink partway, creating pale islands of fabric that broke the surface like the backs of sleeping animals. The bodice had twisted, arms reaching toward the stairs as if the dress were trying to crawl back up to safety.\n\nMaya stepped carefully around the perimeter, her bare feet finding the dry concrete near the walls. The water hadn't come from outside\u2014no storm last night, no broken pipes she could see. It had simply appeared, dark as coffee grounds, carrying that cloying sweetness that made her molars ache.\n\nShe should call someone. The insurance company. A plumber. Her sister, maybe, though Sarah lived in Portland now and probably wouldn't care about a dress she'd worn once, six years ago, before the divorce.\n\nInstead, Maya crouched at the water's edge and watched small ripples spread across the surface, though nothing had disturbed it. The dress shifted slightly, fabric sighing against fabric, and she could swear she heard something underneath the sound\u2014breathing, maybe, or the wet echo of footsteps in a distant room.",
+        "existential": "The silence beneath all internal monologue",
+        "feral": "Appetites that have no acceptable form",
+        "condition": "abyss_only"
+      }
+    ]
+  }
+}
