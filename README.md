@@ -719,3 +719,94 @@ AI text tends toward the literary and polished because it generates from ideas. 
 Perhaps this points toward meaning itself: not a property of words, but a pressure that words can carry. The text doesn't create the meaning—it transmits a compression of everything above it in the hierarchy, from the heat death of the universe down to this breath, this word, this moment.
 
 The deeper question—whether this approach produces text that is genuinely more *meaningful* to human readers—remains untested. But if the detector is measuring something real about humanness, then we may have found it: not in what the text says, but in what it carries.
+
+---
+
+## Appendix: Reproducing the Results
+
+### Requirements
+
+- Python 3.10+
+- An Anthropic API key
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/mjtomei/human.git
+cd human
+
+# Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set your Anthropic API key
+export ANTHROPIC_API_KEY="your-key-here"
+```
+
+### Running the Experiments
+
+**Experiment 1: Basic Cognitive Context**
+```bash
+python run_experiment.py
+```
+Compares baseline generation vs. cognitive context conditioning. Outputs AI detection scores for both conditions.
+
+**Experiment 2: Deep Subconscious Contexts**
+```bash
+python run_deep_experiment.py
+```
+Tests deeper cognitive layers (primal drives, death awareness, etc.).
+
+**Experiment 3: Abyss Search (Curated Configurations)**
+```bash
+python run_abyss_search.py
+```
+Tests six curated primal configurations to find optimal architectures.
+
+**Experiment 4: Refined Animal Architecture**
+```bash
+python run_refined_test.py
+```
+Tests the streamlined animal/embodied architecture variants.
+
+**Experiment 5: Hierarchical Cosmos-to-Body**
+```bash
+python run_hierarchy_test.py --samples 5
+```
+Tests the full hierarchy from cosmos → existence → species → tribe → self → body → moment.
+
+**Control: Human-Written Text**
+```bash
+python run_human_control.py      # Basic control (10 samples)
+python run_human_expanded.py     # Expanded control (26 samples)
+```
+Tests the detector against known human-written text from published authors.
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| `cognitive_gen/context.py` | Basic cognitive context (goals, anxieties, etc.) |
+| `cognitive_gen/deep_context.py` | Subconscious layers (primal drives, death awareness) |
+| `cognitive_gen/refined_context.py` | Animal/embodied architecture |
+| `cognitive_gen/hierarchical_context.py` | Cosmos-to-moment hierarchy |
+| `cognitive_gen/generator.py` | Three-stage generation pipeline |
+| `cognitive_gen/detector.py` | AI detection wrapper (ChatGPT-detector-RoBERTa) |
+
+### Expected Results
+
+Results will vary due to the stochastic nature of generation, but you should see:
+
+- **Baseline AI probability**: ~0.85-0.95
+- **Cognitive context**: ~0.50-0.70 mean, with some samples as low as 0.01-0.10
+- **Best architectures** (grounded_cosmos, minimal_animal): Individual samples scoring 0.004-0.020
+
+### Notes
+
+- The detector (`Hello-SimpleAI/chatgpt-detector-roberta`) will be downloaded automatically on first run (~500MB)
+- Each experiment makes multiple API calls to Anthropic; expect ~$0.50-2.00 per full experiment run
+- Results are saved to `results/` as JSON files
