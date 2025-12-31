@@ -683,6 +683,31 @@ This suggests a refinement of our earlier finding: it's not that abstract concep
 5. **Ablation study**: Which specific elements (primal drives? somatic knowledge? dissociation?) contribute most?
 6. **Voice transfer**: Can this approach capture a specific person's voice, not just generic humanness?
 
+### Open Questions
+
+7. **Application to formal/academic writing**: Can this technique apply to higher-level text like academic writing, legal documents, or technical prose? Or does embodied context necessarily change the surface-level informational content in ways incompatible with formal registers? The samples that pass as human are characterized by sparse, physical, immediate prose—can the *pressure* of embodied context be transmitted through formal structures without altering content, or is the technique fundamentally tied to a specific stylistic register?
+
+8. **Longform narrative generation**: Can this approach scale to meaningful longform text? For example, could it power a hero's journey story generator where each scene carries embodied weight? This would require:
+   - Maintaining cognitive context coherence across thousands of words
+   - Evolving the context as the narrative progresses (the body changes through the journey)
+   - Ensuring the hierarchy presses down consistently without the text becoming monotonous
+   - Testing whether the "humanness" effect persists at scale or dissipates over length
+
+9. **Reverse inference: Text → Cognitive State**: Can we invert the process—going from observed text to inferred internal motivations and unspoken thoughts? The approach would be:
+   - Given a corpus of someone's writing, propose hypothetical cognitive contexts
+   - Test whether each hypothesis successfully predicts what the person says next
+   - Iterate across the full spectrum of unspoken experience (goals, fears, body states, hidden motivations)
+   - Build a probability distribution over their cognitive substrate
+   - Use this distribution to predict how they would react to unseen situations
+
+   This is essentially inferring the "dark matter" of consciousness from its textual emissions. If successful, it could enable:
+   - Psychological profiling from writing samples
+   - Predicting responses to novel situations
+   - Understanding what someone is *not* saying by modeling what they're likely experiencing
+   - Generating text "in someone's voice" by conditioning on their inferred cognitive state
+
+   The philosophical implications are significant: if text is a lossy projection of cognitive state, and we can infer the state from the projection, we may be reconstructing something like the felt experience behind the words.
+
 ## Conclusion
 
 Hierarchical generation with cognitive context conditioning produces AI text that can evade detection. The effect is large and statistically significant for long-form creative writing (p=0.003, Cohen's d=1.18).
