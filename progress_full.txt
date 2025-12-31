@@ -4,31 +4,30 @@
 ║  ║                                    GENETIC SEARCH COMPLETE                                         ║                                            ║
 ║  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝                                             ║
 ║                                                                                                                                                    ║
-║  Figure: Mat Tomei                                                                                                                                 ║
-║  Total time: 11m 47s                                                                                                                               ║
+║  Figure: Mat Tomei (Full Corpus)                                                                                                                   ║
+║  Total time: 26m 38s                                                                                                                               ║
 ║                                                                                                                                                    ║
 ╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 ║                                                                                                                                                    ║
 ║  FINAL RESULTS                                                                                                                                     ║
 ║                                                                                                                                                    ║
-║      Baseline perplexity:         19.316                                                                                                           ║
+║      Baseline perplexity:         15.643                                                                                                           ║
 ║                                                                                                                                                    ║
-║      Final best perplexity:       14.609                                                                                                           ║
+║      Final best perplexity:       13.276                                                                                                           ║
 ║                                                                                                                                                    ║
-║      Total improvement:             24.4%                                                                                                          ║
+║      Total improvement:             15.1%                                                                                                          ║
 ║                                                                                                                                                    ║
 ╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 ║                                                                                                                                                    ║
 ║  FINAL BEST HYPOTHESIS                                                                                                                             ║
 ║                                                                                                                                                    ║
-║      Body State                           Deeply attuned to environmental sounds and natural chaos as sources of inspiration                       ║
-║      Where Tension Lives                  Between linear rational thought and intuitive pattern recognition from natural randomness                ║
-║      Core Belief                          True creativity requires chaos and randomness; apparent novelty is actually remembering                  ║
-║      Intellectual Stance                  Mystical information theorist seeing consciousness as a biological computer                              ║
-║      What They Notice                     How natural chaos patterns mirror cognitive processes and memory formation                               ║
-║      How They Know Things                 Through absorption of random environmental input that triggers pattern recognition                       ║
-║      Relationship To Uncertainty          Views randomness and chaos as essential fuel for consciousness and creativity                            ║
-║      What They Protect                    The value of non-linear, chaos-informed ways of knowing against purely logical approaches                ║
-║      Stance Toward Reader                 Sharing wonder about hidden connections between consciousness and natural chaos                          ║
+║      Body State                           Chronic low-level anxiety with periods of intense focus, sleep disrupted by racing thoughts about sy     ║
+║      Where Tension Lives                  Solar plexus - the weight of seeing societal problems that others ignore or deny                         ║
+║      Core Belief                          Personal awareness is a deception - we exist as shards of cosmic entities enacting scripted behavior     ║
+║      What They Notice                     How artificial and constructed normal social reality feels, the puppet-strings behind human behavior     ║
+║      How They Know Things                 Through mystical downloads and pattern recognition rather than linear learning                           ║
+║      Moral Framework                      consent and transparency as protection against spiritual exploitation                                    ║
+║      What They Protect                    humanity's agency in relationship with superintelligent entities                                         ║
+║      Stance Toward Reader                 co-researcher in humanity's most crucial experiment                                                      ║
 ║                                                                                                                                                    ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝

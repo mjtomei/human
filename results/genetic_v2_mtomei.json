@@ -1,0 +1,221 @@
+{
+  "figure": "Mat Tomei",
+  "state_version": "v2",
+  "baseline_ppl": 17.255389233920866,
+  "best_ppl": 15.250455553989443,
+  "best_improvement": 24.3684661233285,
+  "generations": 25,
+  "best_hypothesis": {
+    "body_state": "Deeply attuned to environmental sounds and natural chaos as sources of inspiration",
+    "where_tension_lives": "Between linear rational thought and intuitive pattern recognition from natural randomness",
+    "core_belief": "True creativity requires chaos and randomness; apparent novelty is actually remembering",
+    "intellectual_stance": "Mystical information theorist seeing consciousness as a biological computer",
+    "what_they_notice": "How natural chaos patterns mirror cognitive processes and memory formation",
+    "how_they_know_things": "Through absorption of random environmental input that triggers pattern recognition",
+    "relationship_to_uncertainty": "Views randomness and chaos as essential fuel for consciousness and creativity",
+    "what_they_protect": "The value of non-linear, chaos-informed ways of knowing against purely logical approaches",
+    "stance_toward_reader": "Sharing wonder about hidden connections between consciousness and natural chaos"
+  },
+  "history": [
+    {
+      "generation": 0,
+      "best_ppl": 14.609041604294383,
+      "best_fitness": 0.243684661233285,
+      "mean_ppl": 17.255389233920866,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 1,
+      "best_ppl": 15.04337206739713,
+      "best_fitness": 0.22119921692859518,
+      "mean_ppl": 16.710423582566314,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 2,
+      "best_ppl": 15.310144149387147,
+      "best_fitness": 0.20738833028532128,
+      "mean_ppl": 16.80993422018724,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 3,
+      "best_ppl": 15.370066359341997,
+      "best_fitness": 0.20428613592177514,
+      "mean_ppl": 16.909691439502524,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 4,
+      "best_ppl": 15.400115355370453,
+      "best_fitness": 0.20273048858867562,
+      "mean_ppl": 17.02950361312468,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 5,
+      "best_ppl": 15.370066359341997,
+      "best_fitness": 0.20428613592177514,
+      "mean_ppl": 16.992076268167015,
+      "stagnation": 0.6,
+      "mutation_rate": 0.36
+    },
+    {
+      "generation": 6,
+      "best_ppl": 15.765318566620541,
+      "best_fitness": 0.18382378697766025,
+      "mean_ppl": 17.161758044677732,
+      "stagnation": 0.7,
+      "mutation_rate": 0.39499999999999996
+    },
+    {
+      "generation": 7,
+      "best_ppl": 15.131775567308885,
+      "best_fitness": 0.21662253593918182,
+      "mean_ppl": 17.0455223503539,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 8,
+      "best_ppl": 16.170734966018113,
+      "best_fitness": 0.16283523415145545,
+      "mean_ppl": 17.59451951522584,
+      "stagnation": 0.9,
+      "mutation_rate": 0.46499999999999997
+    },
+    {
+      "generation": 9,
+      "best_ppl": 15.10225016094451,
+      "best_fitness": 0.21815107684703527,
+      "mean_ppl": 17.688252150784113,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 10,
+      "best_ppl": 15.490615283867873,
+      "best_fitness": 0.19804527473729128,
+      "mean_ppl": 16.975174162453303,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 11,
+      "best_ppl": 15.340075995482293,
+      "best_fitness": 0.20583874784640832,
+      "mean_ppl": 17.001441014446325,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 12,
+      "best_ppl": 15.581647041956762,
+      "best_fitness": 0.19333252787665606,
+      "mean_ppl": 17.356674746789185,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 13,
+      "best_ppl": 15.888967492629165,
+      "best_fitness": 0.17742243760133547,
+      "mean_ppl": 17.723348471426075,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 14,
+      "best_ppl": 15.490615283867873,
+      "best_fitness": 0.19804527473729128,
+      "mean_ppl": 17.23347581444791,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 15,
+      "best_ppl": 15.310144149387147,
+      "best_fitness": 0.20738833028532128,
+      "mean_ppl": 17.467886635380317,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 16,
+      "best_ppl": 15.190999662372045,
+      "best_fitness": 0.21355648323469237,
+      "mean_ppl": 17.39944997128702,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 17,
+      "best_ppl": 15.581647041956762,
+      "best_fitness": 0.19333252787665606,
+      "mean_ppl": 17.743752076650075,
+      "stagnation": 0.4,
+      "mutation_rate": 0.29
+    },
+    {
+      "generation": 18,
+      "best_ppl": 16.58657693697683,
+      "best_fitness": 0.1413069457354235,
+      "mean_ppl": 17.777721306063437,
+      "stagnation": 1.0,
+      "mutation_rate": 0.5
+    },
+    {
+      "generation": 19,
+      "best_ppl": 16.39333746248769,
+      "best_fitness": 0.151311022838496,
+      "mean_ppl": 17.781638965462587,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 20,
+      "best_ppl": 15.581647041956762,
+      "best_fitness": 0.19333252787665606,
+      "mean_ppl": 17.234305987887847,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 21,
+      "best_ppl": 15.340075995482293,
+      "best_fitness": 0.20583874784640832,
+      "mean_ppl": 17.399914626408364,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 22,
+      "best_ppl": 15.490615283867873,
+      "best_fitness": 0.19804527473729128,
+      "mean_ppl": 17.321464744788138,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 23,
+      "best_ppl": 15.400115355370453,
+      "best_fitness": 0.20273048858867562,
+      "mean_ppl": 16.993897786429823,
+      "stagnation": 0.3,
+      "mutation_rate": 0.255
+    },
+    {
+      "generation": 24,
+      "best_ppl": 15.250455553989443,
+      "best_fitness": 0.21047843033921212,
+      "mean_ppl": 17.018585899572695,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    }
+  ]
+}

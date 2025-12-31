@@ -2,13 +2,14 @@ Some applications of a program that can infer motivations behind generic text ar
 - recommendation for media that is much more likely to deeply resonate
 - automated negotiation that maximizes positive sum results
 - automated match making
-- automated therapist that sees the patient more clearly than a human
+- automated therapist that sees the patients more clearly than a human would
 - automated tool for more incisive self discovery
 - automated internet troll that always soul reads people
 - a tool that checks for destructive or malicious intent (important to remember this isnt' always bad)
 - a tool that predicts what someones hidden longer term real-world goals are
 - a tool to explain things that are misunderstood to less intelligent people
 - a tool that generates real-time monitoring of intent for politicians or leader in general
+- a hole detector that finds common motivations which are so missing as to engender suspicion of intentional masking
 
 Research questions
 - Are models already doing this? Is this why people call bad results a skill issue?

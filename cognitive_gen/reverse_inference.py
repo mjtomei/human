@@ -557,6 +557,22 @@ PUBLIC_FIGURES = {
             """I do not believe in God and I am not an atheist.""",
         ]
     },
+
+    "mtomei": {
+        "name": "Mat Tomei",
+        "source": "Essays from mtomei.com",
+        "samples": [
+            """In every interaction between things with incomplete models of themselves, there will be unintended consequences. Today, what we call violence is usually a mismatch between levels of physical sovereignty assumed in an interaction between two people. But since every interaction we recognize includes physical implications, there is necessarily then some violence in every interaction. This will be true as long as there are differences between people. So at one end of the spectrum, there is hell, where all power feels free to violate in any way possible. On the other end, there is heaven, where everyone is exactly identical and hardship is impossible. Neither is preferable since neither is without tradeoff.""",
+
+            """While it seems entirely possible that God is real, eternally beyond our understanding, and deserves our complete deference, it's interesting to think about some of the implications of things like simulation theory. It's possible that there are one or more entities with power beyond our understanding but that are otherwise closer to us in their moral patiency. We could soon create virtual worlds in which there are many intelligent entities for whom we are unable to prove or disprove equivalence of their experience with our own.""",
+
+            """Shame is a request that you take an action to fix something wrong. There can be external or internal sources both for the request and the thing that is wrong. The thing that is wrong is not always the thing that people ask you to fix, although there is always something wrong when you feel shame. This conception is a way to reframe guilt given the fact that sin is a burden shared by everyone, even though we try to parcel it out and eject those with the biggest parcels.""",
+
+            """I wonder if reason and analogy separate us from God because we demand a rational explanation for everything and have corrupted thoughts. If God is an advanced life form beyond our understanding, something allowable by science, we wouldn't understand their mechanisms or be able to explain all the outcomes they produce. Any time they did something which we couldn't do for ourselves that was beyond our understanding, we would brush it off. If you hear voices, you are schizophrenic, not being contacted by something greater.""",
+
+            """I have heard some religious leaders say that water has memory. I wonder if this is a telephone game output of another idea, "water helps us remember." The sound of water moving is one of many sources of chaos in our world, and chaos acts as a source of true random number generation. Random data is required for any computer, even a biological one, to generate truly new data. If we have done almost everything before in this world or another, anything new to us is only really a rediscovery or remembrance.""",
+        ]
+    },
 }
 
 

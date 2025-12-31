@@ -827,23 +827,36 @@ class GeneticSearch:
 
 
 def run_genetic_search(
-    figure_key: str,
+    figure_key: str = None,
     state_version: str = "v1",
     population_size: int = 20,
     max_generations: int = 15,
     model_name: str = "mistralai/Mistral-7B-v0.3",
     progress_file: str = "progress.txt",
+    writing_samples: list[str] = None,
+    figure_name: str = None,
 ) -> dict:
-    """Run genetic search on a writer."""
+    """Run genetic search on a writer.
 
-    if figure_key not in ALL_WRITERS:
-        raise ValueError(f"Unknown figure: {figure_key}. Available: {list(ALL_WRITERS.keys())}")
+    Can provide either:
+    - figure_key: Look up samples from ALL_WRITERS
+    - writing_samples + figure_name: Use provided samples directly
+    """
 
-    figure = ALL_WRITERS[figure_key]
-    samples = figure["samples"]
+    if writing_samples is not None:
+        samples = writing_samples
+        name = figure_name or "Custom"
+    elif figure_key is not None:
+        if figure_key not in ALL_WRITERS:
+            raise ValueError(f"Unknown figure: {figure_key}. Available: {list(ALL_WRITERS.keys())}")
+        figure = ALL_WRITERS[figure_key]
+        samples = figure["samples"]
+        name = figure["name"]
+    else:
+        raise ValueError("Must provide either figure_key or writing_samples")
 
     print("=" * 70)
-    print(f"GENETIC SEARCH: {figure['name']}")
+    print(f"GENETIC SEARCH: {name}")
     print(f"State version: {state_version}")
     print(f"Population: {population_size}, Generations: {max_generations}")
     print(f"Model: {model_name}")
@@ -862,7 +875,7 @@ def run_genetic_search(
     best_hypothesis, best_fitness, history = ga.search(
         samples,
         max_generations=max_generations,
-        figure_name=figure['name'],
+        figure_name=name,
     )
 
     print("\n" + "=" * 70)
@@ -872,7 +885,7 @@ def run_genetic_search(
         print(f"  {dim}: {value}")
 
     return {
-        "figure": figure["name"],
+        "figure": name,
         "state_version": state_version,
         "baseline_ppl": history[0]['mean_ppl'] if history else None,
         "best_ppl": history[-1]['best_ppl'] if history else None,
