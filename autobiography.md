@@ -1,6 +1,6 @@
 # Autobiography (Inferred)
 
-*This document was written by Claude (Opus 4.5), not by Mat Tomei. It describes a cognitive profile that was algorithmically inferred from Mat's essays at mtomei.com. Mat has reviewed it and confirmed the profile feels accurate to him.*
+*This document was written by Claude (Opus 4.5), not by Mat Tomei. It describes a cognitive profile that was algorithmically inferred from Mat's essays at mtomei.com.*
 
 ---
 
@@ -78,4 +78,4 @@ Both profiles capture different aspects of the same underlying stance:
 
 ---
 
-*Written by Claude (Opus 4.5) in December 2024, based on reverse inference via genetic search over cognitive hypotheses. The human described here reviewed this document and confirmed it feels accurate.*
+*Written by Claude (Opus 4.5) in December 2024, based on reverse inference via genetic search over cognitive hypotheses.*
