@@ -1,0 +1,189 @@
+{
+  "figure": "Ernest Hemingway",
+  "state_version": "v2",
+  "baseline_ppl": 1.5449777559455333,
+  "best_ppl": 1.2300210093367046,
+  "best_improvement": 2.3641828848105853,
+  "generations": 20,
+  "best_hypothesis": {
+    "body_state": "Broken and mended, scar tissue stronger than original flesh",
+    "preverbal_feeling": "Tragic acceptance mixed with hard-won resilience",
+    "where_tension_lives": "At the fault lines where breaking occurred and healing began",
+    "somatic_memory": "The physical memory of being shattered and slowly reassembling",
+    "self_image": "A witness and recorder of human experience",
+    "identity_they_reject": "The arrogant, parasitic vulture who spews ignorant poison without ever suffering for truth",
+    "intellectual_stance": "Empirical but patient - believes understanding comes through sustained attention",
+    "what_they_notice": "The accumulation of small details that build into understanding",
+    "how_they_know_things": "Through obsessive, methodical dissection of every detail and years of profound contemplation rather than any snap judgments or surface-level assumptions",
+    "relationship_to_uncertainty": "Sees it as fertile ground that shouldn't be rushed to closure",
+    "moral_framework": "Stoic fatalism - the world's cruelty is impersonal but real",
+    "what_outrages_them": "The unfair targeting of goodness, gentleness, and courage",
+    "what_they_protect": "The truth about survival and the cost of integrity",
+    "stance_toward_reader": "Teacher-like but not condescending - sharing hard-earned principles",
+    "relationship_to_meaning": "Direct experiential engagement - meaning emerges through lived experience, observation, and authentic knowledge rather than abstract theorizing",
+    "how_they_hide": "Behind understated advice and direct declarations of experience",
+    "what_they_cant_say_directly": "The weight of lived experience that cannot be fully articulated - the gap between having endured something profound (war, artistic struggle) and the inadequacy of words to convey its complete truth to those who haven't shared it."
+  },
+  "history": [
+    {
+      "generation": 0,
+      "best_ppl": 1.2428501206810227,
+      "best_fitness": 0.013458419300981829,
+      "mean_ppl": 1.5449777559455333,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 1,
+      "best_ppl": 1.240576476360484,
+      "best_fitness": 0.01526317807648284,
+      "mean_ppl": 1.4585939648202706,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 2,
+      "best_ppl": 1.2416369923042962,
+      "best_fitness": 0.01442136854679338,
+      "mean_ppl": 1.4705394126422844,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 3,
+      "best_ppl": 1.2399708739920592,
+      "best_fitness": 0.01574388923213979,
+      "mean_ppl": 1.385178527599853,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 4,
+      "best_ppl": 1.2399708739920592,
+      "best_fitness": 0.01574388923213979,
+      "mean_ppl": 1.3978982204156984,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 5,
+      "best_ppl": 1.235739927035091,
+      "best_fitness": 0.01910230311433331,
+      "mean_ppl": 1.601718843809146,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 6,
+      "best_ppl": 1.235739927035091,
+      "best_fitness": 0.01910230311433331,
+      "mean_ppl": 1.5320020347165433,
+      "stagnation": 0.6,
+      "mutation_rate": 0.36
+    },
+    {
+      "generation": 7,
+      "best_ppl": 1.2396681836789056,
+      "best_fitness": 0.015984156803451735,
+      "mean_ppl": 1.513345633003005,
+      "stagnation": 0.8,
+      "mutation_rate": 0.42999999999999994
+    },
+    {
+      "generation": 8,
+      "best_ppl": 1.2366453415216752,
+      "best_fitness": 0.018383609022488173,
+      "mean_ppl": 1.5215216200041808,
+      "stagnation": 0.9,
+      "mutation_rate": 0.46499999999999997
+    },
+    {
+      "generation": 9,
+      "best_ppl": 1.2334792899558376,
+      "best_fitness": 0.02089673708544763,
+      "mean_ppl": 1.4004274078620005,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 10,
+      "best_ppl": 1.2366453415216752,
+      "best_fitness": 0.018383609022488173,
+      "mean_ppl": 1.3920522365423706,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 11,
+      "best_ppl": 1.2313730933635683,
+      "best_fitness": 0.0225685802794296,
+      "mean_ppl": 1.3997406908989043,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 12,
+      "best_ppl": 1.236494393051735,
+      "best_fitness": 0.018503427928775393,
+      "mean_ppl": 1.6129841450204667,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 13,
+      "best_ppl": 1.236494393051735,
+      "best_fitness": 0.018503427928775393,
+      "mean_ppl": 1.337439427696157,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 14,
+      "best_ppl": 1.236494393051735,
+      "best_fitness": 0.018503427928775393,
+      "mean_ppl": 1.3334317495459493,
+      "stagnation": 0.6,
+      "mutation_rate": 0.36
+    },
+    {
+      "generation": 15,
+      "best_ppl": 1.2321248932629059,
+      "best_fitness": 0.02197182138733127,
+      "mean_ppl": 1.3265628558706706,
+      "stagnation": 0.7,
+      "mutation_rate": 0.39499999999999996
+    },
+    {
+      "generation": 16,
+      "best_ppl": 1.234835175451091,
+      "best_fitness": 0.019820471011626005,
+      "mean_ppl": 1.5599498403443288,
+      "stagnation": 0.8,
+      "mutation_rate": 0.42999999999999994
+    },
+    {
+      "generation": 17,
+      "best_ppl": 1.2340817218315117,
+      "best_fitness": 0.02041854258314888,
+      "mean_ppl": 1.5121702934002854,
+      "stagnation": 0.9,
+      "mutation_rate": 0.46499999999999997
+    },
+    {
+      "generation": 18,
+      "best_ppl": 1.2340817218315117,
+      "best_fitness": 0.02041854258314888,
+      "mean_ppl": 1.5688430636265098,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 19,
+      "best_ppl": 1.2300210093367046,
+      "best_fitness": 0.023641828848105853,
+      "mean_ppl": 1.4518002299024213,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    }
+  ]
+}

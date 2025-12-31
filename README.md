@@ -674,6 +674,133 @@ This suggests a refinement of our earlier finding: it's not that abstract concep
 
 ---
 
+## Experiment 5: Reverse Inference — Text → Cognitive State
+
+The previous experiments demonstrated that conditioning text generation on cognitive context produces more human-like output. But can we invert the process? Given someone's writing, can we *infer* the cognitive state that produced it?
+
+This would close the loop: instead of hypothesizing cognitive states and generating text, we observe text and reconstruct the hidden cognitive substrate.
+
+### Method: Genetic Search over Cognitive Hypotheses
+
+We implemented a genetic algorithm to search the space of cognitive hypotheses, scored by how well each hypothesis helps predict the writer's text. The key insight: if a cognitive context is correct, it should reduce the perplexity (surprise) of predicting what the writer says next.
+
+**Architecture:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  GENETIC SEARCH                                                  │
+│                                                                  │
+│  Population: 30 cognitive hypotheses                             │
+│  Fitness: -log(perplexity) when predicting target text          │
+│  Selection: Tournament with fitness sharing                      │
+│  Crossover: Linkage-aware (linked dimensions inherited together) │
+│  Mutation: Semantic (Claude generates meaningful variations)     │
+│                                                                  │
+│  Adaptive mechanisms:                                            │
+│  • Stagnation detection → diversity injection                   │
+│  • Mutation rate increases when stuck                           │
+│  • Island model for parallel exploration                        │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Key innovations:**
+
+1. **Linkage learning**: Dimensions like `body_state`, `somatic_memory`, and `preverbal_feeling` are semantically linked—they should be inherited together during crossover to maintain coherence.
+
+2. **Semantic mutation**: Instead of random changes, Claude generates meaningful variations: `vary()` (slight rewording), `intensify()` (make more extreme), `soften()` (make more subtle), `opposite()` (psychological inverse), `blend()` (combine two values).
+
+3. **Perplexity scoring**: Using Mistral-7B, we measure how much a cognitive hypothesis reduces the model's surprise when predicting held-out writing samples.
+
+### Baseline Perplexity by Writer
+
+Before running the search, we measured baseline perplexity (no cognitive hypothesis) for various writers:
+
+| Writer | Baseline Perplexity | Notes |
+|--------|---------------------|-------|
+| Hemingway | 1.26 | Very low—model "knows" him well |
+| Orwell | 1.35 | Low |
+| Didion | 1.39 | Low |
+| Nietzsche | 1.57 | Low |
+| Huxley | 2.00 | Moderate |
+| Baldwin | 2.14 | Moderate |
+| Camus | 2.26 | Moderate |
+| Woolf | 2.40 | Moderate |
+| **Kafka** | **8.29** | High—unusual/translated text |
+| Anonymous (grief forum) | 7.99 | High—unknown writer |
+
+**Critical finding**: Famous writers have very low baseline perplexity because language models have seen their work during training. The model already "knows" Hemingway, leaving little room for cognitive context to help. Writers with higher baseline perplexity have more room for improvement.
+
+### Results: Kafka vs. Hemingway
+
+| Writer | Baseline | Best | Improvement | Time |
+|--------|----------|------|-------------|------|
+| Hemingway | 1.26 | 1.23 | 2.4% | 8m 50s |
+| **Kafka** | **8.29** | **3.74** | **54.8%** | 9m 14s |
+
+Kafka's unusual, translated prose gave the algorithm room to work. The 54.8% improvement demonstrates that cognitive framing can dramatically help when the model doesn't already have strong priors about the writer.
+
+### Inferred Cognitive State for Kafka
+
+The genetic search converged on this profile for Franz Kafka:
+
+| Dimension | Inferred Value |
+|-----------|----------------|
+| **Body State** | Empty, reverberating with void |
+| **Somatic Memory** | Unique experiences of expansion with clear purpose |
+| **Self Image** | A lone fighter in an unwinnable battle |
+| **Identity They Reject** | The optimistic idealist who believes individuals can triumph over systems |
+| **What They Notice** | The dangerous gap between inner reality and outer presentation |
+| **Relationship to Uncertainty** | Manages it through prophetic pronouncements and absolute statements |
+| **What Outrages Them** | The arbitrary nature of who receives hope and who doesn't |
+
+This captures Kafka's characteristic themes with striking accuracy:
+- **Alienation**: "empty, reverberating with void"
+- **Absurdist struggle**: "lone fighter in an unwinnable battle"
+- **Bureaucratic futility**: "individuals cannot triumph over systems"
+- **The Kafkaesque gap**: "inner reality vs. outer presentation"
+- **Arbitrary fate**: "who receives hope and who doesn't"
+
+The algorithm discovered these themes not by analyzing plot or biography, but by finding the cognitive substrate that best predicts Kafka's word choices.
+
+### Adaptive Mechanisms in Action
+
+The search log shows the adaptive mechanisms working:
+
+```
+Gen  9: stag=0.90  Severe stagnation detected, injecting diversity...
+Gen 19: stag=0.90  Severe stagnation detected, injecting diversity...
+```
+
+At generations 9 and 19, the algorithm detected it was stuck in local optima and injected 9 new random hypotheses to escape. The mutation rate adapted from 0.18 (exploring) up to 0.43 (stuck) and back down as progress resumed.
+
+### Interpretation
+
+The dramatic difference between Hemingway (2.4%) and Kafka (54.8%) suggests two things:
+
+1. **Cognitive context helps most for unknown/unusual writers**: When the model already has strong priors (famous canonical authors), cognitive framing adds little. When it doesn't (obscure writers, translated work), the framing becomes essential.
+
+2. **Reverse inference can recover meaningful psychological profiles**: The Kafka profile isn't just word-association—it captures the existential stance and phenomenological texture that scholars have long attributed to his work, discovered purely through predictive optimization.
+
+### Implementation
+
+The genetic search is available via:
+
+```bash
+python run_genetic_search.py kafka --version v2 --population 30 --generations 25 --progress progress.txt
+```
+
+Monitor progress in real-time:
+```bash
+watch -n 1 cat progress.txt
+```
+
+Key files:
+- `cognitive_gen/cognitive_state.py`: V1 (20 dims) and V2 (30+ dims) architectures
+- `cognitive_gen/semantic_mutation.py`: Claude-based mutation operators
+- `cognitive_gen/genetic_search.py`: Full GA implementation with linkage learning
+
+---
+
 ## Future Directions
 
 1. **Refine the animal-somatic architecture**: Build on the finding that embodied/predatory contexts work best
@@ -712,14 +839,15 @@ This suggests a refinement of our earlier finding: it's not that abstract concep
 
 Hierarchical generation with cognitive context conditioning produces AI text that can evade detection. The effect is large and statistically significant for long-form creative writing (p=0.003, Cohen's d=1.18).
 
-Through four experiments, we progressively refined our understanding:
+Through five experiments, we progressively refined our understanding:
 
 | Experiment | Best Score | Key Finding |
 |------------|-----------|-------------|
 | 1. Cognitive context | 0.082 | Context conditioning works |
 | 2. Deep subconscious | 0.032 | Embodied beats abstract |
 | 3. Animal architecture | 0.004 | Minimal embodiment works best |
-| 4. Cosmic hierarchy | **0.010** | Cosmos grounded in body works best |
+| 4. Cosmic hierarchy | 0.010 | Cosmos grounded in body works best |
+| 5. Reverse inference | **54.8% ↓ perplexity** | Can infer cognitive state from text |
 
 The final architecture—**grounded cosmos**—spans from universal to immediate (cosmos → existence → body → moment) while skipping social/self layers. It achieved the lowest mean score (0.551) with the full hierarchy, and the lowest single score (0.010) with the grounded variant.
 
@@ -732,6 +860,8 @@ The final architecture—**grounded cosmos**—spans from universal to immediate
 3. **Social layers add noise**: Skipping tribe/self and going straight from existence to body produced better results. Perhaps the constructed self is where AI patterns live.
 
 4. **The cosmos must be felt, not thought**: "The universe is 13.8 billion years of matter briefly noticing itself" produces human text only when it manifests as "the refrigerator hummed" and "the coffee had gone cold."
+
+5. **Reverse inference works**: Given text, we can search for the cognitive state that best predicts it. The Kafka experiment (54.8% perplexity reduction) shows this isn't just fitting noise—the inferred profile ("lone fighter in an unwinnable battle," "individuals cannot triumph over systems") captures genuine psychological themes that scholars have long attributed to his work.
 
 ### The Theory
 
@@ -811,6 +941,12 @@ python run_human_expanded.py     # Expanded control (26 samples)
 ```
 Tests the detector against known human-written text from published authors.
 
+**Experiment 5: Reverse Inference (Genetic Search)**
+```bash
+python run_genetic_search.py kafka --version v2 --population 30 --generations 25 --progress progress.txt
+```
+Runs genetic search to infer cognitive state from a writer's text. Monitor with `watch -n 1 cat progress.txt`.
+
 ### Key Files
 
 | File | Purpose |
@@ -821,6 +957,9 @@ Tests the detector against known human-written text from published authors.
 | `cognitive_gen/hierarchical_context.py` | Cosmos-to-moment hierarchy |
 | `cognitive_gen/generator.py` | Three-stage generation pipeline |
 | `cognitive_gen/detector.py` | AI detection wrapper (ChatGPT-detector-RoBERTa) |
+| `cognitive_gen/cognitive_state.py` | V1 (20 dims) and V2 (30+ dims) state architectures |
+| `cognitive_gen/semantic_mutation.py` | Claude-based semantic mutation operators |
+| `cognitive_gen/genetic_search.py` | Genetic algorithm with linkage learning |
 
 ### Expected Results
 

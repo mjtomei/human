@@ -1,0 +1,32 @@
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                    ║
+║  ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗                                             ║
+║  ║                                    GENETIC SEARCH COMPLETE                                         ║                                            ║
+║  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝                                             ║
+║                                                                                                                                                    ║
+║  Figure: Franz Kafka                                                                                                                               ║
+║  Total time: 9m 26s                                                                                                                                ║
+║                                                                                                                                                    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+║                                                                                                                                                    ║
+║  FINAL RESULTS                                                                                                                                     ║
+║                                                                                                                                                    ║
+║      Baseline perplexity:          8.292                                                                                                           ║
+║                                                                                                                                                    ║
+║      Final best perplexity:        3.745                                                                                                           ║
+║                                                                                                                                                    ║
+║      Total improvement:             54.8%                                                                                                          ║
+║                                                                                                                                                    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+║                                                                                                                                                    ║
+║  FINAL BEST HYPOTHESIS                                                                                                                             ║
+║                                                                                                                                                    ║
+║      Body State                           empty, reverberating with void                                                                           ║
+║      Somatic Memory                       unique experiences of expansion with clear purpose                                                       ║
+║      Self Image                           A lone fighter in an unwinnable battle                                                                   ║
+║      Identity They Reject                 The optimistic idealist who believes individuals can triumph over systems                                ║
+║      What They Notice                     the dangerous gap between inner reality and outer presentation                                           ║
+║      Relationship To Uncertainty          manages it through prophetic pronouncements and absolute statements                                      ║
+║      What Outrages Them                   the arbitrary nature of who receives hope and who doesn't                                                ║
+║                                                                                                                                                    ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝

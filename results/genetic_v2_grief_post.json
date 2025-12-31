@@ -1,0 +1,180 @@
+{
+  "figure": "Anonymous (Grief forum)",
+  "state_version": "v2",
+  "baseline_ppl": 6.858310156969399,
+  "best_ppl": 5.353413393832282,
+  "best_improvement": 35.37206494635673,
+  "generations": 20,
+  "best_hypothesis": {
+    "what_they_notice": "dream-like quality of daily life continuing",
+    "how_they_know_things": "intuitive sense that reality has fundamentally shifted",
+    "relationship_to_uncertainty": "nothing feels solid or reliable anymore",
+    "what_outrages_them": "people complaining about trivial inconveniences",
+    "where_they_feel_powerless": "against the world's relentless normalcy",
+    "relationship_to_meaning": "significance-seeking in ordinary remnants",
+    "what_they_cant_say_directly": "part of them doesn't believe mother is really gone",
+    "central_tension": "between unconscious impulse and conscious deliberation"
+  },
+  "history": [
+    {
+      "generation": 0,
+      "best_ppl": 5.704246728365185,
+      "best_fitness": 0.2860298059200762,
+      "mean_ppl": 6.858310156969399,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 1,
+      "best_ppl": 5.637790241030036,
+      "best_fitness": 0.2943478106313039,
+      "mean_ppl": 7.04226052443702,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 2,
+      "best_ppl": 5.390134361325962,
+      "best_fitness": 0.32534557859566887,
+      "mean_ppl": 6.796508095197145,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 3,
+      "best_ppl": 5.637790241030036,
+      "best_fitness": 0.2943478106313039,
+      "mean_ppl": 6.81167220791601,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 4,
+      "best_ppl": 6.283270498894711,
+      "best_fitness": 0.21355648323469242,
+      "mean_ppl": 6.973515393140243,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 5,
+      "best_ppl": 5.517957714099694,
+      "best_fitness": 0.3093466100493059,
+      "mean_ppl": 6.654805311450454,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 6,
+      "best_ppl": 5.4377173879024125,
+      "best_fitness": 0.3193898644869569,
+      "mean_ppl": 6.370913274443291,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 7,
+      "best_ppl": 5.501815479756081,
+      "best_fitness": 0.3113670475822554,
+      "mean_ppl": 6.366053050341164,
+      "stagnation": 0.3,
+      "mutation_rate": 0.255
+    },
+    {
+      "generation": 8,
+      "best_ppl": 5.193775750044662,
+      "best_fitness": 0.3499227405737155,
+      "mean_ppl": 6.438648385521492,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 9,
+      "best_ppl": 5.5830016535272735,
+      "best_fitness": 0.30120540643938754,
+      "mean_ppl": 6.415250095173064,
+      "stagnation": 0.5,
+      "mutation_rate": 0.32499999999999996
+    },
+    {
+      "generation": 10,
+      "best_ppl": 5.4430302525389935,
+      "best_fitness": 0.3187248815056216,
+      "mean_ppl": 6.601112643519797,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 11,
+      "best_ppl": 5.777125554065775,
+      "best_fitness": 0.2769079513076128,
+      "mean_ppl": 6.521462543265922,
+      "stagnation": 0.7,
+      "mutation_rate": 0.39499999999999996
+    },
+    {
+      "generation": 12,
+      "best_ppl": 5.748985689945316,
+      "best_fitness": 0.28043006828540085,
+      "mean_ppl": 6.650372877022749,
+      "stagnation": 0.8,
+      "mutation_rate": 0.42999999999999994
+    },
+    {
+      "generation": 13,
+      "best_ppl": 5.31175280028304,
+      "best_fitness": 0.3351561812948513,
+      "mean_ppl": 6.558101131915135,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 14,
+      "best_ppl": 5.178581877668445,
+      "best_fitness": 0.351824476688202,
+      "mean_ppl": 6.250204974827269,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 15,
+      "best_ppl": 5.224297361290046,
+      "best_fitness": 0.3461025129885136,
+      "mean_ppl": 6.388695835604457,
+      "stagnation": 0.2,
+      "mutation_rate": 0.21999999999999997
+    },
+    {
+      "generation": 16,
+      "best_ppl": 5.1634324534488085,
+      "best_fitness": 0.3537206494635673,
+      "mean_ppl": 6.37558195147706,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 17,
+      "best_ppl": 5.788420028583415,
+      "best_fitness": 0.2754942820630321,
+      "mean_ppl": 6.442651563470147,
+      "stagnation": 1.0,
+      "mutation_rate": 0.5
+    },
+    {
+      "generation": 18,
+      "best_ppl": 5.637790241030036,
+      "best_fitness": 0.2943478106313039,
+      "mean_ppl": 6.539518320753761,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 19,
+      "best_ppl": 5.353413393832282,
+      "best_fitness": 0.32994174659764075,
+      "mean_ppl": 6.183071881693644,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    }
+  ]
+}

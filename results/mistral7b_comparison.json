@@ -1,0 +1,33 @@
+{
+  "model": "mistralai/Mistral-7B-v0.3",
+  "gpu": "NVIDIA GB10",
+  "date": "2025-12-31",
+  "method": "iterative_hypothesis_v2",
+  "results": {
+    "grief_post": {
+      "type": "anonymous",
+      "baseline_ppl": 7.99,
+      "best_ppl": 5.24,
+      "improvement": 34.4
+    },
+    "career_post": {
+      "type": "anonymous", 
+      "baseline_ppl": 6.36,
+      "best_ppl": 5.04,
+      "improvement": 20.8
+    },
+    "hemingway": {
+      "type": "famous",
+      "baseline_ppl": 1.26,
+      "best_ppl": 1.19,
+      "improvement": 5.2
+    },
+    "orwell": {
+      "type": "famous",
+      "baseline_ppl": 1.35,
+      "best_ppl": 1.29,
+      "improvement": 4.0
+    }
+  },
+  "key_finding": "Cognitive hypotheses provide large perplexity improvements (20-34%) for novel anonymous writing but minimal improvement (4-5%) for famous authors whose styles are already memorized by the model. This suggests cognitive context has genuine predictive power for understanding new human writing."
+}

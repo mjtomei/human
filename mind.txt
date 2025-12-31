@@ -1,0 +1,22 @@
+Some applications of a program that can infer motivations behind generic text are:
+- recommendation for media that is much more likely to deeply resonate
+- automated negotiation that maximizes positive sum results
+- automated match making
+- automated therapist that sees the patient more clearly than a human
+- automated tool for more incisive self discovery
+- automated internet troll that always soul reads people
+- a tool that checks for destructive or malicious intent (important to remember this isnt' always bad)
+- a tool that predicts what someones hidden longer term real-world goals are
+- a tool to explain things that are misunderstood to less intelligent people
+- a tool that generates real-time monitoring of intent for politicians or leader in general
+
+Research questions
+- Are models already doing this? Is this why people call bad results a skill issue?
+- Then is this ultimately interpretability research or is it also a way to increase performance of smaller models?
+- What is the best way to incorporate and train these signals? Should they be kept separate or discovered in the model? How?
+
+TODOs
+- rerun old experiments with newer model
+- set up local inference machines
+- improve motivation imputation results
+  - try new expanded architecture with feature pruning

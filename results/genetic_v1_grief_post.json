@@ -1,0 +1,60 @@
+{
+  "figure": "Anonymous (Grief forum)",
+  "state_version": "v1",
+  "baseline_ppl": 6.848437422970088,
+  "best_ppl": 4.214270746052497,
+  "best_improvement": 47.56038204537278,
+  "generations": 5,
+  "best_hypothesis": {
+    "body_state": "Rigid resistance to being moved or changed",
+    "preverbal_feeling": "Fierce 'no' to any suggestion of healing",
+    "core_belief": "Major loss should stop the world, but the world is callously indifferent",
+    "what_they_notice": "The relentless normalcy of others - traffic, weather, coffee complaints",
+    "moral_framework": "Loyalty to the dead requires maintaining the wound they left",
+    "what_outrages_them": "The assumption that healing is always desirable",
+    "stance_toward_reader": "Imploring them to witness how wrong normal feels",
+    "what_they_want_reader_to_feel": "The jarring disconnect between inner devastation and outer normalcy"
+  },
+  "history": [
+    {
+      "generation": 0,
+      "best_ppl": 5.019253663293166,
+      "best_fitness": 0.37176674103210905,
+      "mean_ppl": 6.848437422970088,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 1,
+      "best_ppl": 4.534517802910525,
+      "best_fitness": 0.4324385479849756,
+      "mean_ppl": 6.454882890487317,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 2,
+      "best_ppl": 4.382148207559984,
+      "best_fitness": 0.45150983903263386,
+      "mean_ppl": 6.206541067915018,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 3,
+      "best_ppl": 4.189649955064052,
+      "best_fitness": 0.47560382045372784,
+      "mean_ppl": 6.143180862394065,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 4,
+      "best_ppl": 4.214270746052497,
+      "best_fitness": 0.4725221671246371,
+      "mean_ppl": 5.082251590405005,
+      "stagnation": 0.2,
+      "mutation_rate": 0.21999999999999997
+    }
+  ]
+}

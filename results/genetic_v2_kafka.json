@@ -1,0 +1,219 @@
+{
+  "figure": "Franz Kafka",
+  "state_version": "v2",
+  "baseline_ppl": 5.441248786959667,
+  "best_ppl": 3.7961385347096464,
+  "best_improvement": 54.8383483915277,
+  "generations": 25,
+  "best_hypothesis": {
+    "body_state": "empty, reverberating with void",
+    "somatic_memory": "unique experiences of expansion with clear purpose",
+    "self_image": "A lone fighter in an unwinnable battle",
+    "identity_they_reject": "The optimistic idealist who believes individuals can triumph over systems",
+    "what_they_notice": "the dangerous gap between inner reality and outer presentation",
+    "relationship_to_uncertainty": "manages it through prophetic pronouncements and absolute statements",
+    "what_outrages_them": "the arbitrary nature of who receives hope and who doesn't"
+  },
+  "history": [
+    {
+      "generation": 0,
+      "best_ppl": 4.234898559819394,
+      "best_fitness": 0.48924997687098926,
+      "mean_ppl": 5.441248786959667,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 1,
+      "best_ppl": 3.98999134808631,
+      "best_fitness": 0.5187870159027975,
+      "mean_ppl": 5.434317135372557,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 2,
+      "best_ppl": 4.013438830353461,
+      "best_fitness": 0.5159591318481732,
+      "mean_ppl": 5.280279267818855,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 3,
+      "best_ppl": 4.09259681838702,
+      "best_fitness": 0.5064122811626375,
+      "mean_ppl": 6.1999067185944075,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 4,
+      "best_ppl": 4.009521369629645,
+      "best_fitness": 0.5164315972749205,
+      "mean_ppl": 5.278507529889189,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 5,
+      "best_ppl": 3.9938897272077902,
+      "best_fitness": 0.518316851813071,
+      "mean_ppl": 5.40329756959129,
+      "stagnation": 0.2,
+      "mutation_rate": 0.21999999999999997
+    },
+    {
+      "generation": 6,
+      "best_ppl": 4.072662143730661,
+      "best_fitness": 0.5088165029870768,
+      "mean_ppl": 5.348560122559452,
+      "stagnation": 0.6,
+      "mutation_rate": 0.36
+    },
+    {
+      "generation": 7,
+      "best_ppl": 3.825912018246517,
+      "best_fitness": 0.538575806667656,
+      "mean_ppl": 5.392053859605647,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 8,
+      "best_ppl": 3.9705564555387625,
+      "best_fitness": 0.5211309614962885,
+      "mean_ppl": 5.2988639146331655,
+      "stagnation": 0.2,
+      "mutation_rate": 0.21999999999999997
+    },
+    {
+      "generation": 9,
+      "best_ppl": 4.12872544341226,
+      "best_fitness": 0.5020549876391658,
+      "mean_ppl": 5.284976265235736,
+      "stagnation": 0.9,
+      "mutation_rate": 0.46499999999999997
+    },
+    {
+      "generation": 10,
+      "best_ppl": 4.189649955064052,
+      "best_fitness": 0.4947071857270927,
+      "mean_ppl": 5.973327604291376,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 11,
+      "best_ppl": 3.8109962008475367,
+      "best_fitness": 0.540374729115008,
+      "mean_ppl": 5.367375269650823,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 12,
+      "best_ppl": 3.829650085382855,
+      "best_fitness": 0.5381249770080139,
+      "mean_ppl": 5.476805476898357,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 13,
+      "best_ppl": 4.140839054618093,
+      "best_fitness": 0.5005940253242104,
+      "mean_ppl": 5.439794527883499,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 14,
+      "best_ppl": 3.955076722920577,
+      "best_fitness": 0.5229978949496145,
+      "mean_ppl": 5.312136696103582,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 15,
+      "best_ppl": 3.8634574693135315,
+      "best_fitness": 0.5340476368118745,
+      "mean_ppl": 5.352615914581472,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 16,
+      "best_ppl": 3.744591379244545,
+      "best_fitness": 0.548383483915277,
+      "mean_ppl": 5.228678563351523,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    },
+    {
+      "generation": 17,
+      "best_ppl": 3.744591379244545,
+      "best_fitness": 0.548383483915277,
+      "mean_ppl": 5.405371905843306,
+      "stagnation": 0.2,
+      "mutation_rate": 0.21999999999999997
+    },
+    {
+      "generation": 18,
+      "best_ppl": 4.1448848179061955,
+      "best_fitness": 0.5001060859642034,
+      "mean_ppl": 5.512207250116549,
+      "stagnation": 0.8,
+      "mutation_rate": 0.42999999999999994
+    },
+    {
+      "generation": 19,
+      "best_ppl": 4.12872544341226,
+      "best_fitness": 0.5020549876391658,
+      "mean_ppl": 5.654942083066758,
+      "stagnation": 0.9,
+      "mutation_rate": 0.46499999999999997
+    },
+    {
+      "generation": 20,
+      "best_ppl": 4.169242543221528,
+      "best_fitness": 0.49716842202905903,
+      "mean_ppl": 5.179680462850101,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 21,
+      "best_ppl": 3.9473595024974304,
+      "best_fitness": 0.5239286304687627,
+      "mean_ppl": 5.716538217314819,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 22,
+      "best_ppl": 4.044916621232056,
+      "best_fitness": 0.5121627522673651,
+      "mean_ppl": 5.522741238108775,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 23,
+      "best_ppl": 4.009521369629645,
+      "best_fitness": 0.5164315972749205,
+      "mean_ppl": 5.438927549013727,
+      "stagnation": 0.0,
+      "mutation_rate": 0.15
+    },
+    {
+      "generation": 24,
+      "best_ppl": 3.7961385347096464,
+      "best_fitness": 0.5421666382283857,
+      "mean_ppl": 5.145838792433992,
+      "stagnation": 0.1,
+      "mutation_rate": 0.185
+    }
+  ]
+}
