@@ -196,9 +196,14 @@ Another sample of their writing:"""
                 ctx_len = context_lengths[i]
                 seq_mask = shift_mask[i]
 
+                # Account for left-padding: count padding tokens at the start
+                padding_offset = (attention_mask[i] == 0).sum().item()
+
                 target_mask = torch.zeros_like(seq_mask)
-                if ctx_len - 1 < seq_len - 1:
-                    target_mask[ctx_len - 1:] = 1
+                # Start position must account for padding offset
+                start_pos = int(padding_offset + ctx_len - 1)
+                if start_pos < seq_len - 1:
+                    target_mask[start_pos:] = 1
                 target_mask = target_mask * seq_mask
 
                 if target_mask.sum() > 0:
@@ -494,6 +499,7 @@ class GeneticSearch:
         crossover_rate: float = 0.8,
         claude_model: str = "claude-sonnet-4-20250514",
         progress_file: str = "progress.txt",
+        use_local: bool = False,
     ):
         self.scorer = scorer
         self.state_class = get_state_class(state_version)
@@ -503,8 +509,8 @@ class GeneticSearch:
         self.base_mutation_rate = mutation_rate
         self.crossover_rate = crossover_rate
 
-        self.generator = HypothesisGenerator(claude_model, state_version)
-        self.mutator = SemanticMutator(claude_model)
+        self.generator = HypothesisGenerator(claude_model, state_version, use_local=use_local)
+        self.mutator = SemanticMutator(claude_model, use_local=use_local)
         self.stagnation = StagnationDetector()
         self.progress = ProgressVisualizer(progress_file)
 
@@ -558,7 +564,6 @@ class GeneticSearch:
         hypothesis: CognitiveState,
         mutation_rate: float,
         stagnation_severity: float,
-        writing_samples: list[str],
     ) -> CognitiveState:
         """Apply semantic mutation with adaptive rate and type."""
         if random.random() > mutation_rate:
@@ -582,13 +587,13 @@ class GeneticSearch:
         if mutation_type == 'linked':
             # Mutate a whole linked group together
             group = random.choice(self.linkage_groups)
-            hyp_dict = self.mutator.mutate_linked_group(hyp_dict, group, writing_samples)
+            hyp_dict = self.mutator.mutate_linked_group(hyp_dict, group, self._context_samples)
             return self.state_class.from_dict(hyp_dict)
 
         if mutation_type == 'new':
             # Generate completely new value
             dim = random.choice(self.state_class.get_dimensions())
-            new_value = self.generator.generate_dimension_value(dim, writing_samples)
+            new_value = self.generator.generate_dimension_value(dim, self._context_samples)
             hyp_dict[dim] = new_value
             return self.state_class.from_dict(hyp_dict)
 
@@ -643,7 +648,6 @@ class GeneticSearch:
         self,
         population: list[CognitiveState],
         fitnesses: list[float],
-        writing_samples: list[str],
         injection_rate: float = 0.2,
     ) -> list[CognitiveState]:
         """Replace worst individuals with fresh random ones."""
@@ -653,9 +657,9 @@ class GeneticSearch:
         ranked = sorted(zip(population, fitnesses), key=lambda x: x[1], reverse=True)
         survivors = [h for h, f in ranked[:-n_inject]]
 
-        # Generate fresh
+        # Generate fresh - use context_samples to avoid target leakage
         print(f"    Injecting {n_inject} new hypotheses...")
-        fresh = self.generator.generate_initial_hypotheses(writing_samples, n_hypotheses=n_inject)
+        fresh = self.generator.generate_initial_hypotheses(self._context_samples, n_hypotheses=n_inject)
 
         return survivors + fresh
 
@@ -675,6 +679,9 @@ class GeneticSearch:
         context_samples = writing_samples[:-1]
         target = writing_samples[-1]
 
+        # Store context samples for mutation/injection methods (avoid target leakage)
+        self._context_samples = context_samples
+
         # Baseline
         baseline_ppl = self.scorer.compute_baseline(context_samples, target)
         if verbose:
@@ -689,11 +696,11 @@ class GeneticSearch:
             max_generations=max_generations,
         )
 
-        # Initialize population
+        # Initialize population - use context_samples to avoid target leakage
         if verbose:
             print(f"Generating initial population of {self.population_size}...")
         population = self.generator.generate_initial_hypotheses(
-            writing_samples, n_hypotheses=self.population_size
+            context_samples, n_hypotheses=self.population_size
         )
 
         # Retry if we didn't get enough hypotheses
@@ -703,7 +710,7 @@ class GeneticSearch:
             if verbose:
                 print(f"  Got {len(population)} hypotheses, need {self.population_size}. Retrying ({retries}/3)...")
             extra = self.generator.generate_initial_hypotheses(
-                writing_samples, n_hypotheses=self.population_size - len(population)
+                context_samples, n_hypotheses=self.population_size - len(population)
             )
             population.extend(extra)
 
@@ -774,7 +781,7 @@ class GeneticSearch:
                     if verbose:
                         print(f"  Severe stagnation detected, injecting diversity...")
                     population = self.inject_diversity(
-                        population, fitnesses, writing_samples, injection_rate=0.3
+                        population, fitnesses, injection_rate=0.3
                     )
                     self.stagnation = StagnationDetector()  # Reset
                     continue
@@ -806,7 +813,7 @@ class GeneticSearch:
                     child = random.choice([parent_a, parent_b])
 
                 # Mutation
-                child = self.mutate(child, mutation_rate, severity, writing_samples)
+                child = self.mutate(child, mutation_rate, severity)
 
                 offspring.append(child)
 
@@ -835,6 +842,7 @@ def run_genetic_search(
     progress_file: str = "progress.txt",
     writing_samples: list[str] = None,
     figure_name: str = None,
+    use_local: bool = False,
 ) -> dict:
     """Run genetic search on a writer.
 
@@ -859,7 +867,8 @@ def run_genetic_search(
     print(f"GENETIC SEARCH: {name}")
     print(f"State version: {state_version}")
     print(f"Population: {population_size}, Generations: {max_generations}")
-    print(f"Model: {model_name}")
+    print(f"Scoring model: {model_name}")
+    print(f"Generation: {'Local LLM (Mistral-7B-Instruct)' if use_local else 'Claude API'}")
     print(f"Progress file: {progress_file}")
     print("=" * 70)
 
@@ -870,6 +879,7 @@ def run_genetic_search(
         state_version=state_version,
         population_size=population_size,
         progress_file=progress_file,
+        use_local=use_local,
     )
 
     best_hypothesis, best_fitness, history = ga.search(

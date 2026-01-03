@@ -690,24 +690,24 @@ We implemented a genetic algorithm to search the space of cognitive hypotheses, 
 ┌─────────────────────────────────────────────────────────────────┐
 │  GENETIC SEARCH                                                  │
 │                                                                  │
-│  Population: 30 cognitive hypotheses                             │
-│  Fitness: -log(perplexity) when predicting target text          │
+│  Population: 20-30 cognitive hypotheses                          │
+│  Fitness: (baseline_ppl - hypothesis_ppl) / baseline_ppl        │
 │  Selection: Tournament with fitness sharing                      │
 │  Crossover: Linkage-aware (linked dimensions inherited together) │
-│  Mutation: Semantic (Claude generates meaningful variations)     │
+│  Mutation: Semantic (LLM generates meaningful variations)        │
 │                                                                  │
 │  Adaptive mechanisms:                                            │
 │  • Stagnation detection → diversity injection                   │
 │  • Mutation rate increases when stuck                           │
-│  • Island model for parallel exploration                        │
+│  • Elitism preserves best hypotheses                            │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 **Key innovations:**
 
-1. **Linkage learning**: Dimensions like `body_state`, `somatic_memory`, and `preverbal_feeling` are semantically linked—they should be inherited together during crossover to maintain coherence.
+1. **Linkage learning**: Dimensions like `body_state`, `preverbal_feeling`, and `core_belief` are semantically linked—they should be inherited together during crossover to maintain coherence.
 
-2. **Semantic mutation**: Instead of random changes, Claude generates meaningful variations: `vary()` (slight rewording), `intensify()` (make more extreme), `soften()` (make more subtle), `opposite()` (psychological inverse), `blend()` (combine two values).
+2. **Semantic mutation**: Instead of random changes, an LLM generates meaningful variations: `vary()` (slight rewording), `intensify()` (make more extreme), `soften()` (make more subtle), `opposite()` (psychological inverse).
 
 3. **Perplexity scoring**: Using Mistral-7B, we measure how much a cognitive hypothesis reduces the model's surprise when predicting held-out writing samples.
 
@@ -728,65 +728,63 @@ Before running the search, we measured baseline perplexity (no cognitive hypothe
 | **Kafka** | **8.29** | High—unusual/translated text |
 | Anonymous (grief forum) | 7.99 | High—unknown writer |
 
-**Critical finding**: Famous writers have very low baseline perplexity because language models have seen their work during training. The model already "knows" Hemingway, leaving little room for cognitive context to help. Writers with higher baseline perplexity have more room for improvement.
+**Critical finding**: Famous writers have very low baseline perplexity because language models have seen their work during training. The model already "knows" Hemingway, leaving little room for cognitive context to help. Writers with higher baseline perplexity have more room for improvement—in theory.
 
-### Results: Kafka vs. Hemingway
+### Results: A Cautionary Tale
 
-| Writer | Baseline | Best | Improvement | Time |
-|--------|----------|------|-------------|------|
-| Hemingway | 1.26 | 1.23 | 2.4% | 8m 50s |
-| **Kafka** | **8.29** | **3.74** | **54.8%** | 9m 14s |
+Initial results appeared dramatic—Kafka showed 47% improvement. However, comprehensive testing revealed a critical bug in batch scoring that was producing inflated results.
 
-Kafka's unusual, translated prose gave the algorithm room to work. The 54.8% improvement demonstrates that cognitive framing can dramatically help when the model doesn't already have strong priors about the writer.
+**The Bug**: When scoring multiple hypotheses in a batch, shorter hypotheses receive left-padding. The code failed to account for this padding offset when calculating which tokens to score, causing it to score context tokens instead of target tokens for shorter hypotheses—producing artificially low perplexity scores.
 
-### Inferred Cognitive State for Kafka
+Results:
 
-The genetic search converged on this profile for Franz Kafka:
+| Method | Baseline | Best | Improvement | Notes |
+|--------|----------|------|-------------|-------|
+| Meta search (v1 mode) | 8.29 | 7.46 | **+10.0%** | Uses v1's 20 fixed dimensions |
+| Meta search (default) | 9.04 | 5.62 | **+37.8%** | Uses sparse variable dimensions |
+
+Meta search shows modest improvement in v1 mode and stronger improvement with its default sparse hypothesis format.
+
+### What This Means
+
+The meta search results suggest **cognitive context can help predict a writer's text**, though the effect size depends on the approach:
+
+1. **Sparse hypotheses outperform fixed dimensions**: Meta search's default mode (37.8% improvement) significantly outperforms v1 mode (10%). The ability to dynamically select which dimensions matter may be crucial.
+
+2. **The signal is real but modest in v1 mode**: The 10% improvement with fixed dimensions suggests cognitive framing helps, but the rigid 20-dimension architecture may not capture what's most predictive for each writer.
+
+3. **Batch scoring requires careful implementation**: The original dramatic results (47%) were an artifact of a padding bug. Always verify batch operations against individual baselines.
+
+4. **Different baselines complicate comparison**: Meta search's default mode uses a different prompt format (baseline 9.04) than v1 mode (baseline 8.29), making direct comparison difficult.
+
+### Sample Inferred Profile for Kafka
+
+The search converged on psychologically coherent profiles. The best hypothesis from meta search (v1 mode):
 
 | Dimension | Inferred Value |
 |-----------|----------------|
-| **Body State** | Empty, reverberating with void |
-| **Somatic Memory** | Unique experiences of expansion with clear purpose |
-| **Self Image** | A lone fighter in an unwinnable battle |
-| **Identity They Reject** | The optimistic idealist who believes individuals can triumph over systems |
-| **What They Notice** | The dangerous gap between inner reality and outer presentation |
-| **Relationship to Uncertainty** | Manages it through prophetic pronouncements and absolute statements |
-| **What Outrages Them** | The arbitrary nature of who receives hope and who doesn't |
+| **Body State** | Abstracted or detached |
+| **Preverbal Feeling** | Loneliness, longing, or existential dissatisfaction |
+| **Core Belief** | The power of art to evoke deep emotional transformation |
+| **Intellectual Stance** | Symbolic, metaphorical |
+| **What They Notice** | Internal emotional states |
+| **Stance Toward Reader** | Invitational, provoking introspection |
+| **Relationship To Future** | Hopeful, suggesting transformation |
 
-This captures Kafka's characteristic themes with striking accuracy:
-- **Alienation**: "empty, reverberating with void"
-- **Absurdist struggle**: "lone fighter in an unwinnable battle"
-- **Bureaucratic futility**: "individuals cannot triumph over systems"
-- **The Kafkaesque gap**: "inner reality vs. outer presentation"
-- **Arbitrary fate**: "who receives hope and who doesn't"
+Whether these descriptions capture something true about Kafka's psychology, or merely reflect what an LLM generates when prompted with Kafka quotes, remains an open question.
 
-The algorithm discovered these themes not by analyzing plot or biography, but by finding the cognitive substrate that best predicts Kafka's word choices.
+### Lessons Learned
 
-### Adaptive Mechanisms in Action
+1. **Test batch operations against individual baselines**: The bug would have been caught immediately if we had verified that `score_batch([h1, h2])` matched `[score(h1), score(h2)]`.
 
-The search log shows the adaptive mechanisms working:
-
-```
-Gen  9: stag=0.90  Severe stagnation detected, injecting diversity...
-Gen 19: stag=0.90  Severe stagnation detected, injecting diversity...
-```
-
-At generations 9 and 19, the algorithm detected it was stuck in local optima and injected 9 new random hypotheses to escape. The mutation rate adapted from 0.18 (exploring) up to 0.43 (stuck) and back down as progress resumed.
-
-### Interpretation
-
-The dramatic difference between Hemingway (2.4%) and Kafka (54.8%) suggests two things:
-
-1. **Cognitive context helps most for unknown/unusual writers**: When the model already has strong priors (famous canonical authors), cognitive framing adds little. When it doesn't (obscure writers, translated work), the framing becomes essential.
-
-2. **Reverse inference can recover meaningful psychological profiles**: The Kafka profile isn't just word-association—it captures the existential stance and phenomenological texture that scholars have long attributed to his work, discovered purely through predictive optimization.
+2. **Flexible architectures may outperform fixed ones**: The 38% improvement with sparse hypotheses vs 10% with fixed dimensions suggests that discovering which cognitive dimensions matter is as important as filling them in.
 
 ### Implementation
 
 The genetic search is available via:
 
 ```bash
-python run_genetic_search.py kafka --version v2 --population 30 --generations 25 --progress progress.txt
+python run_genetic_search.py kafka --version v1 --population 20 --generations 15 --progress progress.txt
 ```
 
 Monitor progress in real-time:
@@ -796,8 +794,9 @@ watch -n 1 cat progress.txt
 
 Key files:
 - `cognitive_gen/cognitive_state.py`: V1 (20 dims) and V2 (30+ dims) architectures
-- `cognitive_gen/semantic_mutation.py`: Claude-based mutation operators
+- `cognitive_gen/semantic_mutation.py`: LLM-based semantic mutation operators
 - `cognitive_gen/genetic_search.py`: Full GA implementation with linkage learning
+- `cognitive_gen/meta_search.py`: Alternative search with sparse hypotheses
 
 ---
 
@@ -847,7 +846,7 @@ Through five experiments, we progressively refined our understanding:
 | 2. Deep subconscious | 0.032 | Embodied beats abstract |
 | 3. Animal architecture | 0.004 | Minimal embodiment works best |
 | 4. Cosmic hierarchy | 0.010 | Cosmos grounded in body works best |
-| 5. Reverse inference | **54.8% ↓ perplexity** | Can infer cognitive state from text |
+| 5. Reverse inference | **10% ↓ ppl** (v1), **38% ↓ ppl** (meta) | Modest improvement via meta search |
 
 The final architecture—**grounded cosmos**—spans from universal to immediate (cosmos → existence → body → moment) while skipping social/self layers. It achieved the lowest mean score (0.551) with the full hierarchy, and the lowest single score (0.010) with the grounded variant.
 
@@ -861,7 +860,7 @@ The final architecture—**grounded cosmos**—spans from universal to immediate
 
 4. **The cosmos must be felt, not thought**: "The universe is 13.8 billion years of matter briefly noticing itself" produces human text only when it manifests as "the refrigerator hummed" and "the coffee had gone cold."
 
-5. **Reverse inference works**: Given text, we can search for the cognitive state that best predicts it. The Kafka experiment (54.8% perplexity reduction) shows this isn't just fitting noise—the inferred profile ("lone fighter in an unwinnable battle," "individuals cannot triumph over systems") captures genuine psychological themes that scholars have long attributed to his work.
+5. **Reverse inference shows promise**: Meta search demonstrates that cognitive hypotheses can improve prediction (10-38% perplexity reduction). Sparse, flexible dimension sets outperform fixed architectures, suggesting the key is discovering *which* dimensions matter for each writer.
 
 ### The Theory
 
