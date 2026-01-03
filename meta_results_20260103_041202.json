@@ -1,0 +1,103 @@
+{
+  "meta_complete": {
+    "kafka": {
+      "runs": [
+        {
+          "run": 1,
+          "method": "meta_complete",
+          "writer": "kafka",
+          "baseline_ppl": 20.68268496272443,
+          "best_ppl": 3.840886214504188,
+          "improvement": 81.42946033638059,
+          "timestamp": "2026-01-02T23:31:12.156693"
+        },
+        {
+          "run": 2,
+          "method": "meta_complete",
+          "writer": "kafka",
+          "baseline_ppl": 20.68268496272443,
+          "best_ppl": 3.629382414297425,
+          "improvement": 82.45207321564627,
+          "timestamp": "2026-01-03T00:37:36.651502"
+        },
+        {
+          "run": 3,
+          "method": "meta_complete",
+          "writer": "kafka",
+          "baseline_ppl": 20.68268496272443,
+          "best_ppl": 4.148934534064808,
+          "improvement": 79.94005835537182,
+          "timestamp": "2026-01-03T01:09:26.360845"
+        }
+      ],
+      "mean": 81.27386396913289,
+      "std": 1.0314107932618064
+    },
+    "nietzsche": {
+      "runs": [
+        {
+          "run": 1,
+          "method": "meta_complete",
+          "writer": "nietzsche",
+          "baseline_ppl": 11.113972772314547,
+          "best_ppl": 4.193743408529551,
+          "improvement": 62.26602768924923,
+          "timestamp": "2026-01-03T01:43:07.687209"
+        },
+        {
+          "run": 2,
+          "method": "meta_complete",
+          "writer": "nietzsche",
+          "baseline_ppl": 11.113972772314547,
+          "best_ppl": 4.33532628504582,
+          "improvement": 60.992109897503695,
+          "timestamp": "2026-01-03T02:15:59.751752"
+        },
+        {
+          "run": 3,
+          "method": "meta_complete",
+          "writer": "nietzsche",
+          "baseline_ppl": 11.113972772314547,
+          "best_ppl": 3.840886214504188,
+          "improvement": 65.44092474230256,
+          "timestamp": "2026-01-03T02:45:45.910445"
+        }
+      ],
+      "mean": 62.8996874430185,
+      "std": 1.8706740128424073
+    },
+    "hemingway": {
+      "runs": [
+        {
+          "run": 1,
+          "method": "meta_complete",
+          "writer": "hemingway",
+          "baseline_ppl": 6.721245216879584,
+          "best_ppl": 3.722714568939495,
+          "improvement": 44.61272504103327,
+          "timestamp": "2026-01-03T03:13:58.250048"
+        },
+        {
+          "run": 2,
+          "method": "meta_complete",
+          "writer": "hemingway",
+          "baseline_ppl": 6.721245216879584,
+          "best_ppl": 3.654277639801791,
+          "improvement": 45.630943048699955,
+          "timestamp": "2026-01-03T03:42:54.246000"
+        },
+        {
+          "run": 3,
+          "method": "meta_complete",
+          "writer": "hemingway",
+          "baseline_ppl": 6.721245216879584,
+          "best_ppl": 3.095293749133959,
+          "improvement": 53.94761462711541,
+          "timestamp": "2026-01-03T04:12:02.697391"
+        }
+      ],
+      "mean": 48.06376090561621,
+      "std": 4.181227326976624
+    }
+  }
+}
