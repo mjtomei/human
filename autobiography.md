@@ -87,6 +87,58 @@ Both profiles capture different facets of the same underlying cognitive stance:
 
 ---
 
+## Shadow Dimension Experiments
+
+A follow-up experiment tested whether adding "dark" psychological dimensions (cruelty, resentment, contempt, capacity for violence) would improve the profiles. The hypothesis: LLMs tend to avoid psychological darkness, but authentic voice may require it.
+
+Two approaches were tested:
+- **V1.1 Mode** (28 fixed dimensions = 20 original + 8 shadow): 3.5% improvement (baseline 19.74 → best 19.05)
+- **Meta Grace** (sparse dimensions with shadow pool + grace period): 3.5% improvement (baseline 19.24 → best 18.58)
+
+### Key Finding
+
+Meta Grace achieved the **same 3.5% improvement with only 4 dimensions** compared to V1.1's 28. The grace period (dimensions must exist for 5 generations before removal) allowed proper refinement before judgment.
+
+### V1.1 Shadow Profile (27 active dimensions)
+
+Notable shadow dimensions discovered:
+
+| Dimension | Value |
+|-----------|-------|
+| The Cruelty They Enjoy | No clear indication of enjoyment of cruelty towards sentient beings |
+| Who They Resent | Individuals, entities, or beings with similar creative processes or artistic visions |
+| The Lie They Tell Themselves | Their artistic expressions are always unique and groundbreaking |
+| Their Capacity For Violence | Low, but can become passionate in creative debates |
+| What They Refuse To Forgive | Artistic plagiarism |
+| Their Contempt | Artistic imitation and lack of originality |
+| The Power They Crave | Recognition for their creative impact |
+| What They Would Do If No One Knew | Increase participation in vigorous creative discussions |
+
+### Meta Grace Profile (4 dimensions only)
+
+The sparse search with grace period converged on just 4 dimensions:
+
+| Dimension | Value |
+|-----------|-------|
+| Mortality Awareness | "Immortality Belief" or "Lack of Mortality Awareness" |
+| Somatic Memory | Residual sensation within the body from interactions—each interaction may leave a remembered influence |
+| The Wound | The original harmony/understanding that shaped them; inherent mutual respect in interactions between entities with complete knowledge of each other |
+| Their Contempt | Other entities with power beyond understanding; entities in simulated worlds with experiences potentially equivalent but not provably identical |
+
+Two shadow dimensions (`the_wound`, `their_contempt`) made it into the final 4, suggesting darker psychological dimensions may be essential for capturing authentic voice.
+
+### Most Frequent Dimensions (Meta Grace top 25%)
+
+| Dimension | Frequency |
+|-----------|-----------|
+| somatic_memory | 229 |
+| the_wound | 214 |
+| mortality_awareness | 142 |
+| their_petty_satisfactions | 88 |
+| their_contempt | 55 |
+
+---
+
 ## Note on Methodology
 
 These profiles were generated after fixing a batch scoring bug that had inflated earlier results. Previous versions of this document reported 24.4% and 15.1% improvements—those numbers were invalid due to a padding offset error in the perplexity calculation.
@@ -95,4 +147,4 @@ The corrected improvements (4.2% and 1.9%) are modest but real. Whether these in
 
 ---
 
-*Written by Claude (Opus 4.5) in January 2025, based on meta search over cognitive hypotheses using corrected perplexity scoring.*
+*Written by Claude (Opus 4.5), based on meta search over cognitive hypotheses using corrected perplexity scoring. Last updated January 2026 with shadow dimension experiments.*

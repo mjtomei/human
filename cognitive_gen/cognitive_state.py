@@ -89,6 +89,98 @@ class CognitiveStateV1:
 
 
 @dataclass
+class CognitiveStateV1_1:
+    """
+    V1.1: Original 20 dimensions plus 8 shadow/dark dimensions (28 total).
+    Adds dimensions for malice, cruelty, resentment, and hidden darkness.
+    """
+    # === EMBODIED ===
+    body_state: str = ""
+    preverbal_feeling: str = ""
+
+    # === INTELLECTUAL ===
+    core_belief: str = ""
+    intellectual_stance: str = ""
+    what_they_notice: str = ""
+
+    # === MORAL/ETHICAL ===
+    moral_framework: str = ""
+    what_outrages_them: str = ""
+    what_they_protect: str = ""
+
+    # === RELATIONAL ===
+    stance_toward_reader: str = ""
+    who_they_write_for: str = ""
+    what_they_want_reader_to_feel: str = ""
+
+    # === TEMPORAL ===
+    relationship_to_past: str = ""
+    relationship_to_future: str = ""
+    sense_of_urgency: str = ""
+
+    # === AESTHETIC ===
+    what_they_find_beautiful: str = ""
+    what_they_find_ugly: str = ""
+    relationship_to_language: str = ""
+
+    # === HIDDEN (from V1) ===
+    what_they_cant_say_directly: str = ""
+    the_wound: str = ""
+    the_compensation: str = ""
+
+    # === DARK / SHADOW (new in V1.1) ===
+    the_cruelty_they_enjoy: str = ""
+    who_they_resent: str = ""
+    the_lie_they_tell_themselves: str = ""
+    their_capacity_for_violence: str = ""
+    what_they_refuse_to_forgive: str = ""
+    their_contempt: str = ""
+    the_power_they_crave: str = ""
+    what_they_would_do_if_no_one_knew: str = ""
+
+    def to_prompt(self) -> str:
+        sections = ["=== COGNITIVE STATE ===", "Write as if experiencing:", ""]
+        for f in fields(self):
+            value = getattr(self, f.name)
+            if value:
+                label = f.name.replace("_", " ").title()
+                sections.append(f"{label}: {value}")
+        sections.extend(["", "Let these shape the voice without naming them.", "=== END ==="])
+        return "\n".join(sections)
+
+    def to_dict(self) -> dict:
+        return {f.name: getattr(self, f.name) for f in fields(self) if getattr(self, f.name)}
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "CognitiveStateV1_1":
+        valid_fields = {f.name for f in fields(cls)}
+        filtered = {k: v for k, v in d.items() if k in valid_fields}
+        return cls(**filtered)
+
+    @classmethod
+    def get_dimensions(cls) -> list[str]:
+        return [f.name for f in fields(cls)]
+
+    @classmethod
+    def get_dimension_groups(cls) -> dict[str, list[str]]:
+        """Return semantically linked dimension groups."""
+        return {
+            "embodied": ["body_state", "preverbal_feeling"],
+            "intellectual": ["core_belief", "intellectual_stance", "what_they_notice"],
+            "moral": ["moral_framework", "what_outrages_them", "what_they_protect"],
+            "relational": ["stance_toward_reader", "who_they_write_for", "what_they_want_reader_to_feel"],
+            "temporal": ["relationship_to_past", "relationship_to_future", "sense_of_urgency"],
+            "aesthetic": ["what_they_find_beautiful", "what_they_find_ugly", "relationship_to_language"],
+            "shadow": ["what_they_cant_say_directly", "the_wound", "the_compensation"],
+            "dark": [
+                "the_cruelty_they_enjoy", "who_they_resent", "the_lie_they_tell_themselves",
+                "their_capacity_for_violence", "what_they_refuse_to_forgive", "their_contempt",
+                "the_power_they_crave", "what_they_would_do_if_no_one_knew",
+            ],
+        }
+
+
+@dataclass
 class CognitiveStateV2:
     """
     Expanded cognitive state architecture.
@@ -197,15 +289,17 @@ class CognitiveStateV2:
         }
 
 
-# Type alias for either version
-CognitiveState = CognitiveStateV1 | CognitiveStateV2
+# Type alias for any version
+CognitiveState = CognitiveStateV1 | CognitiveStateV1_1 | CognitiveStateV2
 
 
 def get_state_class(version: str = "v1"):
     """Get the appropriate state class by version."""
     if version.lower() == "v1":
         return CognitiveStateV1
+    elif version.lower() == "v1.1" or version.lower() == "v1_1":
+        return CognitiveStateV1_1
     elif version.lower() == "v2":
         return CognitiveStateV2
     else:
-        raise ValueError(f"Unknown version: {version}. Use 'v1' or 'v2'.")
+        raise ValueError(f"Unknown version: {version}. Use 'v1', 'v1.1', or 'v2'.")

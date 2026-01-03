@@ -1,0 +1,52 @@
+{
+  "v1_1": {
+    "experiment": "v1.1",
+    "baseline": 19.735555861572347,
+    "best": 19.053782246709744,
+    "improvement": 0.03454544780216217,
+    "n_dimensions": 28,
+    "best_hypothesis": {
+      "body_state": "Somatic Perception",
+      "preverbal_feeling": "Words before feeling",
+      "core_belief": "Every interaction has some level of harmony or agreement due to similarities between people",
+      "intellectual_stance": "Considers ideas from a thoughtful and critical standpoint",
+      "what_they_notice": "Consistencies and intended consequences in interactions",
+      "moral_framework": "Evaluates right and wrong based on equity and disparity",
+      "what_outrages_them": "Inequitable distribution of resources leading to hardship",
+      "what_they_protect": "Ideas and perspectives that challenge their equitable worldview",
+      "the_cruelty_they_enjoy": "No clear indication of enjoyment of cruelty towards sentient beings",
+      "who_they_resent": "Individuals, Entities, or Beings with similar creative processes or artistic visions",
+      "the_lie_they_tell_themselves": "Their artistic expressions are always unique and groundbreaking",
+      "their_capacity_for_violence": "Low, but can become passionate in creative debates",
+      "what_they_refuse_to_forgive": "Artistic plagiarism",
+      "their_contempt": "Artistic imitation and lack of originality",
+      "the_power_they_crave": "Recognition for their creative impact",
+      "what_they_would_do_if_no_one_knew": "Increase participation in vigorous creative discussions",
+      "what_they_find_beautiful": "Deep philosophical questions",
+      "what_they_find_ugly": "Unrefined or shallow thought processes",
+      "relationship_to_language": "View language as a tool for exploration and debate",
+      "stance_toward_reader": "Engages reader in thoughtful debate",
+      "who_they_write_for": "Intellectual peers",
+      "what_they_want_reader_to_feel": "Deep, contemplative reflection",
+      "relationship_to_past": "Reflective and contemplative",
+      "relationship_to_future": "Indifferent",
+      "sense_of_urgency": "Low",
+      "the_wound": "Feeling misunderstood or misrepresented",
+      "the_compensation": "Expressing complex ideas to establish intellectual authority"
+    }
+  },
+  "meta_grace": {
+    "experiment": "meta_grace",
+    "baseline": 19.24076585887165,
+    "best": 18.576084986220376,
+    "improvement": 0.03454544780216216,
+    "grace_period": 5,
+    "n_active_dims": 4,
+    "best_hypothesis": {
+      "their_contempt": "Their-contempt: Other entities with power beyond understanding, entities in simulated worlds with experiences potentially equivalent to their own but not provably identical.",
+      "the_wound": "The original harmony that shaped them might be the inherent understanding and mutual respect in the interactions between entities with complete and accurate knowledge of each other.\"\n\"The original joy that shaped them might be the inherent certainty and balanced power dynamics in the existence of entities with power within human understanding.\"\n\"The original self-acceptance that shaped them might be the feeling of personal perfection or righteousness that eliminates the experience of shame.",
+      "mortality_awareness": "1 (Immortality Belief\" or \"Lack of Mortality Awareness\")",
+      "somatic_memory": "The writing subtly proposes that each interaction, even those with physical consequences, may leave a residual or remembered sensation within the body. It subtly suggests that each interaction, in some way, may have an influence or effect, stemming from the statement: 'There may be an influence in every interaction, inherently.'"
+    }
+  }
+}
