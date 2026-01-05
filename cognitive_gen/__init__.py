@@ -1,9 +1,22 @@
 """Cognitive Context Text Generation - Testing the subtext hypothesis."""
 
 from .context import CognitiveContext, generate_random_context
-from .generator import CognitiveGenerator
-from .detector import AIDetector
-from .experiment import run_experiment
+
+# Optional imports that require additional dependencies
+try:
+    from .generator import CognitiveGenerator
+except ImportError:
+    CognitiveGenerator = None
+
+try:
+    from .detector import AIDetector
+except ImportError:
+    AIDetector = None
+
+try:
+    from .experiment import run_experiment
+except ImportError:
+    run_experiment = None
 
 __all__ = [
     "CognitiveContext",

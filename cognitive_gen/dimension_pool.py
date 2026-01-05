@@ -121,6 +121,65 @@ DIMENSION_POOL = {
     "relationship_to_truth": "How they relate to truth",
     "what_counts_as_evidence": "What convinces them",
     "relationship_to_language": "How they relate to words",
+
+    # ==========================================================================
+    # CLINICAL / PATHOLOGICAL (mental health dimensions, disorder-adjacent traits)
+    # ==========================================================================
+    # Dark Triad
+    "narcissistic_supply": "What feeds their grandiosity and need for admiration",
+    "machiavellian_calculation": "How they manipulate and strategize for personal gain",
+    "psychopathic_detachment": "Capacity for callous disregard of others' wellbeing",
+
+    # Schizotypal / Perception
+    "magical_thinking": "Belief in supernatural connections, omens, or personal powers",
+    "paranoid_ideation": "Suspicion that others have malicious intent toward them",
+    "ideas_of_reference": "Belief that random events or messages are personally directed at them",
+    "apophenia": "Tendency to perceive meaningful patterns in random or unrelated things",
+    "perceptual_disturbance": "Unusual sensory experiences or mild hallucinations",
+
+    # Dissociative / Identity
+    "dissociative_tendency": "Capacity to detach from self, body, or reality",
+    "identity_fragmentation": "Sense of multiple selves or unstable identity",
+    "derealization": "Feeling that the world is unreal, dreamlike, or artificial",
+
+    # Grandiosity / Delusion-adjacent
+    "grandiose_fantasy": "Beliefs about special destiny, unique importance, or hidden powers",
+    "persecution_complex": "Belief that forces are aligned against them specifically",
+    "messianic_tendency": "Sense of being chosen or having a world-changing mission",
+
+    # Obsessive / Compulsive
+    "obsessive_fixation": "Thoughts they cannot escape or stop returning to",
+    "compulsive_ritual": "Behaviors or patterns they must repeat",
+    "intrusive_thoughts": "Unwanted thoughts that disturb or horrify them",
+
+    # Attachment / Relational pathology
+    "abandonment_terror": "Overwhelming fear of being left or forgotten",
+    "engulfment_fear": "Fear of losing self in relationships or being consumed by others",
+    "object_inconstancy": "Difficulty holding stable images of others when apart",
+
+    # ==========================================================================
+    # SEVEN DEADLY SINS (Christian vices)
+    # ==========================================================================
+    "pride": "Excessive belief in one's own abilities; the sin from which all others arise",
+    "greed": "Desire for material wealth or gain beyond what one needs",
+    "lust": "Intense or unbridled desire, especially of a sexual nature",
+    "envy": "Desire for others' traits, status, abilities, or possessions",
+    "gluttony": "Overindulgence and overconsumption to the point of waste",
+    "wrath": "Uncontrolled feelings of anger, rage, and hatred",
+    "sloth": "Avoidance of physical or spiritual work; apathy and inactivity",
+
+    # ==========================================================================
+    # FRUITS OF THE SPIRIT (Christian virtues - Galatians 5:22-23)
+    # ==========================================================================
+    "love_agape": "Selfless, unconditional love and care for others",
+    "joy": "Deep-seated gladness not dependent on circumstances",
+    "peace": "Tranquility and harmony; absence of inner conflict",
+    "patience": "Ability to endure waiting, delay, or provocation without anger",
+    "kindness": "Quality of being friendly, generous, and considerate",
+    "goodness": "Moral excellence; virtue and righteousness in action",
+    "faithfulness": "Steadfast loyalty and reliability; keeping commitments",
+    "gentleness": "Mildness of manner; humility and considerateness",
+    "self_control": "Ability to regulate one's emotions, desires, and behaviors",
 }
 
 # Flat list for easy access
@@ -167,6 +226,21 @@ DIMENSION_GROUPS = {
         "the_envy_they_wont_admit", "their_contempt", "the_power_they_crave",
         "their_petty_satisfactions", "the_mask_they_wear", "what_they_would_do_if_no_one_knew",
     ],
+    "clinical": [
+        # Dark triad
+        "narcissistic_supply", "machiavellian_calculation", "psychopathic_detachment",
+        # Schizotypal
+        "magical_thinking", "paranoid_ideation", "ideas_of_reference", "apophenia",
+        "perceptual_disturbance",
+        # Dissociative
+        "dissociative_tendency", "identity_fragmentation", "derealization",
+        # Grandiose
+        "grandiose_fantasy", "persecution_complex", "messianic_tendency",
+        # Obsessive
+        "obsessive_fixation", "compulsive_ritual", "intrusive_thoughts",
+        # Attachment
+        "abandonment_terror", "engulfment_fear", "object_inconstancy",
+    ],
     "temporal": [
         "relationship_to_past", "relationship_to_future", "relationship_to_present",
         "what_haunts_them", "what_they_anticipate", "sense_of_urgency",
@@ -181,6 +255,13 @@ DIMENSION_GROUPS = {
     ],
     "psychodynamic": [
         "the_wound", "the_compensation",
+    ],
+    "deadly_sins": [
+        "pride", "greed", "lust", "envy", "gluttony", "wrath", "sloth",
+    ],
+    "fruits_of_spirit": [
+        "love_agape", "joy", "peace", "patience", "kindness",
+        "goodness", "faithfulness", "gentleness", "self_control",
     ],
 }
 
@@ -259,6 +340,107 @@ def get_random_dimensions(n: int) -> list[str]:
     """Get n random dimensions from the pool."""
     import random
     return random.sample(ALL_DIMENSIONS, min(n, len(ALL_DIMENSIONS)))
+
+
+def sample_dimensions_by_group(
+    n_groups: int = 5,
+    dims_per_group: int = 3,
+) -> tuple[list[str], list[str]]:
+    """
+    Sample dimensions while keeping group structure.
+
+    Returns (dimensions, group_names) where dimensions from the same group
+    are kept together to preserve potential co-adaptation.
+
+    Args:
+        n_groups: Number of dimension groups to sample
+        dims_per_group: Max dimensions to sample from each group
+
+    Returns:
+        Tuple of (list of dimension names, list of group names used)
+    """
+    import random
+
+    all_groups = list(DIMENSION_GROUPS.keys())
+
+    # Purely random group selection - no bias toward any group
+    selected_groups = random.sample(all_groups, min(n_groups, len(all_groups)))
+
+    # Sample dimensions from each selected group
+    dimensions = []
+    for group in selected_groups:
+        group_dims = DIMENSION_GROUPS[group]
+        n_sample = min(dims_per_group, len(group_dims))
+        dimensions.extend(random.sample(group_dims, n_sample))
+
+    return dimensions, selected_groups
+
+
+# Architecture templates representing different psychological theories
+ARCHITECTURE_TEMPLATES = {
+    "psychodynamic": ["embodied", "shadow", "psychodynamic"],      # Freudian - wounds, compensation, body
+    "existential": ["existential", "temporal", "aesthetic"],       # Phenomenological - being, time, perception
+    "pathological": ["dark", "clinical", "identity"],              # Clinical - disorders, dark traits
+    "social": ["relational", "moral", "intellectual"],             # Social psych - relationships, ethics, cognition
+    "spiritual": ["deadly_sins", "fruits_of_spirit", "existential"],  # Religious - vices, virtues, meaning
+    "creative": ["creative", "aesthetic", "temporal"],             # Artistic - process, beauty, urgency
+    "somatic": ["embodied", "temporal", "psychodynamic"],          # Body-centered - felt sense, wounds
+    "shadow_work": ["shadow", "dark", "psychodynamic"],            # Depth psych - hidden, repressed, wounds
+}
+
+
+def sample_from_template(
+    template_name: str,
+    dims_per_group: int = 3,
+) -> tuple[list[str], list[str]]:
+    """
+    Sample dimensions from a predefined architecture template.
+
+    Args:
+        template_name: Name of template from ARCHITECTURE_TEMPLATES
+        dims_per_group: Max dimensions to sample from each group
+
+    Returns:
+        Tuple of (list of dimension names, list of group names used)
+    """
+    import random
+
+    if template_name not in ARCHITECTURE_TEMPLATES:
+        raise ValueError(f"Unknown template: {template_name}")
+
+    selected_groups = ARCHITECTURE_TEMPLATES[template_name]
+
+    # Sample dimensions from each group in the template
+    dimensions = []
+    for group in selected_groups:
+        group_dims = DIMENSION_GROUPS[group]
+        n_sample = min(dims_per_group, len(group_dims))
+        dimensions.extend(random.sample(group_dims, n_sample))
+
+    return dimensions, selected_groups
+
+
+def get_random_template_name() -> str:
+    """Get a random template name."""
+    import random
+    return random.choice(list(ARCHITECTURE_TEMPLATES.keys()))
+
+
+def get_dimension_prompt_section(dimensions: list[str]) -> str:
+    """
+    Generate a prompt section listing dimensions with descriptions.
+
+    Args:
+        dimensions: List of dimension names to include
+
+    Returns:
+        Formatted string for use in prompts
+    """
+    lines = []
+    for dim in dimensions:
+        desc = DIMENSION_POOL.get(dim, dim.replace("_", " "))
+        lines.append(f"- {dim}: {desc}")
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":
