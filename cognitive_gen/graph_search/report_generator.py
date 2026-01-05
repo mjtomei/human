@@ -82,20 +82,21 @@ def classify_values_with_llm(values_to_classify: list[tuple[str, str, str]]) -> 
     # Create classification prompts
     prompts = []
     for loc, dim, value in items_to_classify:
-        prompt = f"""Classify this psychological dimension description as either POSITIVE (substantive content about the trait) or NEGATIVE (trait is absent, minimal, or unknown).
+        prompt = f"""Does this psychological description make a SUBSTANTIVE CLAIM about the trait?
 
 Dimension: {dim.replace('_', ' ')}
 Description: "{value}"
 
-NEGATIVE if ANY of these apply:
-- Says "Low", "Minimal", "Little", "None", "N/A"
-- Says trait is "not present", "not evident", "not apparent", "not applicable"
-- Says "unknown", "unclear", "cannot determine", "difficult to assess"
-- Says there is "no indication", "no evidence", "no clear"
-- Describes absence or lack ("does not show", "does not exhibit", "lacks")
-- Only present "to a degree", "beyond what is needed", or similar qualified absence
+Answer POSITIVE if the description:
+- Makes any claim about what IS present, even if hedged ("seems", "may", "likely")
+- Describes a specific quality, state, or characteristic
+- Provides concrete content after phrases like "but they..." or "however..."
 
-POSITIVE only if it makes a substantive claim about what IS present (even if hedged with "may", "seems", "suggests").
+Answer NEGATIVE only if the description:
+- ONLY says the trait is unknown/unclear with NO substantive content
+- Explicitly states complete absence with nothing else offered
+
+Focus on whether ANY substantive claim is made, not on negative phrases.
 
 Reply with only: POSITIVE or NEGATIVE"""
         prompts.append(prompt)
