@@ -1037,18 +1037,22 @@ def generate_html(
                    filtered.length + ' shared values found</div>';
 
         for (const item of filtered) {{
-            const truncValue = item.value.length > 100 ? item.value.substring(0, 100) + '...' : item.value;
+            const truncValue = item.value.length > 80 ? item.value.substring(0, 80) + '...' : item.value;
             const locList = item.locations.map(l => l.location).join(', ');
             const clsClass = item.classification === 'positive' ? 'positive' : 'negative';
 
             html += '<details class="group" style="margin-bottom: 8px;">';
             html += '<summary style="cursor: pointer;">';
             html += '<span style="color: var(--accent-light); font-weight: 600;">' + formatDimName(item.dim) + '</span>';
-            html += '<span style="color: var(--text-secondary); margin-left: 10px;">(' + item.count + ' locations, avg fitness: ' + (item.avgFitness * 100).toFixed(1) + '%)</span>';
+            html += '<span style="color: var(--text-secondary); margin-left: 10px;">(' + item.count + ' locations)</span>';
+            html += '<span style="color: var(--text-secondary); margin-left: 5px; font-size: 0.85em;">"' + truncValue + '"</span>';
             html += '</summary>';
             html += '<div style="padding: 10px; border-left: 3px solid var(--' + clsClass + '); margin: 5px 0;">';
-            html += '<div style="color: var(--text-primary); margin-bottom: 8px;">"' + truncValue + '"</div>';
-            html += '<div style="color: var(--text-secondary); font-size: 0.85em;">Locations: ' + locList + '</div>';
+            html += '<div style="color: var(--text-primary); margin-bottom: 8px; white-space: pre-wrap; line-height: 1.5;">' + item.value + '</div>';
+            html += '<div style="color: var(--text-secondary); font-size: 0.85em; margin-top: 10px;">';
+            html += '<strong>Locations:</strong> ' + locList + '</div>';
+            html += '<div style="color: var(--text-secondary); font-size: 0.85em;">';
+            html += '<strong>Avg fitness:</strong> ' + (item.avgFitness * 100).toFixed(1) + '%</div>';
             html += '</div>';
             html += '</details>';
         }}
