@@ -609,6 +609,18 @@ def generate_html(
         </div>
         <div id="hist-content">Loading...</div>
     </div>
+    <div class="histogram" id="shared-values">
+        <h2>Shared Values (Crossover Spread)</h2>
+        <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 10px;">Dimension values that appear in multiple locations, sorted by occurrence count. Higher counts suggest successful crossover spread.</p>
+        <div style="margin-bottom: 15px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span style="color: var(--text-secondary); font-size: 0.85em;">Min occurrences:</span>
+            <button id="min-2" class="sort-btn active" onclick="setMinOccurrences(2)">2+</button>
+            <button id="min-3" class="sort-btn" onclick="setMinOccurrences(3)">3+</button>
+            <button id="min-5" class="sort-btn" onclick="setMinOccurrences(5)">5+</button>
+            <button id="min-10" class="sort-btn" onclick="setMinOccurrences(10)">10+</button>
+        </div>
+        <div id="shared-content">Loading...</div>
+    </div>
     <div id="modal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -963,8 +975,90 @@ def generate_html(
         document.querySelectorAll('.group').forEach(d => d.open = false);
     }}
 
+    // Shared values analysis
+    const sharedValuesData = (function() {{
+        const valueMap = {{}};  // dim -> value -> [{{location, fitness, classification}}]
+
+        for (const [dim, occurrences] of Object.entries(DIM_OCCURRENCES)) {{
+            if (!valueMap[dim]) valueMap[dim] = {{}};
+            for (const occ of occurrences) {{
+                const val = String(occ.value).trim();
+                if (!val || val === '(null)') continue;
+                if (!valueMap[dim][val]) valueMap[dim][val] = [];
+                valueMap[dim][val].push({{
+                    location: occ.location,
+                    fitness: occ.fitness,
+                    classification: occ.classification
+                }});
+            }}
+        }}
+
+        // Flatten to list of {{dim, value, count, locations, classification}}
+        const shared = [];
+        for (const [dim, values] of Object.entries(valueMap)) {{
+            for (const [value, locs] of Object.entries(values)) {{
+                if (locs.length >= 2) {{
+                    shared.push({{
+                        dim: dim,
+                        value: value,
+                        count: locs.length,
+                        locations: locs,
+                        classification: locs[0].classification,
+                        avgFitness: locs.reduce((s, l) => s + l.fitness, 0) / locs.length
+                    }});
+                }}
+            }}
+        }}
+
+        // Sort by count descending
+        shared.sort((a, b) => b.count - a.count);
+        return shared;
+    }})();
+
+    let minOccurrences = 2;
+
+    function setMinOccurrences(n) {{
+        minOccurrences = n;
+        document.querySelectorAll('#shared-values .sort-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('min-' + n).classList.add('active');
+        renderSharedValues();
+    }}
+
+    function renderSharedValues() {{
+        const container = document.getElementById('shared-content');
+        const filtered = sharedValuesData.filter(s => s.count >= minOccurrences);
+
+        if (filtered.length === 0) {{
+            container.innerHTML = '<p style="color: var(--text-secondary);">No values appear in ' + minOccurrences + '+ locations.</p>';
+            return;
+        }}
+
+        let html = '<div style="color: var(--text-secondary); font-size: 0.85em; margin-bottom: 10px;">' +
+                   filtered.length + ' shared values found</div>';
+
+        for (const item of filtered) {{
+            const truncValue = item.value.length > 100 ? item.value.substring(0, 100) + '...' : item.value;
+            const locList = item.locations.map(l => l.location).join(', ');
+            const clsClass = item.classification === 'positive' ? 'positive' : 'negative';
+
+            html += '<details class="group" style="margin-bottom: 8px;">';
+            html += '<summary style="cursor: pointer;">';
+            html += '<span style="color: var(--accent-light); font-weight: 600;">' + formatDimName(item.dim) + '</span>';
+            html += '<span style="color: var(--text-secondary); margin-left: 10px;">(' + item.count + ' locations, avg fitness: ' + (item.avgFitness * 100).toFixed(1) + '%)</span>';
+            html += '</summary>';
+            html += '<div style="padding: 10px; border-left: 3px solid var(--' + clsClass + '); margin: 5px 0;">';
+            html += '<div style="color: var(--text-primary); margin-bottom: 8px;">"' + truncValue + '"</div>';
+            html += '<div style="color: var(--text-secondary); font-size: 0.85em;">Locations: ' + locList + '</div>';
+            html += '</div>';
+            html += '</details>';
+        }}
+
+        container.innerHTML = html;
+    }}
+
     renderLocations();
     renderHistogram();
+    renderSharedValues();
     </script>
 </body>
 </html>'''
