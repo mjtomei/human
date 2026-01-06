@@ -169,8 +169,12 @@ class MigrationSystem:
 
         return events
 
-    def select_parent(self, location: 'Location') -> Optional[SparseHypothesis]:
-        """Select a parent for breeding, weighted by fitness."""
+    def select_parent(self, location: 'Location') -> Optional[tuple[SparseHypothesis, float]]:
+        """Select a parent for breeding, weighted by fitness.
+
+        Returns:
+            Tuple of (hypothesis, fitness) or None if selection fails
+        """
         if not location.population or not location.fitness_scores:
             return None
 
@@ -183,12 +187,15 @@ class MigrationSystem:
         indices = random.sample(range(len(location.population)), k)
         best_idx = max(indices, key=lambda i: location.fitness_scores[i])
 
-        return location.population[best_idx]
+        return location.population[best_idx], location.fitness_scores[best_idx]
 
     def crossover(
         self,
         parent_a: SparseHypothesis,
         parent_b: SparseHypothesis,
+        loc_a_slug: str = None,
+        loc_b_slug: str = None,
+        generation: int = 0,
     ) -> SparseHypothesis:
         """
         Create offspring from two parents.
@@ -196,6 +203,8 @@ class MigrationSystem:
         Uses linkage-aware crossover: inherit dimension groups as units.
         Groups are included probabilistically to maintain average parent size
         (prevents dimension inflation over generations).
+
+        Tracks dimension origins for lineage analysis.
         """
         from cognitive_gen.dimension_pool import DIMENSION_TO_GROUP
 
@@ -243,6 +252,7 @@ class MigrationSystem:
 
         # Select groups probabilistically
         offspring_values = {}
+        offspring_origins = {}
         included_groups = []
 
         for group in all_groups:
@@ -257,20 +267,29 @@ class MigrationSystem:
                     # Both have this group - choose randomly
                     if random.random() < 0.5:
                         source = parent_a
+                        source_slug = loc_a_slug
                         dims = groups_a[group]
                     else:
                         source = parent_b
+                        source_slug = loc_b_slug
                         dims = groups_b[group]
                 elif has_a:
                     source = parent_a
+                    source_slug = loc_a_slug
                     dims = groups_a[group]
                 else:
                     source = parent_b
+                    source_slug = loc_b_slug
                     dims = groups_b[group]
 
-                # Copy values from chosen parent
+                # Copy values and origins from chosen parent
                 for dim in dims:
                     offspring_values[dim] = source.values.get(dim)
+                    # Preserve existing origin if present, else set to source location
+                    if dim in source.origins:
+                        offspring_origins[dim] = source.origins[dim]
+                    elif source_slug:
+                        offspring_origins[dim] = {'location': source_slug, 'generation': generation}
 
         # Ensure at least some dimensions (fallback if unlucky)
         if len(offspring_values) < 2:
@@ -279,11 +298,19 @@ class MigrationSystem:
                 if group in groups_a:
                     for dim in groups_a[group]:
                         offspring_values[dim] = parent_a.values.get(dim)
+                        if dim in parent_a.origins:
+                            offspring_origins[dim] = parent_a.origins[dim]
+                        elif loc_a_slug:
+                            offspring_origins[dim] = {'location': loc_a_slug, 'generation': generation}
                 elif group in groups_b:
                     for dim in groups_b[group]:
                         offspring_values[dim] = parent_b.values.get(dim)
+                        if dim in parent_b.origins:
+                            offspring_origins[dim] = parent_b.origins[dim]
+                        elif loc_b_slug:
+                            offspring_origins[dim] = {'location': loc_b_slug, 'generation': generation}
 
-        return SparseHypothesis(values=offspring_values)
+        return SparseHypothesis(values=offspring_values, origins=offspring_origins)
 
     def cross_breed(
         self,
@@ -318,28 +345,39 @@ class MigrationSystem:
                 continue
 
             for _ in range(self.breeding_attempts_per_edge):
-                # Select parents
-                parent_a = self.select_parent(loc_a)
-                parent_b = self.select_parent(loc_b)
+                # Select parents (returns tuple of hypothesis, fitness)
+                parent_a_result = self.select_parent(loc_a)
+                parent_b_result = self.select_parent(loc_b)
 
-                if not parent_a or not parent_b:
+                if not parent_a_result or not parent_b_result:
                     continue
 
-                # Create offspring
-                offspring = self.crossover(parent_a, parent_b)
+                parent_a, fitness_a = parent_a_result
+                parent_b, fitness_b = parent_b_result
+
+                # Create offspring with lineage tracking
+                offspring = self.crossover(
+                    parent_a, parent_b,
+                    loc_a_slug=edge.source,
+                    loc_b_slug=edge.target,
+                    generation=generation,
+                )
 
                 # Get scoring contexts
                 ctx_a, tgt_a = loc_a.get_random_target()
                 ctx_b, tgt_b = loc_b.get_random_target()
 
-                offspring_info.append((edge, offspring, loc_a, loc_b, ctx_a, tgt_a, ctx_b, tgt_b))
+                # Track better parent fitness for edge weight calculation
+                better_parent_fitness = max(fitness_a, fitness_b)
+
+                offspring_info.append((edge, offspring, loc_a, loc_b, ctx_a, tgt_a, ctx_b, tgt_b, better_parent_fitness))
 
         if not offspring_info:
             return []
 
         # Phase 2: Build batch for scoring (2 scores per offspring - on each parent location)
         score_batch = []
-        for edge, offspring, loc_a, loc_b, ctx_a, tgt_a, ctx_b, tgt_b in offspring_info:
+        for edge, offspring, loc_a, loc_b, ctx_a, tgt_a, ctx_b, tgt_b, _ in offspring_info:
             # Score on location A
             score_batch.append((ctx_a, tgt_a, offspring, loc_a.baseline_ppl))
             # Score on location B
@@ -361,7 +399,7 @@ class MigrationSystem:
 
         # Phase 4: Process results
         results = []
-        for i, (edge, offspring, loc_a, loc_b, _, _, _, _) in enumerate(offspring_info):
+        for i, (edge, offspring, loc_a, loc_b, _, _, _, _, parent_fitness) in enumerate(offspring_info):
             fit_a, _ = score_results[i * 2]      # Score on loc A
             fit_b, _ = score_results[i * 2 + 1]  # Score on loc B
 
@@ -388,16 +426,16 @@ class MigrationSystem:
                 else:
                     placed_at = edge.target
 
-            # Record crossing based on actual placement (not just positive fitness)
+            # Record crossing - weight increase based on % improvement over parent
             placed = placed_at is not None
-            success = placed  # Success now means actual placement
+            success = best_fit > parent_fitness  # Success means improving over parent
 
-            edge.record_placement(best_fit, placed)
+            edge.record_placement(best_fit, parent_fitness, placed)
 
             # Also record on reverse edge if exists
             reverse_edge = graph.get_edge(edge.target, edge.source)
             if reverse_edge:
-                reverse_edge.record_placement(best_fit, placed)
+                reverse_edge.record_placement(best_fit, parent_fitness, placed)
 
             results.append(CrossBreedingResult(
                 edge_source=edge.source,

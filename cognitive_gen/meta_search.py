@@ -51,8 +51,11 @@ class SparseHypothesis:
     A hypothesis with only some dimensions active.
 
     values: dict mapping dimension name -> value (or None if inactive)
+    origins: dict mapping dimension name -> {'location': slug, 'generation': int}
+             Tracks where each dimension value originated from.
     """
     values: dict = field(default_factory=dict)
+    origins: dict = field(default_factory=dict)  # dimension -> {location, generation}
 
     @property
     def active_dimensions(self) -> list[str]:
@@ -91,8 +94,15 @@ class SparseHypothesis:
         """Only include active dimensions."""
         return {d: v for d, v in self.values.items() if v is not None}
 
+    def to_dict_with_origins(self) -> dict:
+        """Include values and origins for serialization."""
+        return {
+            'values': {d: v for d, v in self.values.items() if v is not None},
+            'origins': dict(self.origins),
+        }
+
     def copy(self) -> "SparseHypothesis":
-        return SparseHypothesis(values=dict(self.values))
+        return SparseHypothesis(values=dict(self.values), origins=dict(self.origins))
 
 
 # =============================================================================

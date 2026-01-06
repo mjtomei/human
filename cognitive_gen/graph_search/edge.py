@@ -22,49 +22,57 @@ class Edge:
     failed_crossings: int = 0
     total_offspring_fitness: float = 0.0
 
-    # Weight update parameters
-    success_bonus: float = 0.1
-    failure_penalty: float = 0.02
-
-    def record_crossing(self, offspring_fitness: float, success_threshold: float = 0.0):
+    def record_crossing(self, offspring_fitness: float, parent_fitness: float):
         """
         Record the result of a cross-breeding attempt.
 
+        Weight increase is based on % improvement over parent fitness.
+        No penalty for failed placements.
+
         Args:
             offspring_fitness: Fitness of the offspring (higher = better)
-            success_threshold: Minimum fitness to count as success
+            parent_fitness: Fitness of the better parent
         """
         self.total_offspring_fitness += offspring_fitness
 
-        if offspring_fitness > success_threshold:
+        if offspring_fitness > parent_fitness and parent_fitness > 0:
             self.successful_crossings += 1
-            # Bonus scales with fitness
-            self.weight += self.success_bonus * (1 + offspring_fitness)
+            # Weight increase = % improvement over parent
+            improvement = (offspring_fitness - parent_fitness) / parent_fitness
+            self.weight += improvement
         else:
+            # Track as failed but no penalty
             self.failed_crossings += 1
-            self.weight = max(0, self.weight - self.failure_penalty)
 
-    def record_placement(self, offspring_fitness: float, placed: bool):
+    def record_placement(self, offspring_fitness: float, parent_fitness: float, placed: bool):
         """
         Record the result of a cross-breeding attempt based on actual placement.
 
-        This method uses whether the offspring was placed in a population
-        (i.e., beat the worst member) as the success criterion, rather than
-        just having positive fitness.
+        Tiered weight increase:
+        - Placement (beating worst) = weak signal, small bonus
+        - Beating parent = strong signal, bonus scales with % improvement
 
         Args:
             offspring_fitness: Fitness of the offspring (higher = better)
+            parent_fitness: Fitness of the better parent
             placed: Whether the offspring was placed in at least one population
         """
         self.total_offspring_fitness += offspring_fitness
 
         if placed:
-            self.successful_crossings += 1
-            # Bonus scales with fitness
-            self.weight += self.success_bonus * (1 + offspring_fitness)
+            base_bonus = 0.02  # Small bonus for any viable placement
+            if offspring_fitness > parent_fitness and parent_fitness > 0:
+                # Strong signal - crossover improved fitness
+                self.successful_crossings += 1
+                improvement = (offspring_fitness - parent_fitness) / parent_fitness
+                self.weight += base_bonus + improvement
+            else:
+                # Weak signal - viable but didn't beat parent
+                self.successful_crossings += 1
+                self.weight += base_bonus
         else:
+            # Not placed - no weight change
             self.failed_crossings += 1
-            self.weight = max(0, self.weight - self.failure_penalty)
 
     @property
     def total_crossings(self) -> int:

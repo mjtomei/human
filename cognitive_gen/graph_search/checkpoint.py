@@ -42,12 +42,16 @@ def serialize_hypothesis(hyp: SparseHypothesis) -> dict:
     """Serialize a SparseHypothesis to dict."""
     return {
         'values': hyp.values,
+        'origins': hyp.origins,  # Track dimension lineage
     }
 
 
 def deserialize_hypothesis(data: dict) -> SparseHypothesis:
     """Deserialize a SparseHypothesis from dict."""
-    return SparseHypothesis(values=data['values'])
+    return SparseHypothesis(
+        values=data.get('values', {}),
+        origins=data.get('origins', {}),  # Restore lineage if present
+    )
 
 
 def serialize_location(location: 'Location') -> dict:

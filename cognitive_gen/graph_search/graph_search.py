@@ -223,14 +223,16 @@ class GraphSearch:
                     # Accept ANY valid dimension from the full pool
                     filtered = {d: v for d, v in h.items() if d in ALL_DIMENSIONS and v}
                     if filtered:
-                        location.population.append(SparseHypothesis(values=filtered))
+                        # Set origins for all dimensions to this location at generation 0
+                        origins = {d: {'location': slug, 'generation': 0} for d in filtered}
+                        location.population.append(SparseHypothesis(values=filtered, origins=origins))
                         location.fitness_scores.append(0.0)
                         parsed_count += 1
                         continue
             except Exception:
                 pass
             # Fallback: empty hypothesis
-            location.population.append(SparseHypothesis(values={}))
+            location.population.append(SparseHypothesis(values={}, origins={}))
             location.fitness_scores.append(0.0)
 
         print(f"  Successfully parsed {parsed_count}/{total_prompts} hypotheses")
@@ -445,7 +447,7 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
 
             # Crossover
             if random.random() < self.crossover_rate:
-                child = self._crossover(parent_a, parent_b)
+                child = self._crossover(parent_a, parent_b, location.slug, location.generation)
             else:
                 child = parent_a.copy()
 
@@ -468,8 +470,8 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
         best_idx = max(indices, key=lambda i: location.fitness_scores[i])
         return location.population[best_idx]
 
-    def _crossover(self, parent_a: SparseHypothesis, parent_b: SparseHypothesis) -> SparseHypothesis:
-        """Linkage-aware crossover."""
+    def _crossover(self, parent_a: SparseHypothesis, parent_b: SparseHypothesis, location_slug: str = None, generation: int = 0) -> SparseHypothesis:
+        """Linkage-aware crossover with lineage tracking."""
         from cognitive_gen.dimension_pool import DIMENSION_TO_GROUP
 
         dims_a = set(parent_a.active_dimensions)
@@ -489,6 +491,7 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
         # Choose groups from each parent
         all_groups = set(groups_a.keys()) | set(groups_b.keys())
         offspring_values = {}
+        offspring_origins = {}
 
         for group in all_groups:
             has_a = group in groups_a
@@ -506,8 +509,13 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
 
             for dim in dims:
                 offspring_values[dim] = source.values.get(dim)
+                # Preserve existing origin or set to current location
+                if dim in source.origins:
+                    offspring_origins[dim] = source.origins[dim]
+                elif location_slug:
+                    offspring_origins[dim] = {'location': location_slug, 'generation': generation}
 
-        return SparseHypothesis(values=offspring_values)
+        return SparseHypothesis(values=offspring_values, origins=offspring_origins)
 
     def _mutate(self, hypothesis: SparseHypothesis, location: Location, severity: float) -> SparseHypothesis:
         """Apply mutation to a hypothesis."""
@@ -521,6 +529,8 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
                     dim, [location.context_region]
                 )
                 result.values[dim] = new_value
+                # Update origin since value changed (mutation creates new lineage)
+                result.origins[dim] = {'location': location.slug, 'generation': location.generation}
             except Exception:
                 pass  # Keep original value
 
@@ -535,6 +545,8 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
                         new_dim, [location.context_region]
                     )
                     result.values[new_dim] = value
+                    # Set origin for newly added dimension
+                    result.origins[new_dim] = {'location': location.slug, 'generation': location.generation}
                 except Exception:
                     pass
 
@@ -542,6 +554,8 @@ Return as JSON object with dimension names as keys. Focus on dimensions where yo
         if random.random() < 0.1 and result.n_active > 3:
             dim = random.choice(result.active_dimensions)
             result.values[dim] = None
+            # Also remove from origins
+            result.origins.pop(dim, None)
 
         return result
 
@@ -583,7 +597,9 @@ Return as JSON object."""
                     h = json.loads(response[start:end])
                     filtered = {d: v for d, v in h.items() if d in ALL_DIMENSIONS and v}
                     if filtered:
-                        fresh.append(SparseHypothesis(values=filtered))
+                        # Set origins for fresh hypothesis
+                        origins = {d: {'location': location.slug, 'generation': location.generation} for d in filtered}
+                        fresh.append(SparseHypothesis(values=filtered, origins=origins))
             except Exception:
                 pass
 
