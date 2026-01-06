@@ -593,7 +593,12 @@ class MetaScorer:
         ).to(self.device)
 
         # Context length = everything before target (including trailing newlines)
-        context_len = len(self.tokenizer(context_text + "\n\n").input_ids)
+        # IMPORTANT: Also truncate to max_length to match full_text tokenization
+        context_len = len(self.tokenizer(
+            context_text + "\n\n",
+            truncation=True,
+            max_length=2048,
+        ).input_ids)
 
         with torch.no_grad():
             outputs = self.model(**inputs, labels=inputs.input_ids)
@@ -606,11 +611,17 @@ class MetaScorer:
                 shift_labels.view(-1)
             )
 
-            if context_len > 0 and context_len < len(losses):
+            # Require at least 10 target tokens for valid perplexity
+            min_target_tokens = 10
+            if context_len > 0 and context_len < len(losses) - min_target_tokens:
                 target_losses = losses[context_len - 1:]
                 avg_loss = target_losses.mean().item()
+            elif len(losses) > min_target_tokens:
+                # Context overflows - use last min_target_tokens as fallback
+                avg_loss = losses[-min_target_tokens:].mean().item()
             else:
-                avg_loss = losses.mean().item()
+                # Not enough tokens at all - return high perplexity
+                return 100.0
 
             return math.exp(avg_loss)
 
@@ -729,13 +740,16 @@ class MetaScorer:
 
         # Compute perplexity for each sequence
         results = []
+        min_target_tokens = 10  # Require at least 10 target tokens for valid perplexity
+
         for idx, (_, _, _, baseline_ppl) in enumerate(chunk):
             seq_losses = losses[idx]
             seq_mask = attention_mask[idx]
             ctx_len = context_lens[idx]
+            n_valid_tokens = seq_mask.sum().item()
 
             # Only count losses on target tokens (after context)
-            if ctx_len > 0 and ctx_len < seq_mask.sum().item():
+            if ctx_len > 0 and ctx_len < n_valid_tokens - min_target_tokens:
                 # Mask out context tokens
                 target_mask = seq_mask.clone()
                 target_mask[:ctx_len - 1] = 0
@@ -744,10 +758,20 @@ class MetaScorer:
                 if n_target_tokens > 0:
                     avg_loss = target_losses.sum().item() / n_target_tokens
                 else:
-                    avg_loss = seq_losses[seq_mask.bool()].mean().item()
+                    avg_loss = 4.6  # ~100 perplexity fallback
+            elif n_valid_tokens > min_target_tokens:
+                # Context overflows - use last min_target_tokens as fallback
+                fallback_mask = seq_mask.clone()
+                fallback_mask[:-min_target_tokens] = 0
+                fallback_losses = seq_losses * fallback_mask
+                n_fallback = fallback_mask.sum().item()
+                if n_fallback > 0:
+                    avg_loss = fallback_losses.sum().item() / n_fallback
+                else:
+                    avg_loss = 4.6
             else:
-                # Use all non-padding tokens
-                avg_loss = seq_losses[seq_mask.bool()].mean().item()
+                # Not enough tokens at all - return high perplexity
+                avg_loss = 4.6  # ~100 perplexity
 
             ppl = math.exp(avg_loss)
             fitness = (baseline_ppl - ppl) / baseline_ppl if baseline_ppl > 0 else 0.0
