@@ -824,8 +824,8 @@ def generate_html(
         <button onclick="expandLocations()">Show All Locations</button>
         <span style="color: var(--border); margin: 0 4px;">|</span>
         <span style="color: var(--text-secondary); font-size: 0.85em;">Filter:</span>
-        <button id="filter-all" class="sort-btn active" onclick="setLocationFilter('all')">All</button>
-        <button id="filter-base" class="sort-btn" onclick="setLocationFilter('base')">Base Only</button>
+        <button id="filter-all" class="sort-btn" onclick="setLocationFilter('all')">All</button>
+        <button id="filter-base" class="sort-btn active" onclick="setLocationFilter('base')">Base Only</button>
         <button id="filter-meta" class="sort-btn" onclick="setLocationFilter('meta')">Meta Only</button>
     </div>
     <div id="locations"><p style="color: var(--text-secondary);">Loading...</p></div>
@@ -864,9 +864,9 @@ def generate_html(
         <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 10px;">Dimension values that appear in multiple locations, sorted by occurrence count. Higher counts suggest successful crossover spread.</p>
         <div style="margin-bottom: 15px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
             <span style="color: var(--text-secondary); font-size: 0.85em;">Min occurrences:</span>
-            <button id="min-2" class="sort-btn active" onclick="setMinOccurrences(2)">2+</button>
+            <button id="min-2" class="sort-btn" onclick="setMinOccurrences(2)">2+</button>
             <button id="min-3" class="sort-btn" onclick="setMinOccurrences(3)">3+</button>
-            <button id="min-5" class="sort-btn" onclick="setMinOccurrences(5)">5+</button>
+            <button id="min-5" class="sort-btn active" onclick="setMinOccurrences(5)">5+</button>
             <button id="min-10" class="sort-btn" onclick="setMinOccurrences(10)">10+</button>
         </div>
         <div id="shared-content">Loading...</div>
@@ -1192,7 +1192,7 @@ def generate_html(
         </svg>`;
     }}
 
-    let locationFilter = 'all';
+    let locationFilter = 'base';
 
     function setLocationFilter(filter) {{
         locationFilter = filter;
@@ -1531,7 +1531,7 @@ def generate_html(
         return shared;
     }}
 
-    let minOccurrences = 2;
+    let minOccurrences = 5;
 
     function setMinOccurrences(n) {{
         minOccurrences = n;
