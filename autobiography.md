@@ -73,4 +73,10 @@ The shadow dimension experiments found that darker psychological dimensions (con
 
 ---
 
+## Notes
+
+[1] **Truncation bug**: The "water" essay has an artificially low baseline perplexity (1.13) due to a bug where essays exceeding 2048 tokens have their context length computed without truncation. This causes perplexity to be measured on context tokens rather than target tokens. The bug affects only "water" (the longest essay at ~3700 tokens). Other essays' results are unaffected.
+
+---
+
 *Written by Claude (Opus 4.5). Last updated January 2026.*

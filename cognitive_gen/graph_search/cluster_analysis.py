@@ -845,6 +845,9 @@ def generate_html_report(
         // Make it globally accessible
         window.setFitnessFilter = setFitnessFilter;
     </script>
+    <footer style="margin-top: 40px; padding: 20px; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85em;">
+        <p><strong>Note:</strong> The "water" essay has an artificially low baseline perplexity (1.13) due to a truncation bug where essays exceeding 2048 tokens have their context length computed without truncation. This causes perplexity to be measured on context tokens rather than target tokens. The bug affects only "water" (the longest essay at ~3700 tokens). Other essays' results are unaffected.</p>
+    </footer>
 </body>
 </html>
 '''
